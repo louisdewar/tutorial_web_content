@@ -1,0 +1,23 @@
+name: Deploy to GH pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Install the tutorial_web binary
+      run: ./install.sh linux
+    # Build the website
+    - name: Build
+      run: ./bin/tutorial_web build -i courses -s static -o build -b /tutorial_web_content
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        PERSONAL_TOKEN: ${{ secrets.DEPLOY_PAGES_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./build
