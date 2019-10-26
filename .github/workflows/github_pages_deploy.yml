@@ -14,7 +14,7 @@ jobs:
       run: ./install.sh linux
     # Build the website
     - name: Build
-      run: ./bin/tutorial_web build -i courses -s static -o build -b /tutorial_web_content
+      run: ./bin/tutorial_web build -i courses -s ./bin/static -o build -b /tutorial_web_content
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.5.0
       env:
