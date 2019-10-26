@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Python beginners</title>
+
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/nord.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand:300&display=swap" rel="stylesheet">
+
+    <script defer onload="hljs.initHighlightingOnLoad();" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+    
+  </head>
+  <body>
+    <div id="content">
+      
+<div class="course">
+  <h1 class="course-title">Python beginners</h1>
+  <section class="tutorials">
+  
+    <article class="tutorial" data-index="1">
+  <h2 class="subtitle">1. Getting started</h2>
+  <div class="content"><p>To get started coding python you'll need to setup an editor where you can type and run python.</p>
+<p><strong>Note:</strong> We are learning using python3 (python2 is now outdated).</p>
+<p>Choose one of these methods</p>
+<h2>Online (fastest)</h2>
+<p>The easiest way to get going with python is using an online editor such as
+<a href="https://repl.it/languages/python3">repl</a>.</p>
+<h2>IDLE (best)</h2>
+<p>Setting up the IDLE is also relatively easy and it has the advantage
+that the python files are on your computer.</p>
+<p>You can download python from <a href="https://www.python.org/downloads/">the website</a>
+(you want python3).
+Once you have it downloaded you need to look for a program called IDLE.</p>
+<p>Create a new file like below:
+<img src="assets/idle_new_file.png" alt="IDLE new file" /></p>
+<h2>Terminal (advanced)</h2>
+<p>If you are a bit more advanced you might want to use the terminal or command prompt
+to run python.</p>
+<p><a href="https://www.python.org/downloads/">Download python 3</a>,
+if you are on windows make sure you select &quot;Add python to PATH&quot;.</p>
+<p>Create a folder where you will put your code.</p>
+<p>In either terminal or command prompt (depending on your OS) use the command <code>cd</code> to change
+to the directory where python. To run the code use the command <code>python3 {NAME_OF_FILE}</code>
+(where  <code>{NAME_OF_FILE}</code> is the name of your python file).</p>
+</div>
+</article>
+  
+    <article class="tutorial" data-index="2">
+  <h2 class="subtitle">2. Hello World</h2>
+  <div class="content"><p>Whenever we learn a new programming language normally the first thing
+we learn how to do is to say <code>hello world</code>.</p>
+<p>In python we would use the <code>print</code> command to say things e.g.</p>
+<pre><code class="language-python">print(&quot;Text that you want to print out&quot;)
+</code></pre>
+<h2>Try it</h2>
+<ol>
+<li>Change the print command to say <code>Hello world</code></li>
+<li>Run it and check that it outputs what you expect</li>
+</ol>
+<p><strong>Tip:</strong> The quotation marks around the text are important! They
+tell python that we want it to treat it as text instead of code</p>
+</div>
+</article>
+  
+    <article class="tutorial" data-index="3">
+  <h2 class="subtitle">3. Comments</h2>
+  <div class="content"><p>Sometime when we program we want to leave comments to ourselves explaining
+what the code does.</p>
+<p>In python anything after a <code>#</code> is ignored</p>
+<pre><code class="language-python"># This isn't valid python code yet it doesn't matter because of the hashtag
+print(&quot;Actual python code&quot;)
+</code></pre>
+<h2>Try it</h2>
+<p>Remove the hashtag from the code above and see what happens</p>
+</div>
+</article>
+  
+    <article class="tutorial" data-index="4">
+  <h2 class="subtitle">4. Variables</h2>
+  <div class="content"><p>If we want to store data we use something called variables.
+They are incredibly important in coding and we'll be using many more in the future.</p>
+<p>Each variable has a name and data associated with it.</p>
+<p><strong>Copy and run this code</strong> and see what happens:</p>
+<pre><code class="language-python"># The name `my_variable` can be anything as long as they are no spaces and doesn't begin with numbers
+my_variable = 10
+print(my_variable)
+
+# The quotation marks here are important, see what happens when you delete them
+my_name = &quot;{ENTER_YOUR_NAME}&quot;
+print(&quot;Hello&quot; + my_name)
+
+# Pick your favourite number
+my_favourite_number = 7
+# The str() is VERY important read below for details
+print(&quot;Your favourite number is &quot; + str(my_favourite_number))
+</code></pre>
+<h2>Interesting information</h2>
+<p>On the line that said:</p>
+<pre><code class="language-python">print(&quot;Your favourite number is &quot; + str(my_favourite_number))
+</code></pre>
+<p>We had to use a function called <code>str()</code>. <strong>Try deleting str()</strong> and see what happens.
+It should say: <code>TypeError: can only concatenate str (not &quot;int&quot;) to str</code>.</p>
+<p>Essentially what that means is that we can only append strings to strings.
+A <strong>string</strong> is another word for text.</p>
+<p><code>my_favourite_number</code> is a number (called an <code>int</code> or integer) so we need
+to convert it to a string. That's what the <code>str</code> function does.</p>
+<h2>Bonus</h2>
+<p>Create a variable called <code>my_age</code> and set it equal to your age.
+Then make a print statement say <code>Your age is {YOUR_AGE}</code> (where <code>{YOUR_AGE}</code> is the variable).</p>
+</div>
+</article>
+  
+    <article class="tutorial" data-index="5">
+  <h2 class="subtitle">5. Input</h2>
+  <div class="content"><p>So far our programs have been a bit limited. Now we are going to learn how
+to make our programs interactive.</p>
+<p>Try running this program:</p>
+<pre><code class="language-python">name = input(&quot;Enter your name&quot;)
+print(&quot;Hello &quot; + name)
+</code></pre>
+<h2>Try it</h2>
+<p>Create a program that asks a user for their favourite colour and then
+prints <code>{THEIR_COLOUR} is my favourite colour too!</code> (replace
+<code>{THEIR_COLOUR}</code> with the colour they pick).</p>
+</div>
+</article>
+  
+  </section>
+</div>
+
+    </div>
+
+    <script src="/tutorial_web_content/static/main.js"></script>
+  </body>
+</html>
