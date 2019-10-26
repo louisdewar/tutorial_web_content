@@ -1,0 +1,125 @@
+title: Python beginners
+lang: python3
+url: introduction
+
+tutorials:
+  - subtitle: Getting started
+    content: |
+      To get started coding python you'll need to setup an editor where you can type and run python.
+
+      **Note:** We are learning using python3 (python2 is now outdated).
+
+      Choose one of these methods
+
+      ## Online (fastest)
+      The easiest way to get going with python is using an online editor such as
+      [repl](https://repl.it/languages/python3).
+
+      ## IDLE (best)
+      Setting up the IDLE is also relatively easy and it has the advantage
+      that the python files are on your computer.
+
+      You can download python from [the website](https://www.python.org/downloads/)
+      (you want python3).
+      Once you have it downloaded you need to look for a program called IDLE.
+
+      Create a new file like below:
+      ![IDLE new file](assets/idle_new_file.png)
+
+      ## Terminal (advanced)
+      If you are a bit more advanced you might want to use the terminal or command prompt
+      to run python.
+
+      [Download python 3](https://www.python.org/downloads/),
+      if you are on windows make sure you select "Add python to PATH".
+
+      Create a folder where you will put your code.
+
+      In either terminal or command prompt (depending on your OS) use the command `cd` to change
+      to the directory where python. To run the code use the command `python3 {NAME_OF_FILE}`
+      (where  `{NAME_OF_FILE}` is the name of your python file).
+  - subtitle: Hello World
+    content: |
+      Whenever we learn a new programming language normally the first thing
+      we learn how to do is to say `hello world`.
+
+      In python we would use the `print` command to say things e.g.
+      ```python
+      print("Text that you want to print out")
+      ```
+
+      ## Try it
+      1. Change the print command to say `Hello world`
+      2. Run it and check that it outputs what you expect
+
+      **Tip:** The quotation marks around the text are important! They
+      tell python that we want it to treat it as text instead of code
+  - subtitle: Comments
+    content: |
+      Sometime when we program we want to leave comments to ourselves explaining
+      what the code does.
+
+      In python anything after a `#` is ignored
+      ```python
+      # This isn't valid python code yet it doesn't matter because of the hashtag
+      print("Actual python code")
+      ```
+
+      ## Try it
+      Remove the hashtag from the code above and see what happens
+  - subtitle: Variables
+    content: |
+      If we want to store data we use something called variables.
+      They are incredibly important in coding and we'll be using many more in the future.
+
+      Each variable has a name and data associated with it.
+
+      **Copy and run this code** and see what happens:
+      ```python
+      # The name `my_variable` can be anything as long as they are no spaces and doesn't begin with numbers
+      my_variable = 10
+      print(my_variable)
+
+      # The quotation marks here are important, see what happens when you delete them
+      my_name = "{ENTER_YOUR_NAME}"
+      print("Hello" + my_name)
+
+      # Pick your favourite number
+      my_favourite_number = 7
+      # The str() is VERY important read below for details
+      print("Your favourite number is " + str(my_favourite_number))
+      ```
+
+      ## Interesting information
+
+      On the line that said:
+      ```python
+      print("Your favourite number is " + str(my_favourite_number))
+      ```
+      We had to use a function called `str()`. **Try deleting str()** and see what happens.
+      It should say: `TypeError: can only concatenate str (not "int") to str`.
+
+      Essentially what that means is that we can only append strings to strings.
+      A **string** is another word for text.
+
+      `my_favourite_number` is a number (called an `int` or integer) so we need
+      to convert it to a string. That's what the `str` function does.
+
+      ## Bonus
+      Create a variable called `my_age` and set it equal to your age.
+      Then make a print statement say `Your age is {YOUR_AGE}` (where `{YOUR_AGE}` is the variable).
+  - subtitle: Input
+    content: |
+      So far our programs have been a bit limited. Now we are going to learn how
+      to make our programs interactive.
+
+      Try running this program:
+      ```python
+      name = input("Enter your name")
+      print("Hello " + name)
+      ```
+
+      ## Try it
+      Create a program that asks a user for their favourite colour and then
+      prints `{THEIR_COLOUR} is my favourite colour too!` (replace
+      `{THEIR_COLOUR}` with the colour they pick).
