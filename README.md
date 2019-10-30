@@ -4,6 +4,21 @@
 
 This repo houses the content for tutorials, see [this repo](https://github.com/louisdewar/tutorial_web) for the code that builds the websites.
 
+## ==Quickstart==
+I want to get started straight away!
+
+### Mac/Linux(/Windows with linux subsystem)
+1. Clone this repo and open a terminal in that folder
+2. Run `./install.sh`
+3. Run `./run_server.sh`
+
+### Windows
+1. Clone this repo
+2. Create a folder called bin within this repo (it is automatically ignored from git)
+3. Download latest windows release [from here](https://github.com/louisdewar/tutorial_web/releases) and unzip contents into the bin folder
+4. cd (change directory) using command prompt into folder where this repository was cloned
+5. Run `bin/tutorial_web.exe --help` for help OR `bin/tutorial_web.exe start-test-server -s bin/static -i courses`
+
 ## How does it work?
 
 You write courses in `.yml` files (YAML) and then the code reads them and builds websites from them. Checkout the `courses` folder for examples of how other courses used them.
