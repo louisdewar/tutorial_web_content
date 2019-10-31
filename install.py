@@ -1,4 +1,8 @@
-#!/usr/bin/env python3
+import sys
+
+if sys.version_info[0] != 3:
+    print('Please run this script using python3')
+    sys.exit(1)
 
 import json
 import urllib.error
@@ -8,7 +12,6 @@ import stat
 import tarfile
 import shutil
 import subprocess
-import sys
 
 match_release = None
 try:

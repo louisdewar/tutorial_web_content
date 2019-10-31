@@ -9,15 +9,14 @@ I want to get started straight away!
 
 ### Mac/Linux(/Windows with linux subsystem)
 1. Clone this repo and open a terminal in that folder
-2. Run `./install.sh`
+2. (Optional - run_server.sh will run this script anyway) Run `python3 install.py`
 3. Run `./run_server.sh`
 
 ### Windows
 1. Clone this repo
-2. Create a folder called bin within this repo (it is automatically ignored from git)
-3. Download latest windows release [from here](https://github.com/louisdewar/tutorial_web/releases) and unzip contents into the bin folder
+2. Run `python3 install.py` (make sure you have python3 installed)
 4. cd (change directory) using command prompt into folder where this repository was cloned
-5. Run `bin/tutorial_web.exe --help` for help OR `bin/tutorial_web.exe start-test-server -s bin/static -i courses`
+5. Run `bin/tutorial_web.exe --help` for help OR `bin/tutorial_web.exe start-test-server -s bin/static -i courses` to start the server
 
 ## How does it work?
 
