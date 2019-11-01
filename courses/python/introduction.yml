@@ -81,7 +81,7 @@ tutorials:
       tell python that we want it to treat it as text instead of code.
   - subtitle: Comments
     content: |
-      Sometime when we program we want to leave comments to ourselves explaining
+      Sometimes when we program we want to leave comments to ourselves explaining
       what the code does.
 
       In python anything after a `#` is ignored
@@ -379,6 +379,65 @@ tutorials:
       ## Solution
       If you've done and want to check your answer (or you have got really stuck)
       then [here is the solution](assets/guess_game_3_solution.py).
+  - subtitle: Randomness
+    content: |
+      So far our guessing game has been a bit boring for us since we know the answer
+      already since we have to type it in ourselves.
+
+      What if we could get python to choose a random number?
+
+      Well we can, but first we need to learn about `import`.
+
+      There are loads of python features that are only accessible by using `import`.
+      Python uses `import` because it reduces clutter (mess) so our code
+      is clearer without getting confused with unfamiliar features.
+
+      When we `import` something we bring it into *scope* so we can use it.
+
+      To generate random numbers we need to import a module called `random`:
+      ```python
+      import random
+      ```
+
+      Next we need to work out what function from `random` to use. To do this we
+      can look at the real documentation for this module [here](https://docs.python.org/3/library/random.html).
+
+      If we scroll down on this page we find this definition:
+
+      ![randint documentation](assets/randint_doc.png)
+
+      This wording is a bit confusing but essentially it means that we pass in two
+      numbers `a` and `b` and the function returns a number which is between `a` and `b`
+      inclusive (inclusive means that the number is not only between `a` and `b` but
+      it could also be `a` or `b`).
+
+      ```python
+      import random
+
+      random.randint(a, b)
+      ```
+
+      ## Task
+      1. Change your `secret_number` in the guessing game to be a randomly generated
+      number between 1 and 99 (inclusive) using `randint`.
+      2. If the user runs out of guesses tell them what the number was.
+      3. Come up with a scoring system so that if the user guesses correctly they
+      get 100 points and then if they don't get it give them a score based on how close
+      they were to the actual number.
+
+      **Hint:** when we calculate the points we are probably going to do some sort
+      of subtraction to give us the distance from the correct answer. Unfortunately
+      depending on whether the guess was higher or lower than the answer the distance
+      may be negative or positive. To fix this we use a function called `abs(x)`
+      which takes in a value and if it's negative then it makes it positive.
+
+      If you get this working we should have a pretty good guessing game!
+
+      Try changing the number of allowed guesses and see if you can come up with any good strategies for winning.
+
+      ## Solution
+      If you've done and want to check your answer (or you have got really stuck)
+      then [here is the solution to the final version of the guessing game](assets/guess_game_4_solution.py).
   - subtitle: For loops and lists
     content: |
       A `for` loop is another kind of loop but it is designed to be very easy to
@@ -435,6 +494,7 @@ tutorials:
   - subtitle: Conclusion
     content: |
       You've now learnt some python!
+
       When you get home you could try writing programs to help you with your math homework!
 
       If you want to learn more you can look up python tutorials online but in future
