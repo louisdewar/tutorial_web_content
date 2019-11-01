@@ -27,7 +27,7 @@ Also see [these examples](https://github.com/louisdewar/tutorial_web/tree/master
 ## Folder structure
 
 All the content is in the `courses` folder. Within that folder there are course group folders (e.g. `courses/python`) which house a series of similar courses.
-If you want to include assets with your project you must name the folder the same as the `.yml` file. See [this](https://github.com/louisdewar/tutorial_web/blob/master/courses/example/demonstrating_assets.yml)
+If you want to include assets with your project you must name the folder the same as the `.yml` file. See [this](https://github.com/louisdewar/tutorial_web/blob/master/courses/example/demonstrating_assets.yml) for more information.
 
 ## How do I view the result?
 
@@ -35,7 +35,12 @@ All the courses are automatically rendered [here](https://louisdewar.github.io/t
 
 If you want to view them locally run the script called `run_server.sh` (this should help you install everything you need).
 
-## How do I build static content?
-This question is best answered on the repository that handles the code.
+## How do I view the result of a pull request?
 
-Usage instructions are included with all releases (once you install locally see the `bin` folder). But you can find the latest instructions [here](https://github.com/louisdewar/tutorial_web/blob/master/USAGE.md)
+All pull requests are automatically rendered [here](http://dev.tutorial.dewardt.uk/) (once the pull request is closed the deployment disappears).
+
+## How do I build static content?
+
+Usage instructions are included with all releases (once you install locally see the `bin` folder). But you can find the latest instructions [here](https://github.com/louisdewar/tutorial_web/blob/master/USAGE.md).
+
+You can also look at the [build script](./build.sh) in this repo or run `tutorial_web build --help` for some information on running the command.
