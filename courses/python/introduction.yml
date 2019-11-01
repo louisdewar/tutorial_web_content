@@ -78,7 +78,7 @@ tutorials:
       2. Run it and check that it outputs what you expect
 
       **Tip:** The quotation marks around the text are important! They
-      tell python that we want it to treat it as text instead of code
+      tell python that we want it to treat it as text instead of code.
   - subtitle: Comments
     content: |
       Sometime when we program we want to leave comments to ourselves explaining
@@ -131,7 +131,7 @@ tutorials:
       see what happens (leave `my_favourite_number`).
       It should say: `TypeError: can only concatenate str (not "int") to str`.
 
-      Essentially what that means is that we can only append strings to strings.
+      Essentially what that means is that we can only join strings to strings.
       A **string** is another word for text.
 
       `my_favourite_number` is a number (called an `int` or integer) so we need
