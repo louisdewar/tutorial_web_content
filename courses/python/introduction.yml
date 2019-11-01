@@ -61,7 +61,7 @@ tutorials:
   - subtitle: Hello World
     content: |
       Whenever we learn a new programming language normally the first thing
-      we learn how to do is to say `hello world`.
+      we do is to say `hello world`.
 
       In python we would use the `print` command to say things e.g.
       ```python
