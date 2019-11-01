@@ -2,21 +2,37 @@ title: Python beginners
 lang: python3
 url: introduction
 
+tutorial_settings:
+  start_closed: true
+
 tutorials:
+  - subtitle: Introduction
+    start_closed: false
+    content: |
+      This course is intended to help teach you some basic python skills.
+
+      It is intended for people who have never done python before, or people
+      who want to brush up on their basic python skills.
+
+      For some of the more complicated tasks there are code solutions, but
+      **only use these if you are done** or if you are really stuck (it's probably better
+      to ask for help instead of looking at the answer though).
+
+      Some of the challenges will be tough and you will probably find it
+      frustrating at times but that is how you learn! They've been designed to be
+      difficult to try and get you to think.
+
+      Click on "Getting started" to open the next tutorial.
   - subtitle: Getting started
     content: |
       To get started coding python you'll need to setup an editor where you can type and run python.
 
       **Note:** We are learning using python3 (python2 is now outdated).
 
-      Choose one of these methods
+      Choose one of these methods:
 
-      ## Online (fastest)
-      The easiest way to get going with python is using an online editor such as
-      [repl](https://repl.it/languages/python3).
-
-      ## IDLE (best)
-      Setting up the IDLE is also relatively easy and it has the advantage
+      ## 1. IDLE (best)
+      Setting up the IDLE is relatively easy and it has the advantage
       that the python files are on your computer.
 
       You can download python from [the website](https://www.python.org/downloads/)
@@ -26,7 +42,11 @@ tutorials:
       Create a new file like below:
       ![IDLE new file](assets/idle_new_file.png)
 
-      ## Terminal (advanced)
+      ## 2. Online (fastest)
+      The fastest way to get going with python is using an online editor such as
+      [repl](https://repl.it/languages/python3).
+
+      ## 3. Terminal (advanced)
       If you are a bit more advanced you might want to use the terminal or command prompt
       to run python.
 
@@ -48,6 +68,11 @@ tutorials:
       print("Text that you want to print out")
       ```
 
+      ## IDLE help
+      If you are using the IDLE then in order to run the file you must go to
+      `Run -> Run Module F5`.
+      ![IDLE run module](assets/idle_run.png)
+
       ## Try it
       1. Change the print command to say `Hello world`
       2. Run it and check that it outputs what you expect
@@ -61,12 +86,18 @@ tutorials:
 
       In python anything after a `#` is ignored
       ```python
-      # This isn't valid python code yet it doesn't matter because of the hashtag
+      # This isn't valid python code but it doesn't matter because of the hashtag
       print("Actual python code")
       ```
 
       ## Try it
-      Remove the hashtag from the code above and see what happens
+      Remove the hashtag from the code above and see what happens (hint: you should
+      get a syntax error).
+
+      This is what happens on the **IDLE** when you try to run the program without the hashtag:
+
+      ![IDLE syntax error](assets/idle_syntax_error.png)
+
   - subtitle: Variables
     content: |
       If we want to store data we use something called variables.
@@ -96,7 +127,8 @@ tutorials:
       ```python
       print("Your favourite number is " + str(my_favourite_number))
       ```
-      We had to use a function called `str()`. **Try deleting str()** and see what happens.
+      We had to use a function called `str(...)`. **Try deleting `str(...)`** and
+      see what happens (leave `my_favourite_number`).
       It should say: `TypeError: can only concatenate str (not "int") to str`.
 
       Essentially what that means is that we can only append strings to strings.
@@ -105,21 +137,308 @@ tutorials:
       `my_favourite_number` is a number (called an `int` or integer) so we need
       to convert it to a string. That's what the `str` function does.
 
-      ## Bonus
+      ## Task
       Create a variable called `my_age` and set it equal to your age.
       Then make a print statement say `Your age is {YOUR_AGE}` (where `{YOUR_AGE}` is the variable).
+
+      ## Solution
+      If you've done and want to check your answer (or you have got really stuck)
+      then [here is the solution](assets/variables_solution.py).
   - subtitle: Input
     content: |
       So far our programs have been a bit limited. Now we are going to learn how
       to make our programs interactive.
 
-      Try running this program:
+      We're going to use a new function called `input` which asks the user a question.
+      We pass in a string to input which is the message that is printed to the user
+      before they enter their response (i.e. `input("SOME_MESSAGE")`).
+
+      Try running this program: (it should ask you for your name, just type it in
+      and then hit enter)
       ```python
-      name = input("Enter your name")
+      name = input("Enter your name: ")
       print("Hello " + name)
       ```
 
       ## Try it
       Create a program that asks a user for their favourite colour and then
       prints `{THEIR_COLOUR} is my favourite colour too!` (replace
-      `{THEIR_COLOUR}` with the colour they pick).
+      `{THEIR_COLOUR}` with the colour they pick - **use a variable**).
+
+      ## Bonus
+      If we look at the example we have put a space at the end of the input string
+      `"Enter your name: "`, why is that? *Is it important?*
+
+      Also why is there a space in the print statement `"Hello " + name`? Is this important?
+
+      **Before you read on**, play around running the example code with and without the spaces
+      and try to think about those two questions.
+
+      So the answer: For the input it just creates a nice bit of space after the question
+      otherwise the text the user enters will be directly after the `:`. This is
+      just aesthetic (aesthetic means how something looks as opposed to how something works)
+      and it doesn't really affect much about how the code runs.
+
+      We have a space in the print for a similar reason: otherwise "Hello" and name would
+      be right next to each other with no space.
+
+      ## Solution
+      If you've done and want to check your answer (or you have got really stuck)
+      then [here is the solution to the colour task](assets/input_solution.py).
+  - subtitle: Lists
+    content: |
+      Lists allow us to store a group of items in one variable.
+
+      To get started we need to learn some **terminology**:
+      - Each item in a list is called an `element`.
+      - In most programming languages (including python) we start counting from 0
+      so the first element of the list is at *index* (aka position) 0, and the second is at position 1 and so on...
+
+      Read through the code (including the comments) and then ry running this example:
+      ```python
+      # Create a list with the elements 1, 2 and 3
+      numbers = [1, 2, 3]
+
+      # Prints out the entire list (you should see "[1, 2, 3]" in your console)
+      print(numbers)
+
+      # Print the first element on the list (you should see "1" in your console)
+      print(numbers[0])
+
+      # Add a new number to the list
+      numbers.append(20)
+      # Now we should see "[1, 2, 3, 20]" in the console
+      print(numbers)
+
+      # Change the thrid number to be 42
+      numbers[2] = 42
+      # Now we should see "[1, 2, 42, 20]" in the console
+      print(numbers)
+
+      # We can remove elements by value
+      numbers.remove(42)
+      # Now we should see "[1, 2, 20]" in the console
+      print(numbers)
+
+      # We can also remove elements by their index (aka position)
+      # Here we delete the first element
+      del numbers[0]
+      # Now we should see "[2, 20]" in the console
+      print(numbers)
+
+      # We can also find the length of a list using the len function (at this point it should be 2)
+      print(len(numbers))
+      ```
+
+      ## Task
+      1. Create an empty list called `shopping_list`
+      2. Add several items (at least 5) to this list e.g. `milk`, `eggs`
+      3. Print the list
+      4. Pick two elements and remove them using `shopping_list.remove(...)`
+      5. Print the list again (now that the items have been removed)
+
+      ## Solution
+      If you've done and want to check your answer (or you have got really stuck)
+      then [here is the solution to the number guessing task](assets/shopping_list.py).
+  - subtitle: Conditionals
+    content: |
+      `if` statments are how we make decisions in our code, in general they are
+      called conditionals.
+
+      In general they follow this pattern:
+      ```python
+      if EXPRESSION_1:
+        # If EXPRESSION_1 is true do this:
+        do(this)
+      elif EXPRESSION_2: # elif is short for "else if"
+        # If EXPRESSION_1 is false AND EXPRESSION_2 is true then do this:
+        do(something_else)
+      else:
+        # If EXPRESSION_1 AND EXPRESSION_2 are both false do this:
+        do(something_else_entirely)
+      ```
+
+      Try running the example below and run it multiple times so you can see
+      both messages (run once with 'blue' and once with another colour):
+
+      **Watch out:** After the `:` at the end of the line you must indent your
+      code (hit the tab key, or your editor may do it automatically).
+
+      ```python
+      colour = input("What is your favourite colour? ")
+
+      if colour == 'blue':
+        print("That's my favourite colour too!")
+      else:
+        print(colour + " isn't my favourite colour, blue is!")
+      ```
+
+      ## Try it
+      1. Choose a secret number between 1 and 99.
+      2. Ask the user to guess what the secret number is.
+      3. If the user guesses the correct secret number then say they're in the secret area of your program.
+      4. If their guess is less than the secret number (Hint: `if their_guess < secret_number:`)
+      then tell them to pick a higher number next time
+      5. If their guess is higher than the secret number then tell them to pick a lower
+      number next time.
+
+      **Watch out:** Remember when we had to use `str` to convert the number to a string to print it out?
+      Well, when we read the guess from the input we need to convert it to a number.
+      To do that we use the `int` function (e.g. `int(input("..."))`).
+
+      ## Solution
+      If you've done and want to check your answer (or you have got really stuck)
+      then [here is the solution to the number guessing task](assets/guess_game_1_solution.py).
+  - subtitle: Loops (i)
+    content: |
+      For this tutorial and the next two we're going to be improving the guessing game code
+      from the last tutorial so make sure you have a working copy of it
+      (save it and create a new file for the rest of the tasks).
+
+      We're first going to learn about while loops.
+
+      They follow the pattern:
+      ```python
+      while EXPRESSION:
+        # Keep running the code in the while loop as long as EXPRESSION is true
+        do(something)
+      ```
+
+      `EXPRESSION` is just a placeholder for some condition we might have such as
+      in the `if` statements, e.g. `while colour != "red":` which will run again
+      and again as long as the variable `colour` is not `"red"`.
+
+      ## Indentation
+      Again like the `if` statements the indentation is important as it indicates what is within
+      the while loop.
+
+      Here is an example demonstrating this:
+      ```python
+      # Set the initial value of colour so that it is defined
+      colour = ""
+      while colour != "red":
+        # This line is indented so it is part of the while loop
+        colour = input("Choose the correct colour: ")
+
+      # Since this line isn't indented it isn't in the while loop
+      print("You guessed the correct colour")
+
+      # This line is indented when it shouldn't be
+      # This will cause a syntax error
+        print("This causes an error")
+      ```
+
+      **Delete the last print** that causes the error and **then run the code**.
+
+      ## Task
+      Now that you understand while loops, we're going to improve our guessing game code from earlier.
+
+      1. Add a while loop to your guessing game code so that it will keep on running until you guess correctly
+      2. If their guess is less than the secret number then tell them to pick a higher number
+      3. If their guess is more than the secret number then tell them to pick a lower number
+      4. Once they guess correctly tell them they are correct (hint: have this after the end of the while loop)
+
+      **Hint**: set their guess to be 0 before the start of the while loop
+      otherwise you'll get an error saying that it isn't defined.
+
+      Get a friend to play the game and see if they can guess your secret number!
+
+      ## Solution
+      If you've done and want to check your answer (or you have got really stuck)
+      then [here is the solution to the number guessing task with the while loop](assets/guess_game_2_solution.py).
+  - subtitle: Loops (ii)
+    content: |
+      We're going to adapt the code from last time to only allow 3 guesses. This is
+      going to be quite tricky since your going to have to work this out yourself
+      but you'll get some hints.
+
+      You'll need to create a counter variable to keep track of the number of guesses e.g.
+      `guess_counter = 0`.
+
+      At the end of the while loop you'll want to add one to the counter **each time**
+      `guess_counter = guess_counter + 1`.
+
+      You'll need to add a check in the while loop to check if the maximum guesses have been reached.
+      To do this you'll need to write (after you increase the `guess_counter`):
+      ```python
+      if guess_counter == 3:
+        break
+      ```
+      `break` exits the while loop early.
+
+      Right now there are two conditions for whether we exit the while loop either:
+      1. We guessed correctly
+      2. or we reached the maximum number of guesses
+
+      We need to check which one happened, so we should add an `if` statement to check
+      if the guess was correct (and print the message saying they guessed correctly).
+      We should then add an `else` statement which means that they reached the maximum number of guesses
+      so we should print `You have reached your maximum number of guesses!`
+
+      ## Solution
+      If you've done and want to check your answer (or you have got really stuck)
+      then [here is the solution](assets/guess_game_3_solution.py).
+  - subtitle: For loops and lists
+    content: |
+      A `for` loop is another kind of loop but it is designed to be very easy to
+      loop over lists.
+
+      Try running this example (`iteration` means one cycle of a loop):
+      ```python
+      example_list = ["one", "two", "three"]
+
+      # Word gets set to be the next element of the list each iteration of the loop
+      for word in example_list:
+        print(word)
+      ```
+
+      Here is an example where we *sum* the elements in the list:
+      ```python
+      numbers = [5, 2, 10, 4]
+
+      count = 0
+
+      for number in numbers:
+        # count += number is a shorthand for count = count + number
+        count += number
+
+      # Prints 21
+      print(count)
+      ```
+
+      ## Task
+      We're going to improve our shopping list from earlier to make it more dynamic
+      (**hint:** it may be useful to look at the list section for help using lists).
+
+      1. Using a while loop ask to user to keep on entering items into a shopping list until they type `STOP`
+      2. Using a for loop print all the elements of the list
+
+      Hint: If you're unsure how to write the loop which ends where the user types `STOP`
+      you could write the while loop using `while True:` (which means it runs forever)
+      and then use and `if` statment and a `break` statement to exit when the user types `STOP`
+      (there are other methods if you can think of them).
+
+      ## Optional Bonus
+      Add some more features such as:
+      - After the user enters the items into the list have another loop that
+      lets the user delete items until they type `STOP`.
+      - When the items are printed out also print the number next to it (e.g. `1. milk`, `2. eggs` ...).
+      You'll need a counter to do this.
+
+      Ask people around you what they think would be useful for a shopping list
+      or think of improvements yourself and then code it!
+
+      ## Solution
+      If you've done and want to check your answer (or you have got really stuck)
+      then [here is the solution to the task](assets/shopping_list_loop.py) (not the bonus).
+  - subtitle: Conclusion
+    content: |
+      You've now learnt some python!
+      When you get home you could try writing programs to help you with your math homework!
+
+      If you want to learn more you can look up python tutorials online but in future
+      we will have more advanced tutorials helping you make games, draw shapes
+      and write more advanced programs.
+
+      If you noticed any issues with this course such as typos or bugs tell someone
+      or you can report them youself [here](https://github.com/louisdewar/tutorial_web_content/issues/new).
