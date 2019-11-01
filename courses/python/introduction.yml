@@ -129,6 +129,7 @@ tutorials:
       ```
       We had to use a function called `str(...)`. **Try deleting `str(...)`** and
       see what happens (leave `my_favourite_number`).
+
       It should say: `TypeError: can only concatenate str (not "int") to str`.
 
       Essentially what that means is that we can only join strings to strings.
