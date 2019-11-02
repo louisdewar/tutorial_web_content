@@ -20,22 +20,39 @@
   <section class="tutorials">
   
     <article class="tutorial " data-index="1">
-  <h2 class="subtitle">1. Getting started</h2>
+  <h2 class="subtitle">1. Introduction</h2>
+  <div class="content"><p>This course is intended to help teach you some basic python skills.</p>
+<p>It is intended for people who have never done python before, or people
+who want to brush up on their basic python skills.</p>
+<p>For some of the more complicated tasks there are code solutions, but
+<strong>only use these if you are done</strong> or if you are really stuck (it's probably better
+to ask for help instead of looking at the answer though).</p>
+<p>Some of the challenges will be tough and you will probably find it
+frustrating at times but that is how you learn! They've been designed to be
+difficult to try and get you to think.</p>
+<p>If you <strong>read everything carefully</strong> and ask for help with things that
+make you confused you should be fine.</p>
+<p>Click on &quot;Getting started&quot; to open the next tutorial.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="2">
+  <h2 class="subtitle">2. Getting started</h2>
   <div class="content"><p>To get started coding python you'll need to setup an editor where you can type and run python.</p>
 <p><strong>Note:</strong> We are learning using python3 (python2 is now outdated).</p>
-<p>Choose one of these methods</p>
-<h2>Online (fastest)</h2>
-<p>The easiest way to get going with python is using an online editor such as
-<a href="https://repl.it/languages/python3">repl</a>.</p>
-<h2>IDLE (best)</h2>
-<p>Setting up the IDLE is also relatively easy and it has the advantage
+<p>Choose one of these methods:</p>
+<h2>1. IDLE (best)</h2>
+<p>Setting up the IDLE is relatively easy and it has the advantage
 that the python files are on your computer.</p>
 <p>You can download python from <a href="https://www.python.org/downloads/">the website</a>
 (you want python3).
 Once you have it downloaded you need to look for a program called IDLE.</p>
-<p>Create a new file like below:
-<img src="assets/idle_new_file.png" alt="IDLE new file" /></p>
-<h2>Terminal (advanced)</h2>
+<p>Create a new file like below:</p>
+<p><img src="assets/idle_new_file.png" alt="IDLE new file" /></p>
+<h2>2. Online (fastest)</h2>
+<p>The fastest way to get going with python is using an online editor such as
+<a href="https://repl.it/languages/python3">repl</a>.</p>
+<h2>3. Terminal (advanced)</h2>
 <p>If you are a bit more advanced you might want to use the terminal or command prompt
 to run python.</p>
 <p><a href="https://www.python.org/downloads/">Download python 3</a>,
@@ -47,38 +64,45 @@ to the directory where python. To run the code use the command <code>python3 {NA
 </div>
 </article>
   
-    <article class="tutorial " data-index="2">
-  <h2 class="subtitle">2. Hello World</h2>
+    <article class="tutorial hide" data-index="3">
+  <h2 class="subtitle">3. Hello World</h2>
   <div class="content"><p>Whenever we learn a new programming language normally the first thing
-we learn how to do is to say <code>hello world</code>.</p>
+we do is to say <code>hello world</code>.</p>
 <p>In python we would use the <code>print</code> command to say things e.g.</p>
 <pre><code class="language-python">print(&quot;Text that you want to print out&quot;)
 </code></pre>
+<h2>IDLE help</h2>
+<p>If you are using the IDLE then in order to run the file you must go to
+<code>Run -&gt; Run Module F5</code>.</p>
+<p><img src="assets/idle_run.png" alt="IDLE run module" /></p>
 <h2>Try it</h2>
 <ol>
 <li>Change the print command to say <code>Hello world</code></li>
 <li>Run it and check that it outputs what you expect</li>
 </ol>
 <p><strong>Tip:</strong> The quotation marks around the text are important! They
-tell python that we want it to treat it as text instead of code</p>
+tell python that we want it to treat it as text instead of code.</p>
 </div>
 </article>
   
-    <article class="tutorial " data-index="3">
-  <h2 class="subtitle">3. Comments</h2>
-  <div class="content"><p>Sometime when we program we want to leave comments to ourselves explaining
+    <article class="tutorial hide" data-index="4">
+  <h2 class="subtitle">4. Comments</h2>
+  <div class="content"><p>Sometimes when we program we want to leave comments to ourselves explaining
 what the code does.</p>
 <p>In python anything after a <code>#</code> is ignored</p>
-<pre><code class="language-python"># This isn't valid python code yet it doesn't matter because of the hashtag
+<pre><code class="language-python"># This isn't valid python code but it doesn't matter because of the hashtag
 print(&quot;Actual python code&quot;)
 </code></pre>
 <h2>Try it</h2>
-<p>Remove the hashtag from the code above and see what happens</p>
+<p>Remove the hashtag from the code above and see what happens (hint: you should
+get a syntax error).</p>
+<p>This is what happens on the <strong>IDLE</strong> when you try to run the program without the hashtag:</p>
+<p><img src="assets/idle_syntax_error.png" alt="IDLE syntax error" /></p>
 </div>
 </article>
   
-    <article class="tutorial " data-index="4">
-  <h2 class="subtitle">4. Variables</h2>
+    <article class="tutorial hide" data-index="5">
+  <h2 class="subtitle">5. Variables</h2>
   <div class="content"><p>If we want to store data we use something called variables.
 They are incredibly important in coding and we'll be using many more in the future.</p>
 <p>Each variable has a name and data associated with it.</p>
@@ -100,30 +124,343 @@ print(&quot;Your favourite number is &quot; + str(my_favourite_number))
 <p>On the line that said:</p>
 <pre><code class="language-python">print(&quot;Your favourite number is &quot; + str(my_favourite_number))
 </code></pre>
-<p>We had to use a function called <code>str()</code>. <strong>Try deleting str()</strong> and see what happens.
-It should say: <code>TypeError: can only concatenate str (not &quot;int&quot;) to str</code>.</p>
-<p>Essentially what that means is that we can only append strings to strings.
+<p>We had to use a function called <code>str(...)</code>. <strong>Try deleting <code>str(...)</code></strong> and
+see what happens (leave <code>my_favourite_number</code>).</p>
+<p>It should say: <code>TypeError: can only concatenate str (not &quot;int&quot;) to str</code>.</p>
+<p>Essentially what that means is that we can only join strings to strings.
 A <strong>string</strong> is another word for text.</p>
 <p><code>my_favourite_number</code> is a number (called an <code>int</code> or integer) so we need
 to convert it to a string. That's what the <code>str</code> function does.</p>
-<h2>Bonus</h2>
+<h2>Task</h2>
 <p>Create a variable called <code>my_age</code> and set it equal to your age.
 Then make a print statement say <code>Your age is {YOUR_AGE}</code> (where <code>{YOUR_AGE}</code> is the variable).</p>
+<h2>Solution</h2>
+<p>If you've done and want to check your answer (or you have got really stuck)
+then <a href="assets/variables_solution.py">here is the solution</a>.</p>
 </div>
 </article>
   
-    <article class="tutorial " data-index="5">
-  <h2 class="subtitle">5. Input</h2>
+    <article class="tutorial hide" data-index="6">
+  <h2 class="subtitle">6. Input</h2>
   <div class="content"><p>So far our programs have been a bit limited. Now we are going to learn how
 to make our programs interactive.</p>
-<p>Try running this program:</p>
-<pre><code class="language-python">name = input(&quot;Enter your name&quot;)
+<p>We're going to use a new function called <code>input</code> which asks the user a question.
+We pass in a string to input which is the message that is printed to the user
+before they enter their response (i.e. <code>input(&quot;SOME_MESSAGE&quot;)</code>).</p>
+<p>Try running this program: (it should ask you for your name, just type it in
+and then hit enter)</p>
+<pre><code class="language-python">name = input(&quot;Enter your name: &quot;)
 print(&quot;Hello &quot; + name)
 </code></pre>
 <h2>Try it</h2>
 <p>Create a program that asks a user for their favourite colour and then
 prints <code>{THEIR_COLOUR} is my favourite colour too!</code> (replace
-<code>{THEIR_COLOUR}</code> with the colour they pick).</p>
+<code>{THEIR_COLOUR}</code> with the colour they pick - <strong>use a variable</strong>).</p>
+<h2>Bonus</h2>
+<p>If we look at the example we have put a space at the end of the input string
+<code>&quot;Enter your name: &quot;</code>, why is that? <em>Is it important?</em></p>
+<p>Also why is there a space in the print statement <code>&quot;Hello &quot; + name</code>? Is this important?</p>
+<p><strong>Before you read on</strong>, play around running the example code with and without the spaces
+and try to think about those two questions.</p>
+<p>So the answer: For the input it just creates a nice bit of space after the question
+otherwise the text the user enters will be directly after the <code>:</code>. This is
+just aesthetic (aesthetic means how something looks as opposed to how something works)
+and it doesn't really affect much about how the code runs.</p>
+<p>We have a space in the print for a similar reason: otherwise &quot;Hello&quot; and name would
+be right next to each other with no space.</p>
+<h2>Solution</h2>
+<p>If you've done and want to check your answer (or you have got really stuck)
+then <a href="assets/input_solution.py">here is the solution to the colour task</a>.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="7">
+  <h2 class="subtitle">7. Lists</h2>
+  <div class="content"><p>Lists allow us to store a group of items in one variable.</p>
+<p>To get started we need to learn some <strong>terminology</strong>:</p>
+<ul>
+<li>Each item in a list is called an <code>element</code>.</li>
+<li>In most programming languages (including python) we start counting from 0
+so the first element of the list is at <em>index</em> (aka position) 0, and the second is at position 1 and so on...</li>
+</ul>
+<p>Read through the code (including the comments) and then ry running this example:</p>
+<pre><code class="language-python"># Create a list with the elements 1, 2 and 3
+numbers = [1, 2, 3]
+
+# Prints out the entire list (you should see &quot;[1, 2, 3]&quot; in your console)
+print(numbers)
+
+# Print the first element on the list (you should see &quot;1&quot; in your console)
+print(numbers[0])
+
+# Add a new number to the list
+numbers.append(20)
+# Now we should see &quot;[1, 2, 3, 20]&quot; in the console
+print(numbers)
+
+# Change the thrid number to be 42
+numbers[2] = 42
+# Now we should see &quot;[1, 2, 42, 20]&quot; in the console
+print(numbers)
+
+# We can remove elements by value
+numbers.remove(42)
+# Now we should see &quot;[1, 2, 20]&quot; in the console
+print(numbers)
+
+# We can also remove elements by their index (aka position)
+# Here we delete the first element
+del numbers[0]
+# Now we should see &quot;[2, 20]&quot; in the console
+print(numbers)
+
+# We can also find the length of a list using the len function (at this point it should be 2)
+print(len(numbers))
+</code></pre>
+<h2>Task</h2>
+<ol>
+<li>Create an empty list called <code>shopping_list</code></li>
+<li>Add several items (at least 5) to this list e.g. <code>milk</code>, <code>eggs</code></li>
+<li>Print the list</li>
+<li>Pick two elements and remove them using <code>shopping_list.remove(...)</code></li>
+<li>Print the list again (now that the items have been removed)</li>
+</ol>
+<h2>Solution</h2>
+<p>If you've done and want to check your answer (or you have got really stuck)
+then <a href="assets/shopping_list.py">here is the solution to the number guessing task</a>.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="8">
+  <h2 class="subtitle">8. Conditionals</h2>
+  <div class="content"><p><code>if</code> statments are how we make decisions in our code, in general they are
+called conditionals.</p>
+<p>In general they follow this pattern:</p>
+<pre><code class="language-python">if EXPRESSION_1:
+  # If EXPRESSION_1 is true do this:
+  do(this)
+elif EXPRESSION_2: # elif is short for &quot;else if&quot;
+  # If EXPRESSION_1 is false AND EXPRESSION_2 is true then do this:
+  do(something_else)
+else:
+  # If EXPRESSION_1 AND EXPRESSION_2 are both false do this:
+  do(something_else_entirely)
+</code></pre>
+<p>Try running the example below and run it multiple times so you can see
+both messages (run once with 'blue' and once with another colour):</p>
+<p><strong>Watch out:</strong> After the <code>:</code> at the end of the line you must indent your
+code (hit the tab key, or your editor may do it automatically).</p>
+<pre><code class="language-python">colour = input(&quot;What is your favourite colour? &quot;)
+
+if colour == 'blue':
+  print(&quot;That's my favourite colour too!&quot;)
+else:
+  print(colour + &quot; isn't my favourite colour, blue is!&quot;)
+</code></pre>
+<h2>Try it</h2>
+<ol>
+<li>Choose a secret number between 1 and 99.</li>
+<li>Ask the user to guess what the secret number is.</li>
+<li>If the user guesses the correct secret number then say they're in the secret area of your program.</li>
+<li>If their guess is less than the secret number (Hint: <code>if their_guess &lt; secret_number:</code>)
+then tell them to pick a higher number next time</li>
+<li>If their guess is higher than the secret number then tell them to pick a lower
+number next time.</li>
+</ol>
+<p><strong>Watch out:</strong> Remember when we had to use <code>str</code> to convert the number to a string to print it out?
+Well, when we read the guess from the input we need to convert it to a number.
+To do that we use the <code>int</code> function (e.g. <code>int(input(&quot;...&quot;))</code>).</p>
+<h2>Solution</h2>
+<p>If you've done and want to check your answer (or you have got really stuck)
+then <a href="assets/guess_game_1_solution.py">here is the solution to the number guessing task</a>.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="9">
+  <h2 class="subtitle">9. Loops (i)</h2>
+  <div class="content"><p>For this tutorial and the next two we're going to be improving the guessing game code
+from the last tutorial so make sure you have a working copy of it
+(save it and create a new file for the rest of the tasks).</p>
+<p>We're first going to learn about while loops.</p>
+<p>They follow the pattern:</p>
+<pre><code class="language-python">while EXPRESSION:
+  # Keep running the code in the while loop as long as EXPRESSION is true
+  do(something)
+</code></pre>
+<p><code>EXPRESSION</code> is just a placeholder for some condition we might have such as
+in the <code>if</code> statements, e.g. <code>while colour != &quot;red&quot;:</code> which will run again
+and again as long as the variable <code>colour</code> is not <code>&quot;red&quot;</code>.</p>
+<h2>Indentation</h2>
+<p>Again like the <code>if</code> statements the indentation is important as it indicates what is within
+the while loop.</p>
+<p>Here is an example demonstrating this:</p>
+<pre><code class="language-python"># Set the initial value of colour so that it is defined
+colour = &quot;&quot;
+while colour != &quot;red&quot;:
+  # This line is indented so it is part of the while loop
+  colour = input(&quot;Choose the correct colour: &quot;)
+
+# Since this line isn't indented it isn't in the while loop
+print(&quot;You guessed the correct colour&quot;)
+
+# This line is indented when it shouldn't be
+# This will cause a syntax error
+  print(&quot;This causes an error&quot;)
+</code></pre>
+<p><strong>Delete the last print</strong> that causes the error and <strong>then run the code</strong>.</p>
+<h2>Task</h2>
+<p>Now that you understand while loops, we're going to improve our guessing game code from earlier.</p>
+<ol>
+<li>Add a while loop to your guessing game code so that it will keep on running until you guess correctly</li>
+<li>If their guess is less than the secret number then tell them to pick a higher number</li>
+<li>If their guess is more than the secret number then tell them to pick a lower number</li>
+<li>Once they guess correctly tell them they are correct (hint: have this after the end of the while loop)</li>
+</ol>
+<p><strong>Hint</strong>: set their guess to be 0 before the start of the while loop
+otherwise you'll get an error saying that it isn't defined.</p>
+<p>Get a friend to play the game and see if they can guess your secret number!</p>
+<h2>Solution</h2>
+<p>If you've done and want to check your answer (or you have got really stuck)
+then <a href="assets/guess_game_2_solution.py">here is the solution to the number guessing task with the while loop</a>.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="10">
+  <h2 class="subtitle">10. Loops (ii)</h2>
+  <div class="content"><p>We're going to adapt the code from last time to only allow 3 guesses. This is
+going to be quite tricky since your going to have to work this out yourself
+but you'll get some hints.</p>
+<p>You'll need to create a counter variable to keep track of the number of guesses e.g.
+<code>guess_counter = 0</code>.</p>
+<p>At the end of the while loop you'll want to add one to the counter <strong>each time</strong>
+<code>guess_counter = guess_counter + 1</code>.</p>
+<p>You'll need to add a check in the while loop to check if the maximum guesses have been reached.
+To do this you'll need to write (after you increase the <code>guess_counter</code>):</p>
+<pre><code class="language-python">if guess_counter == 3:
+  break
+</code></pre>
+<p><code>break</code> exits the while loop early.</p>
+<p>Right now there are two conditions for whether we exit the while loop either:</p>
+<ol>
+<li>We guessed correctly</li>
+<li>or we reached the maximum number of guesses</li>
+</ol>
+<p>We need to check which one happened, so we should add an <code>if</code> statement to check
+if the guess was correct (and print the message saying they guessed correctly).
+We should then add an <code>else</code> statement which means that they reached the maximum number of guesses
+so we should print <code>You have reached your maximum number of guesses!</code></p>
+<h2>Solution</h2>
+<p>If you've done and want to check your answer (or you have got really stuck)
+then <a href="assets/guess_game_3_solution.py">here is the solution</a>.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="11">
+  <h2 class="subtitle">11. Randomness</h2>
+  <div class="content"><p>So far our guessing game has been a bit boring for us since we know the answer
+already since we have to type it in ourselves.</p>
+<p>What if we could get python to choose a random number?</p>
+<p>Well we can, but first we need to learn about <code>import</code>.</p>
+<p>There are loads of python features that are only accessible by using <code>import</code>.
+Python uses <code>import</code> because it reduces clutter (mess) so our code
+is clearer without getting confused with unfamiliar features.</p>
+<p>When we <code>import</code> something we bring it into <em>scope</em> so we can use it.</p>
+<p>To generate random numbers we need to import a module called <code>random</code>:</p>
+<pre><code class="language-python">import random
+</code></pre>
+<p>Next we need to work out what function from <code>random</code> to use. To do this we
+can look at the real documentation for this module <a href="https://docs.python.org/3/library/random.html">here</a>.</p>
+<p>If we scroll down on this page we find this definition:</p>
+<p><img src="assets/randint_doc.png" alt="randint documentation" /></p>
+<p>This wording is a bit confusing but essentially it means that we pass in two
+numbers <code>a</code> and <code>b</code> and the function returns a number which is between <code>a</code> and <code>b</code>
+inclusive (inclusive means that the number is not only between <code>a</code> and <code>b</code> but
+it could also be <code>a</code> or <code>b</code>).</p>
+<pre><code class="language-python">import random
+
+random.randint(a, b)
+</code></pre>
+<h2>Task</h2>
+<ol>
+<li>Change your <code>secret_number</code> in the guessing game to be a randomly generated
+number between 1 and 99 (inclusive) using <code>randint</code>.</li>
+<li>If the user runs out of guesses tell them what the number was.</li>
+<li>Come up with a scoring system so that if the user guesses correctly they
+get 100 points and then if they don't get it give them a score based on how close
+they were to the actual number.</li>
+</ol>
+<p><strong>Hint:</strong> when we calculate the points we are probably going to do some sort
+of subtraction to give us the distance from the correct answer. Unfortunately
+depending on whether the guess was higher or lower than the answer the distance
+may be negative or positive. To fix this we use a function called <code>abs(x)</code>
+which takes in a value and if it's negative then it makes it positive.</p>
+<p>If you get this working we should have a pretty good guessing game!</p>
+<p>Try changing the number of allowed guesses and see if you can come up with any good strategies for winning.</p>
+<h2>Solution</h2>
+<p>If you've done and want to check your answer (or you have got really stuck)
+then <a href="assets/guess_game_4_solution.py">here is the solution to the final version of the guessing game</a>.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="12">
+  <h2 class="subtitle">12. For loops and lists</h2>
+  <div class="content"><p>A <code>for</code> loop is another kind of loop but it is designed to be very easy to
+loop over lists.</p>
+<p>Try running this example (<code>iteration</code> means one cycle of a loop):</p>
+<pre><code class="language-python">example_list = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]
+
+# Word gets set to be the next element of the list each iteration of the loop
+for word in example_list:
+  print(word)
+</code></pre>
+<p>Here is an example where we <em>sum</em> the elements in the list:</p>
+<pre><code class="language-python">numbers = [5, 2, 10, 4]
+
+count = 0
+
+for number in numbers:
+  # count += number is a shorthand for count = count + number
+  count += number
+
+# Prints 21
+print(count)
+</code></pre>
+<h2>Task</h2>
+<p>We're going to improve our shopping list from earlier to make it more dynamic
+(<strong>hint:</strong> it may be useful to look at the list section for help using lists).</p>
+<ol>
+<li>Using a while loop ask to user to keep on entering items into a shopping list until they type <code>STOP</code></li>
+<li>Using a for loop print all the elements of the list</li>
+</ol>
+<p>Hint: If you're unsure how to write the loop which ends where the user types <code>STOP</code>
+you could write the while loop using <code>while True:</code> (which means it runs forever)
+and then use and <code>if</code> statment and a <code>break</code> statement to exit when the user types <code>STOP</code>
+(there are other methods if you can think of them).</p>
+<h2>Optional Bonus</h2>
+<p>Add some more features such as:</p>
+<ul>
+<li>After the user enters the items into the list have another loop that
+lets the user delete items until they type <code>STOP</code>.</li>
+<li>When the items are printed out also print the number next to it (e.g. <code>1. milk</code>, <code>2. eggs</code> ...).
+You'll need a counter to do this.</li>
+</ul>
+<p>Ask people around you what they think would be useful for a shopping list
+or think of improvements yourself and then code it!</p>
+<h2>Solution</h2>
+<p>If you've done and want to check your answer (or you have got really stuck)
+then <a href="assets/shopping_list_loop.py">here is the solution to the task</a> (not the bonus).</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="13">
+  <h2 class="subtitle">13. Conclusion</h2>
+  <div class="content"><p>You've now learnt some python!</p>
+<p>When you get home you could try writing programs to help you with your math homework!</p>
+<p>If you want to learn more you can look up python tutorials online but in future
+we will have more advanced tutorials helping you make games, draw shapes
+and write more advanced programs.</p>
+<p>If you noticed any issues with this course such as typos or bugs tell someone
+or you can report them youself <a href="https://github.com/louisdewar/tutorial_web_content/issues/new">here</a>.</p>
 </div>
 </article>
   
