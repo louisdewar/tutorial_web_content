@@ -22,6 +22,9 @@ tutorials:
       frustrating at times but that is how you learn! They've been designed to be
       difficult to try and get you to think.
 
+      If you **read everything carefully** and ask for help with things that
+      make you confused you should be fine.
+
       Click on "Getting started" to open the next tutorial.
   - subtitle: Getting started
     content: |
@@ -40,6 +43,7 @@ tutorials:
       Once you have it downloaded you need to look for a program called IDLE.
 
       Create a new file like below:
+
       ![IDLE new file](assets/idle_new_file.png)
 
       ## 2. Online (fastest)
@@ -71,6 +75,7 @@ tutorials:
       ## IDLE help
       If you are using the IDLE then in order to run the file you must go to
       `Run -> Run Module F5`.
+
       ![IDLE run module](assets/idle_run.png)
 
       ## Try it
