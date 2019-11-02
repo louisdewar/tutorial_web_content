@@ -3,7 +3,7 @@ lang: python3
 url: introduction
 
 tutorial_settings:
-  start_closed: false
+  start_closed: true
 
 tutorials:
   - subtitle: Introduction
