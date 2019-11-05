@@ -1,0 +1,236 @@
+title: Python intermediate
+lang: python3
+url: intermediate
+
+tutorials:
+  - subtitle: Introduction
+    content: |
+      This tutorial is designed for people who have done some python before.
+
+      Before you continue here is a list of things you should know:
+      - The `print` command
+      - Variables
+      - Basic conditionals (`if`, `else` and `elif` - short for `else if`)
+      - Lists (defining them and appending to them)
+      - While loops
+      - For loops (e.g. `for value in list:`)
+
+      If you think you need to recap any of these there is a tutorial
+      [here](../introduction/index.html) that should help you. Also it might be useful to
+      have it open in another tab so you can refer to it if you get stuck.
+  - subtitle: Setting up your environment
+    content: |
+      In previous tutorials I recommended using an IDE (integrated learning environment)
+      for python, but for these tutorials we are going to get a little bit more advanced.
+
+      The exact steps are slightly different between linux, mac and windows,
+      but overall things should be pretty similar.
+
+      ## Installing python
+
+      **Even if you have already installed python** we may need to reinstall it to make
+      sure everything is setup correctly.
+
+      First let's check the current installation.
+
+      If you are on windows open `command prompt`, if you are on linux or mac
+      open `terminal`. I may refer to `command prompt` on windows as a `terminal`.
+
+      Type `python3 --version` (and then hit enter) into your terminal. If there is an error, we need to
+      (re-)install python.
+
+      Go [here](https://www.python.org/downloads/) and grab the latest version of python3
+      for your operating system.
+
+      **Important:** if you are on windows make sure you check `Add Python 3.X to PATH`!
+
+      Now type `python3 --version` (and then hit enter) into your terminal and it should work, if it doesn't
+      ask for help.
+
+      ## Setting up your editor
+
+      There are loads of text editors we can use to write python.
+      Here are two that I recommend:
+      - [Sublime text](https://www.sublimetext.com/3)
+      - [Atom](https://atom.io/)
+
+      If you have issues using them then you should look up your questions on a search
+      engine, e.g. you might want to search `how to save a file using atom`.
+
+      Now we should create a folder to store our files, perhaps call it `python_intermediate`
+      (It will probably help to **not** include a space in the name).
+
+      Now we need to navigate to the folder within our terminal.
+
+      ### Mac / Linux
+      In your terminal type `cd ` (don't hit enter yet, also include the space).
+
+      Now in your file manager (`finder` on mac) navigate to the folder that you created.
+
+      Drag and drop the folder onto your terminal. It should fill in the path to the folder.
+      If it does this you can hit enter and you should be navigated to the folder.
+      If this doesn't work you should ask for help.
+
+      ![terminal drag and drop](assets/drag_and_drop_terminal.gif)
+
+      ### Windows
+      On windows ... TODO
+  - subtitle: Functions
+    content: |
+      Functions are an incredibly useful tool in programming.
+
+      They let us *label* a block of code so that we can run it by referring to its label
+      (called the function *name*).
+
+      The `function body` is a term meaning the code that is inside the function.
+
+      `Calling` a function is another way of saying *running the function*.
+      In python we call a function by writing the function name and then some
+      parentheses `()` (brackets), e.g. `function_name()`.
+
+      Lets look at an example:
+      ```python
+      # The name of this function is `say_hello`
+      def say_hello():
+        print("Hello")
+        # This is the french way of saying hello
+        print("Bonjour")
+
+      # This code isn't indented so it isn't part of the function body
+      print("Hi")
+
+      # Here we call the function
+      say_hello()
+
+      print("Some other code")
+
+      # We can call the function as many times as we want
+      say_hello()
+      say_hello()
+      say_hello()
+      ```
+
+      **Copy and run this code** and you will see that `hello` and `bonjour` is
+      printed `4` times since we call the function four times.
+
+      ## Function arguments
+
+      Functions can also take in variables (called `arguments` or `parameters`).
+
+      When we call a function with arguments we must pass in values. We do this
+      by putting them in the parentheses e.g. `say_hello("Sam")`.
+
+      ```python
+      # Define a function called `say_hello` which takes in a variable called name
+      def say_hello(name):
+        print("Hello " + name)
+
+      say_hello("Sam")
+      say_hello("dog")
+      ```
+
+      This prints out `Hello Sam` and then `Hello dog`.
+
+      **Tip:** whenever you want to *debug* a function it is useful to imagine replacing
+      the arguments of the function with real values such as `Sam` or `Dog` and then
+      run through the function in your head to see what it does.
+
+      ## Function return
+
+      Functions can return a value, which is useful for calculating things which
+      we can return to the caller of the function.
+
+      ```python
+      def add(a, b):
+        return a + b
+
+      # Here we take the return value of 2+3 and assign it to the variable result
+      result = add(2, 3)
+      print(result)
+
+      # We can add strings together too
+      print(add("one", "two"))
+
+      # If you uncomment the next line and run it you will get an error (remember we need to convert numbers to strings to join them)
+      # print(add(42, " is the answer."))
+      ```
+
+      ## Challenge 1
+
+      We're going to make a calculator using our knowledge of functions and conditionals (`if` statements).
+
+      1. Create a function that accepts three values `operator`, `a`, `b`.
+      2. Check if the operator is `+` (plus), `-` (minus), `*` (times) or `/` (divide).
+      3. For each of the four cases that the operator could be, return the result of `a OPERATOR b` like a calculator.
+
+      Let's say the function you create is called `calculate` here are some examples of what should happen:
+      ```python
+      # Should print 5 (since 2+3)
+      print(calculate('+', 2, 3))
+
+      # Should print 11 (since 13-2)
+      print(calculate('-', 13, 2))
+
+      # Should print 2 (since 5/2)
+      print(calculate('/', 10, 5))
+
+      # Should print 40 (since 5/2)
+      print(calculate('*', 2, 20))
+      ```
+
+      ### Solution to challenge 1
+
+      If you finish then you can take a look at the solution to compare how you did it
+      to how I did it. [Here is it](assets/calculator_1.py).
+
+      ## Challenge 2
+
+      Once you get challenge 1 working adapt it so that a program asks you to enter
+      an operator, one number and then another number and it prints the result using your calculation function.
+
+      This program should keep asking and returning the result forever by using
+      a `while True:` loop, but at the end of each calculation it should ask
+      the user if they want to stop or not. If the user wants to stop use the `break`
+      command to exit the loop.
+
+      Extensions:
+      - If the user enters an invalid operator tell them they must enter a valid operator and go back to the start of the loop
+      (**Hint:** use a `continue` statement which skips to the next iteration of the while loop.
+      You'll also probably want to use `and` between the conditions for the `if` statement).
+      - Print out the full calculation and the result in the format `a OPERATOR b = RESULT`.
+      So if I enter `+` as the operator, `2` for a and `5` for b, the program should print `2 + 5 = 7`.
+
+      **Watch out:** don't forget to use the `int` function to convert the user input
+      into a number.
+
+      ### Solution to challenge 2
+
+      If you finish then you can take a look at the solution to compare how you did it
+      to how I did it. [Here is it](assets/calculator_2.py).
+
+
+  - subtitle: For loops with range
+    content: |
+      Previously we learnt about using for loops with a pre-defined list, e.g:
+      ```python
+      numbers = [4, 2, 8]
+
+      for number in numbers:
+        print(number)
+      ```
+      It should print the numbers `4`, `2` and `8` on individual lines.
+
+      Now we're going to learn about a really useful function called `range(start, stop)`.
+      What is just is `generate` values from the `start` up to, but not including, the `stop`.
+
+      In for loops it acts just like an list, but unlike a list which has all the values stored,
+      `generators` such as `range` only produce values as they are needed.
+
+      This means you can't do many of the things you can normally do with a
+      list (e.g. index - get a value at a position).
+
+      ```python
+      # The variable name i is commonly used as a counter
+      for i in range(2, 10):
+        print(i)
+      ```
