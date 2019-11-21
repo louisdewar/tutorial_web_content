@@ -60,21 +60,104 @@ tutorials:
       Now we should create a folder to store our files, perhaps call it `python_intermediate`
       (It will probably help to **not** include a space in the name).
 
+      ## Opening the folder in your terminal
+
       Now we need to navigate to the folder within our terminal.
 
-      ### Mac / Linux
       In your terminal type `cd ` (don't hit enter yet, also include the space).
 
-      Now in your file manager (`finder` on mac) navigate to the folder that you created.
+      In your file manager (`finder` on mac, `file explorer` on windows) open folder that you created.
 
       Drag and drop the folder onto your terminal. It should fill in the path to the folder.
       If it does this you can hit enter and you should be navigated to the folder.
-      If this doesn't work you should ask for help.
 
       ![terminal drag and drop](assets/drag_and_drop_terminal.gif)
 
-      ### Windows
-      On windows ... TODO
+      If this doesn't work you should ask for help.
+  - subtitle: Running python from the command line
+    content: |
+      Hopefully you were able to follow the previous tutorial and you should
+      have a terminal open in the directory that you are going to write your python programs.
+
+      In your editor that you downloaded create a file called `hello_world.py` in this directory.
+
+      Copy and paste the following code into that file:
+      ```python
+      print("Hello world!")
+      name = input("Enter your name: ")
+      print("Hello " + name)
+      ```
+
+      Once you have saved the file run the command `python3 hello_world.py` in
+      your terminal.
+
+      It should first print `Hello world!` and then it should ask you to enter your
+      name. When you hit enter it should say `Hello {your name}`.
+
+      It this doesn't work ask for help!
+  - subtitle: Operators
+    content: |
+      In python we can use various common math operators e.g:
+      - `+` is plus (you've probably used this already)
+      - `-` is minus
+      - `*` is times
+      - `/` is divide
+
+      ```python
+      # Prints 12
+      print(10 + 2)
+
+      # Prints 8
+      print(10 - 2)
+
+      # Prints 20
+      print(10 * 2)
+
+      # Prints 5
+      print(10 / 2)
+      ```
+
+      ## Assignment operators
+
+      Very often we want to apply an operation to a variable and then store
+      then result in the variable, for example:
+      ```python
+      a = 10
+      # Set a to equal a + 2
+      a = a + 2
+      # Prints 12
+      print(a)
+      ```
+
+      In this case we can use `a += 2` as a shorthand for `a = a + 2`.
+
+      We can also use other operators, here is the full list:
+      - `a += b` is the same as `a = a + b`
+      - `a -= b` is the same as `a = a - b`
+      - `a *= b` is the same as `a = a * b`
+      - `a /= b` is the same as `a = a / b`
+
+      ## Modular arithmetic (clock arithmetic)
+
+      A very useful operator is `%` (the modulus operator). `a % b` returns the
+      remainder from dividing a by b.
+
+      For example `10 % 3 == 1` since 10 ÷ 3 = 3 **remainder 1**.
+
+      We can also use an assignment operator (`a %= b` is the same as `a = a % b`).
+
+      ## Brackets
+
+      TODO...
+
+      ### Conclusion
+
+      Writing mathematical expressions is easy in python as long as you know
+      the symbol to use. As a side note these are the common operators you'll
+      find in most langauges.
+
+      **There's no exercise for this** but make sure you understand what's going on
+      especially with modular arithmetic.
   - subtitle: Functions
     content: |
       Functions are an incredibly useful tool in programming.
