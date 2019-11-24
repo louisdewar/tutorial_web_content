@@ -1,0 +1,67 @@
+title: Python exercises
+lang: python3
+url: exercises
+
+tutorials:
+  - subtitle: Introduction
+    content: |
+      Before you start this course you should have a basic understanding of python.
+
+      If you want to recap see the python tutorials on the website
+      (particularily `introduction` and `intermediate`).
+
+      This course is much less structured so you can skip around between questions
+      without problems. It's designed to give you some exercises to test your
+      python skill, almost like brain teasers.
+  - subtitle: Factorial!
+    content: |
+      The factorial of a number is all the numbers less than the number
+      (but greater than 0) multiplied together. In maths we use the notation
+      `n!` to mean the factorial of the number n.
+
+      For example `3! = 3 x 2 x 1`, and `5! = 5 x 4 x 3 x 2 x 1`.
+
+      Your task is to write a function called `factorial` that accepts a number
+      and it returns the factorial of the number.
+
+      ## Test it
+      To make sure it works check it returns the correct results to these
+      (use `print(factorial(n))` where n is the number):
+      - `factorial(3) = 6`
+      -  `factorial(5) = 120`
+  - subtitle: Caesar cipher
+    content: |
+      Caesar cipher is an ancient cipher first used in Roman days.
+
+      The way it worked was to *shift* each letter of the alphabet by a certain amount.
+
+      For example, if the shift was 1 `abc xyz` would become `bcd yza`
+      (z wraps back around to a). If the shift was 2 then the message `CAT` would become `ECV`.
+
+      Your task is to create a function called `caesar_shift(msg, n)` where `msg` is
+      a string containing the message and `n` is number of positions the message should
+      be shifted by.
+
+      Here are some things that might be useful:
+      ```python
+      import string
+      alphabet = string.ascii_lowercase
+      # Prints 'abcdefghijklmnopqrstuvwxyz'
+      print(alphabet)
+
+      # Prints '3' (a = 0, b = 1, ...)
+      print(alphabet.index('d'))
+
+      # Prints 4 (% returns the remainder of the division - look into modular arithmetic)
+      print(30 % len(alphabet))
+      ```
+
+      ## Test it
+      Try running `caesar_shift('cat', 2)`, it should equal `ECV`.
+
+      ## Extension
+      What happens if your message contains both upper and lowercase letters?
+      How does you program handle that case? How should it handle that case?
+
+      What if the message contains a space? Make sure your program keeps the space
+      as it is without changing it when the text is shifted.
