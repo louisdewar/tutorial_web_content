@@ -65,3 +65,35 @@ tutorials:
 
       What if the message contains a space? Make sure your program keeps the space
       as it is without changing it when the text is shifted.
+  - subtitle: Fizzbuzz
+    content: |
+      This is a classic programming interview question.
+
+      The idea is that your program should print the numbers from `1` to `1000`,
+      but if the number is a multiple of 3 you print `Fizz`, if it's a multiple of
+      5 you print `Buzz`. If it's a multiple of 3 **and** 5 then you print `FizzBuzz`.
+
+      ## Examples
+      The first 20 lines of output from your program should be:
+      ```
+      1
+      2
+      Fizz
+      4
+      Buzz
+      Fizz
+      7
+      8
+      Fizz
+      Buzz
+      11
+      Fizz
+      13
+      14
+      FizzBuzz
+      16
+      17
+      Fizz
+      19
+      Buzz
+      ``` 
