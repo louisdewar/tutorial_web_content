@@ -96,4 +96,15 @@ tutorials:
       Fizz
       19
       Buzz
-      ``` 
+      ```
+  - subtitle: Fibonacci
+    content: |
+      Fibonacci numbers are the famous sequence of numbers where each number is the sum
+      of the two previous numbers, and the sequence starts with `1 1`.
+
+      Your task is to create a function called `fibonacci(n)` which prints out the first
+      `n` fibonacci numbers.
+
+      ## Test it
+      `fibonacci(6)` should return `1 1 2 3 5 8`.
+      `fibonacci(2)` should return `1 1`
