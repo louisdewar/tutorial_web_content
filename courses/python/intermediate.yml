@@ -25,6 +25,7 @@ tutorials:
       - `-` is minus
       - `*` is times
       - `/` is divide
+      - `//` is integer division (rounds down to the nearest whole number)
 
       ```python
       # Prints 12
@@ -36,8 +37,11 @@ tutorials:
       # Prints 20
       print(10 * 2)
 
-      # Prints 5
-      print(10 / 2)
+      # Prints 5.5
+      print(11 / 2)
+
+      # Prints 5 (since it is 5.5 rounded down)
+      print(11 // 2)
       ```
 
       ## Assignment operators
@@ -71,16 +75,50 @@ tutorials:
 
       ## Brackets
 
-      TODO...
+      Python follows the usual rules of operator order, for example
+      `3 + 6 / 3 == 3 + (6 / 3) == 5`, since divide (`/`) has a higher precedence than `+` (think BIDMAS).
+
+      We can use brackets just like we do in normal maths for example `(3 + 6) / 3 == 3`.
+
+      ## Exercise
+
+      We're going to write a timer in python, to do this we need to learn how
+      to pause the program for a certain amount of time. To do this we use `sleep`
+      from the `time` module.
+
+      Run the code below and then remove the `time.sleep(1000)` lines and see what changes:
+
+      ```python
+      import time
+
+      print("One")
+      # Sleep for 1 second
+      time.sleep(1)
+      print("Two")
+      time.sleep(1)
+      print("Three")
+      ```
+
+      `time.sleep(x)` takes in the number of seconds you want to sleep for.
+
+      **Your task is** to create a program that asks the user for the number of seconds
+      to run a timer, and then your program prints out `minutes:seconds` with the amount
+      of time the timer has been running every second. The `seconds` must never be above 60.
+
+      **Hint:** If you have been counting for 100 seconds (this should print `1:40`),
+      then you can use integer division (`//`) to get the number of minutes
+      (`100 // 60 == 1`) and modulus (`%`) to get the seconds (`100 % 60 == 40`).
+
+      When you're debugging this it might help to temporarily speed up your timer
+      so you don't have to wait for a minute to see a difference.
+
+      You can find the solution that I made [here](assets/timer.py).
 
       ### Conclusion
 
       Writing mathematical expressions is easy in python as long as you know
       the symbol to use. As a side note these are the common operators you'll
       find in most langauges.
-
-      **There's no exercise for this** but make sure you understand what's going on
-      especially with modular arithmetic.
   - subtitle: Functions
     content: |
       Functions are an incredibly useful tool in programming.
@@ -213,8 +251,6 @@ tutorials:
 
       If you finish then you can take a look at the solution to compare how you did it
       to how I did it. [Here is it](assets/calculator_2.py).
-
-
   - subtitle: For loops with range
     content: |
       Previously we learnt about using for loops with a pre-defined list, e.g:
@@ -240,3 +276,7 @@ tutorials:
       for i in range(2, 10):
         print(i)
       ```
+
+      ## Exercise
+
+      TODO...
