@@ -36,6 +36,11 @@ tutorials:
       (use `print(factorial(n))` where n is the number):
       - `factorial(3) = 6`
       - `factorial(5) = 120`
+
+      ## Research
+      What happens if you pass in `0!` to your program?
+
+      What should happen? Try doing some research to find out!
   - subtitle: Caesar cipher
     content: |
       Caesar cipher is an ancient cipher first used in Roman days.
@@ -117,8 +122,9 @@ tutorials:
       - `fibonacci(2)` should print `1 1`.
   - subtitle: Factorisation
     content: |
-      The factors of a number are the numbers which divide the numbers and return a
-      whole number (called an integer).
+      The factors of a number are the numbers which divide the number and return a
+      whole number (called an integer) - another way of thinking about this are
+      numbers which divide the original number with remainder 0.
 
       Let's look at an example such as `6`:
       - `1` is a factor of 6 since `6 ÷ 1 = 6`.
