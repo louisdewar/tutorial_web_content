@@ -32,19 +32,14 @@ tutorials:
 
       **Note:** We are learning using python3 (python2 is now outdated).
 
-      Choose one of these methods:
+      **Choose one of these methods:**
 
-      ## 1. IDLE (best)
-      Setting up the IDLE is relatively easy and it has the advantage
-      that the python files are on your computer.
+      ## 1. Mu python (best)
+      You can download Mu from <a href="https://codewith.mu/" target="_blank">their website</a>.
 
-      You can download python from <a href="https://www.python.org/downloads/" target="_blank">the website</a>.
-      (you want python3).
-      Once you have it downloaded you need to look for a program called IDLE.
+      Open mu-editor and you should see something like this:
 
-      Create a new file like below:
-
-      ![IDLE new file](assets/idle_new_file.png)
+      ![Mu main screen](assets/mu_main.png)
 
       ## 2. Online (fastest)
       The fastest way to get going with python is using an online editor such as
@@ -72,21 +67,23 @@ tutorials:
       print("Text that you want to print out")
       ```
 
-      ## IDLE help
-      If you are using the IDLE then in order to run the file you must go to
-      `Run -> Run Module F5`.
+      ## Mu help
+      If you are using Mu then once you've typed in your code you need to press
+      the `Run` button.
 
-      ![IDLE run module](assets/idle_run.png)
+      ![Mu hello world](assets/mu_hello_world.png)
 
       Then you need to save the file:
 
-      ![IDLE save](assets/idle_save_dialogue.png)
+      ![Mu save](assets/mu_save_as.png)
+
+      You should see this output:
+
+      ![Mu output](assets/mu_hello_world_output.png)
 
       You can call it whatever you want, in this example I call it `python_introduction`.
       Later in this course you might want to create multiple files, just make
       sure you save them with unique names.
-
-      ![IDLE save](assets/idle_save_as.png)
 
       ## Try it
       1. Change the print command to say `Hello world`
@@ -109,9 +106,9 @@ tutorials:
       Remove the hashtag from the code above and see what happens (hint: you should
       get a syntax error).
 
-      This is what happens on the **IDLE** when you try to run the program without the hashtag:
+      This is what happens on **Mu** when you try to run the program without the hashtag:
 
-      ![IDLE syntax error](assets/idle_syntax_error.png)
+      ![Mu syntax error](assets/mu_syntax_error.png)
 
   - subtitle: Variables
     content: |
