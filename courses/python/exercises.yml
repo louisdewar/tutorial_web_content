@@ -12,7 +12,7 @@ tutorials:
       Before you start this course you should have a basic understanding of python.
 
       If you want to recap see the python tutorials on the website
-      (particularily `introduction` and `intermediate`).
+      (particularily [introduction](../introduction/index.html) and [intermediate](../intermediate/index.html)).
 
       This course is much less structured so you can skip around between questions
       without problems. It's designed to give you some exercises to test your
@@ -38,7 +38,7 @@ tutorials:
       - `factorial(5) = 120`
 
       ## Research
-      What happens if you pass in `0!` to your program?
+      What happens if you pass in `0` to your program?
 
       What should happen? Try doing some research to find out!
   - subtitle: Caesar cipher
@@ -48,7 +48,7 @@ tutorials:
       The way it worked was to *shift* each letter of the alphabet by a certain amount.
 
       For example, if the shift was 1 `abc xyz` would become `bcd yza`
-      (z wraps back around to a). If the shift was 2 then the message `CAT` would become `ECV`.
+      (z wraps back around to a). If the shift was 2 then the message `cat` would become `ecv`.
 
       Your task is to create a function called `caesar_shift(msg, n)` where `msg` is
       a string containing the message and `n` is number of positions the message should
@@ -69,7 +69,7 @@ tutorials:
       ```
 
       ## Test it
-      Try running `caesar_shift('cat', 2)`, it should equal `ECV`.
+      Try running `caesar_shift('cat', 2)`, it should equal `ecv`.
 
       ## Extension
       What happens if your message contains both upper and lowercase letters?
