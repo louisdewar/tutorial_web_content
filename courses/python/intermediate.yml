@@ -1,0 +1,278 @@
+title: Python intermediate
+lang: python3
+url: intermediate
+
+tutorials:
+  - subtitle: Introduction
+    content: |
+      This tutorial is designed for people who have done some python before.
+
+      Before you continue here is a list of things you should know:
+      - The `print` command
+      - Variables
+      - Basic conditionals (`if`, `else` and `elif` - short for `else if`)
+      - Lists (defining them and appending to them)
+      - While loops
+      - For loops (e.g. `for value in list:`)
+
+      If you think you need to recap any of these there is a tutorial
+      [here](../introduction/index.html) that should help you. Also it might be useful to
+      have it open in another tab so you can refer to it if you get stuck.
+  - subtitle: Operators
+    content: |
+      In python we can use various common math operators e.g:
+      - `+` is plus (you've probably used this already)
+      - `-` is minus
+      - `*` is times
+      - `/` is divide
+      - `//` is integer division (rounds down to the nearest whole number)
+
+      ```python
+      # Prints 12
+      print(10 + 2)
+
+      # Prints 8
+      print(10 - 2)
+
+      # Prints 20
+      print(10 * 2)
+
+      # Prints 5.5
+      print(11 / 2)
+
+      # Prints 5 (since it is 5.5 rounded down)
+      print(11 // 2)
+      ```
+
+      ## Assignment operators
+
+      Very often we want to apply an operation to a variable and then store
+      then result in the variable, for example:
+      ```python
+      a = 10
+      # Set a to equal a + 2
+      a = a + 2
+      # Prints 12
+      print(a)
+      ```
+
+      In this case we can use `a += 2` as a shorthand for `a = a + 2`.
+
+      We can also use other operators, here is the full list:
+      - `a += b` is the same as `a = a + b`
+      - `a -= b` is the same as `a = a - b`
+      - `a *= b` is the same as `a = a * b`
+      - `a /= b` is the same as `a = a / b`
+
+      ## Modular arithmetic (clock arithmetic)
+
+      A very useful operator is `%` (the modulus operator). `a % b` returns the
+      remainder from dividing a by b.
+
+      For example `10 % 3 == 1` since 10 ÷ 3 = 3 **remainder 1**.
+
+      We can also use an assignment operator (`a %= b` is the same as `a = a % b`).
+
+      ## Brackets
+
+      Python follows the usual rules of operator order, for example
+      `3 + 6 / 3 == 3 + (6 / 3) == 5`, since divide (`/`) has a higher precedence than `+` (think BIDMAS).
+
+      We can use brackets just like we do in normal maths for example `(3 + 6) / 3 == 3`.
+
+      ## Exercise
+
+      We're going to write a timer in python, to do this we need to learn how
+      to pause the program for a certain amount of time. To do this we use `sleep`
+      from the `time` module.
+
+      Run the code below and then remove the `time.sleep(1000)` lines and see what changes:
+
+      ```python
+      import time
+
+      print("One")
+      # Sleep for 1 second
+      time.sleep(1)
+      print("Two")
+      time.sleep(1)
+      print("Three")
+      ```
+
+      `time.sleep(x)` takes in the number of seconds you want to sleep for.
+
+      **Your task is** to create a program that asks the user for the number of seconds
+      to run a timer, and then your program prints out `minutes:seconds` with the amount
+      of time the timer has been running every second. The `seconds` must never be above 60.
+
+      **Hint:** If you have been counting for 100 seconds (this should print `1:40`),
+      then you can use integer division (`//`) to get the number of minutes
+      (`100 // 60 == 1`) and modulus (`%`) to get the seconds (`100 % 60 == 40`).
+
+      When you're debugging this it might help to temporarily speed up your timer
+      so you don't have to wait for a minute to see a difference.
+
+      You can find the solution that I made [here](assets/timer.py).
+
+      ### Conclusion
+
+      Writing mathematical expressions is easy in python as long as you know
+      the symbol to use. As a side note these are the common operators you'll
+      find in most langauges.
+  - subtitle: Functions
+    content: |
+      Functions are an incredibly useful tool in programming.
+
+      They let us *label* a block of code so that we can run it by referring to its label
+      (called the function *name*).
+
+      The `function body` is a term meaning the code that is inside the function.
+
+      `Calling` a function is another way of saying *running the function*.
+      In python we call a function by writing the function name and then some
+      parentheses `()` (brackets), e.g. `function_name()`.
+
+      Lets look at an example:
+      ```python
+      # The name of this function is `say_hello`
+      def say_hello():
+        print("Hello")
+        # This is the french way of saying hello
+        print("Bonjour")
+
+      # This code isn't indented so it isn't part of the function body
+      print("Hi")
+
+      # Here we call the function
+      say_hello()
+
+      print("Some other code")
+
+      # We can call the function as many times as we want
+      say_hello()
+      say_hello()
+      say_hello()
+      ```
+
+      **Copy and run this code** and you will see that `hello` and `bonjour` is
+      printed `4` times since we call the function four times.
+
+      ## Function arguments
+
+      Functions can also take in variables (called `arguments` or `parameters`).
+
+      When we call a function with arguments we must pass in values. We do this
+      by putting them in the parentheses e.g. `say_hello("Sam")`.
+
+      ```python
+      # Define a function called `say_hello` which takes in a variable called name
+      def say_hello(name):
+        print("Hello " + name)
+
+      say_hello("Sam")
+      say_hello("dog")
+      ```
+
+      This prints out `Hello Sam` and then `Hello dog`.
+
+      **Tip:** whenever you want to *debug* a function it is useful to imagine replacing
+      the arguments of the function with real values such as `Sam` or `Dog` and then
+      run through the function in your head to see what it does.
+
+      ## Function return
+
+      Functions can return a value, which is useful for calculating things which
+      we can return to the caller of the function.
+
+      ```python
+      def add(a, b):
+        return a + b
+
+      # Here we take the return value of 2+3 and assign it to the variable result
+      result = add(2, 3)
+      print(result)
+
+      # We can add strings together too
+      print(add("one", "two"))
+
+      # If you uncomment the next line and run it you will get an error (remember we need to convert numbers to strings to join them)
+      # print(add(42, " is the answer."))
+      ```
+
+      ## Challenge 1
+
+      We're going to make a calculator using our knowledge of functions and conditionals (`if` statements).
+
+      1. Create a function that accepts three values `operator`, `a`, `b`.
+      2. Check if the operator is `+` (plus), `-` (minus), `*` (times) or `/` (divide).
+      3. For each of the four cases that the operator could be, return the result of `a OPERATOR b` like a calculator.
+
+      Let's say the function you create is called `calculate` here are some examples of what should happen:
+      ```python
+      # Should print 5 (since 2+3)
+      print(calculate('+', 2, 3))
+
+      # Should print 11 (since 13-2)
+      print(calculate('-', 13, 2))
+
+      # Should print 2 (since 5/2)
+      print(calculate('/', 10, 5))
+
+      # Should print 40 (since 5/2)
+      print(calculate('*', 2, 20))
+      ```
+
+      ### Solution to challenge 1
+
+      If you finish then you can take a look at the solution to compare how you did it
+      to how I did it. [Here is it](assets/calculator_1.py).
+
+      ## Challenge 2
+
+      Once you get challenge 1 working adapt it so that a program asks you to enter
+      an operator, one number and then another number and it prints the result using your calculation function.
+
+      This program should keep asking and returning the result forever by using
+      a `while True:` loop, but at the end of each calculation it should ask
+      the user if they want to stop or not. If the user wants to stop use the `break`
+      command to exit the loop.
+
+      Extensions:
+      - If the user enters an invalid operator tell them they must enter a valid operator and go back to the start of the loop
+      (**Hint:** use a `continue` statement which skips to the next iteration of the while loop.
+      You'll also probably want to use `and` between the conditions for the `if` statement).
+      - Print out the full calculation and the result in the format `a OPERATOR b = RESULT`.
+      So if I enter `+` as the operator, `2` for a and `5` for b, the program should print `2 + 5 = 7`.
+
+      **Watch out:** don't forget to use the `int` function to convert the user input
+      into a number.
+
+      ### Solution to challenge 2
+
+      If you finish then you can take a look at the solution to compare how you did it
+      to how I did it. [Here is it](assets/calculator_2.py).
+  - subtitle: For loops with range
+    content: |
+      Previously we learnt about using for loops with a pre-defined list, e.g:
+      ```python
+      numbers = [4, 2, 8]
+
+      for number in numbers:
+        print(number)
+      ```
+      It should print the numbers `4`, `2` and `8` on individual lines.
+
+      Now we're going to learn about a really useful function called `range(start, stop)`.
+      What is just is `generate` values from the `start` up to, but not including, the `stop`.
+
+      In for loops it acts just like an list, but unlike a list which has all the values stored,
+      `generators` such as `range` only produce values as they are needed.
+
+      This means you can't do many of the things you can normally do with a
+      list (e.g. index - get a value at a position).
+
+      ```python
+      # The variable name i is commonly used as a counter
+      for i in range(2, 10):
+        print(i)
+      ```

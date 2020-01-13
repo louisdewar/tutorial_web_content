@@ -32,29 +32,24 @@ tutorials:
 
       **Note:** We are learning using python3 (python2 is now outdated).
 
-      Choose one of these methods:
+      **Choose one of these methods:**
 
-      ## 1. IDLE (best)
-      Setting up the IDLE is relatively easy and it has the advantage
-      that the python files are on your computer.
+      ## 1. Mu python (best)
+      You can download Mu from <a href="https://codewith.mu/" target="_blank">their website</a>.
 
-      You can download python from [the website](https://www.python.org/downloads/)
-      (you want python3).
-      Once you have it downloaded you need to look for a program called IDLE.
+      Open mu-editor and you should see something like this:
 
-      Create a new file like below:
-
-      ![IDLE new file](assets/idle_new_file.png)
+      ![Mu main screen](assets/mu_main.png)
 
       ## 2. Online (fastest)
       The fastest way to get going with python is using an online editor such as
-      [repl](https://repl.it/languages/python3).
+      <a href="https://repl.it/languages/python3" target="_blank">repl</a>.
 
       ## 3. Terminal (advanced)
       If you are a bit more advanced you might want to use the terminal or command prompt
       to run python.
 
-      [Download python 3](https://www.python.org/downloads/),
+      <a href="https://www.python.org/downloads/" target="_blank">Download python 3</a>
       if you are on windows make sure you select "Add python to PATH".
 
       Create a folder where you will put your code.
@@ -72,11 +67,23 @@ tutorials:
       print("Text that you want to print out")
       ```
 
-      ## IDLE help
-      If you are using the IDLE then in order to run the file you must go to
-      `Run -> Run Module F5`.
+      ## Mu help
+      If you are using Mu then once you've typed in your code you need to press
+      the `Run` button.
 
-      ![IDLE run module](assets/idle_run.png)
+      ![Mu hello world](assets/mu_hello_world.png)
+
+      Then you need to save the file:
+
+      ![Mu save](assets/mu_save_as.png)
+
+      You should see this output:
+
+      ![Mu output](assets/mu_hello_world_output.png)
+
+      You can call it whatever you want, in this example I call it `python_introduction`.
+      Later in this course you might want to create multiple files, just make
+      sure you save them with unique names.
 
       ## Try it
       1. Change the print command to say `Hello world`
@@ -99,9 +106,9 @@ tutorials:
       Remove the hashtag from the code above and see what happens (hint: you should
       get a syntax error).
 
-      This is what happens on the **IDLE** when you try to run the program without the hashtag:
+      This is what happens on **Mu** when you try to run the program without the hashtag:
 
-      ![IDLE syntax error](assets/idle_syntax_error.png)
+      ![Mu syntax error](assets/mu_syntax_error.png)
 
   - subtitle: Variables
     content: |
@@ -426,9 +433,20 @@ tutorials:
       1. Change your `secret_number` in the guessing game to be a randomly generated
       number between 1 and 99 (inclusive) using `randint`.
       2. If the user runs out of guesses tell them what the number was.
-      3. Come up with a scoring system so that if the user guesses correctly they
+      3. Add a scoring system (see below).
+
+      Come up with a scoring system so that if the user guesses correctly they
       get 100 points and then if they don't get it give them a score based on how close
       they were to the actual number.
+
+      ### Scoring system
+      1. If the user guesses correctly they should get `100` points.
+      2. If the user runs out of guesses then we should calculate a score for their **last**
+      guess.
+      3. The score should be `100 - distance from the correct answer`.
+
+      e.g. If your last guess was 50 and the answer was 52, you get `98` points.
+      If your last guess was 42 and the answer was 30, you should get `12`.
 
       **Hint:** when we calculate the points we are probably going to do some sort
       of subtraction to give us the distance from the correct answer. Unfortunately
@@ -478,7 +496,7 @@ tutorials:
       1. Using a while loop ask to user to keep on entering items into a shopping list until they type `STOP`
       2. Using a for loop print all the elements of the list
 
-      Hint: If you're unsure how to write the loop which ends where the user types `STOP`
+      **Hint:** If you're unsure how to write the loop which ends where the user types `STOP`
       you could write the while loop using `while True:` (which means it runs forever)
       and then use and `if` statment and a `break` statement to exit when the user types `STOP`
       (there are other methods if you can think of them).

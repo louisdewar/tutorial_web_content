@@ -1,0 +1,165 @@
+title: Python exercises
+lang: python3
+url: exercises
+
+tutorial_settings:
+  start_closed: true
+
+tutorials:
+  - subtitle: Introduction
+    start_closed: false
+    content: |
+      Before you start this course you should have a basic understanding of python.
+
+      If you want to recap see the python tutorials on the website
+      (particularily [introduction](../introduction/index.html) and [intermediate](../intermediate/index.html)).
+
+      This course is much less structured so you can skip around between questions
+      without problems. It's designed to give you some exercises to test your
+      python skill, almost like brain teasers.
+
+      Some of these problems are quite tricky and may require you to look some things
+      up to remind you of how they work in python, but try not to look up the whole answer!
+  - subtitle: Factorial!
+    content: |
+      The factorial of a number is all the numbers less than the number
+      (but greater than 0) multiplied together. In maths we use the notation
+      `n!` to mean the factorial of the number n.
+
+      For example `3! = 3 x 2 x 1`, and `5! = 5 x 4 x 3 x 2 x 1`.
+
+      Your task is to write a function called `factorial` that accepts a number
+      and it returns the factorial of the number.
+
+      ## Test it
+      To make sure it works check it returns the correct results to these
+      (use `print(factorial(n))` where n is the number):
+      - `factorial(3) = 6`
+      - `factorial(5) = 120`
+
+      ## Research
+      What happens if you pass in `0` to your program?
+
+      What should happen? Try doing some research to find out!
+  - subtitle: Caesar cipher
+    content: |
+      Caesar cipher is an ancient cipher first used in Roman days.
+
+      The way it worked was to *shift* each letter of the alphabet by a certain amount.
+
+      For example, if the shift was 1 `abc xyz` would become `bcd yza`
+      (z wraps back around to a). If the shift was 2 then the message `cat` would become `ecv`.
+
+      Your task is to create a function called `caesar_shift(msg, n)` where `msg` is
+      a string containing the message and `n` is number of positions the message should
+      be shifted by.
+
+      Here are some things that might be useful:
+      ```python
+      import string
+      alphabet = string.ascii_lowercase
+      # Prints 'abcdefghijklmnopqrstuvwxyz'
+      print(alphabet)
+
+      # Prints '3' (a = 0, b = 1, ...)
+      print(alphabet.index('d'))
+
+      # Prints 4 (% returns the remainder of the division - look into modular arithmetic)
+      print(30 % len(alphabet))
+      ```
+
+      ## Test it
+      Try running `caesar_shift('cat', 2)`, it should equal `ecv`.
+
+      ## Extension
+      What happens if your message contains both upper and lowercase letters?
+      How does you program handle that case? How should it handle that case?
+
+      What if the message contains a space? Make sure your program keeps the space
+      as it is without changing it when the text is shifted.
+  - subtitle: Fizzbuzz
+    content: |
+      This is a classic programming interview question.
+
+      The idea is that your program should print the numbers from `1` to `1000`,
+      but if the number is a multiple of 3 you print `Fizz`, if it's a multiple of
+      5 you print `Buzz`. If it's a multiple of 3 **and** 5 then you print `FizzBuzz`.
+
+      ## Examples
+      The first 20 lines of output from your program should be:
+      ```
+      1
+      2
+      Fizz
+      4
+      Buzz
+      Fizz
+      7
+      8
+      Fizz
+      Buzz
+      11
+      Fizz
+      13
+      14
+      FizzBuzz
+      16
+      17
+      Fizz
+      19
+      Buzz
+      ```
+  - subtitle: Fibonacci
+    content: |
+      Fibonacci numbers are the famous sequence of numbers where each number is the sum
+      of the two previous numbers, and the sequence starts with `1 1`.
+
+      Your task is to create a function called `fibonacci(n)` which prints out the first
+      `n` fibonacci numbers.
+
+      ## Test it
+      - `fibonacci(6)` should print `1 1 2 3 5 8`.
+      - `fibonacci(2)` should print `1 1`.
+  - subtitle: Factorisation
+    content: |
+      The factors of a number are the numbers which divide the number and return a
+      whole number (called an integer) - another way of thinking about this are
+      numbers which divide the original number with remainder 0.
+
+      Let's look at an example such as `6`:
+      - `1` is a factor of 6 since `6 ÷ 1 = 6`.
+      - So is `2` since `6 ÷ 2 = 3`, and 3 and 6.
+      - `4` is **not** a factor of 6 since `6 ÷ 4 = 2.5` and `2.5` isn't a whole number.
+
+      Your task is to create a function that returns a **list** of factors of a number.
+
+      Call this function `factorise(n)` where n is the number you want to factorise.
+
+      Hint: It may help to use `n % x == 0` to check if `n ÷ x` has remainder 0,
+      and you can find all the values of `x` in a loop.
+
+      ## Test it
+      - `print(factorise(6))` should print `[1, 2, 3, 6]`
+      - `print(factorise(8) == [1, 2, 8])` should print `True`
+  - subtitle: Prime numbers
+    content: |
+      Prime numbers are numbers whose only factors are 1 and itself.
+
+      For example 7 is a prime number since it's only factors are 1 and 7 whereas
+      6 isn't a prime number since it's factors are 1, 2, 3 and 6.
+
+      Your task is to create a function called `is_prime(n)` that returns `True`
+      if the number is a prime and `False` otherwise.
+
+      ## Extra
+
+      Whats the greatest number that you need to check up to in order to see if it's
+      a prime number?
+
+      Hint: Factors come in pairs. For example when working out the factors of
+      15 once you check 3, you've already checked 5 since `15 ÷ 3 == 5`.
+
+      ## Test it
+      - `print(is_prime(2))` should print `True` (this is a special case)
+      - `print(is_prime(13))` should print `True`
+      - `print(is_prime(14))` should print `False`
