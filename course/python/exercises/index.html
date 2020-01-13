@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Python exercises</title>
+
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/main.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/zenburn.min.css" />
+
+    
+  </head>
+  <body>
+    <div id="content">
+      
+<div class="course">
+  <h1 class="course-title">Python exercises</h1>
+  <section class="tutorials">
+  
+    <article class="tutorial " data-index="1">
+  <h2 class="subtitle">1. Introduction</h2>
+  <div class="content"><p>Before you start this course you should have a basic understanding of python.</p>
+<p>If you want to recap see the python tutorials on the website
+(particularily <a href="../introduction/index.html">introduction</a> and <a href="../intermediate/index.html">intermediate</a>).</p>
+<p>This course is much less structured so you can skip around between questions
+without problems. It's designed to give you some exercises to test your
+python skill, almost like brain teasers.</p>
+<p>Some of these problems are quite tricky and may require you to look some things
+up to remind you of how they work in python, but try not to look up the whole answer!</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="2">
+  <h2 class="subtitle">2. Factorial!</h2>
+  <div class="content"><p>The factorial of a number is all the numbers less than the number
+(but greater than 0) multiplied together. In maths we use the notation
+<code>n!</code> to mean the factorial of the number n.</p>
+<p>For example <code>3! = 3 x 2 x 1</code>, and <code>5! = 5 x 4 x 3 x 2 x 1</code>.</p>
+<p>Your task is to write a function called <code>factorial</code> that accepts a number
+and it returns the factorial of the number.</p>
+<h2>Test it</h2>
+<p>To make sure it works check it returns the correct results to these
+(use <code>print(factorial(n))</code> where n is the number):</p>
+<ul>
+<li><code>factorial(3) = 6</code></li>
+<li><code>factorial(5) = 120</code></li>
+</ul>
+<h2>Research</h2>
+<p>What happens if you pass in <code>0</code> to your program?</p>
+<p>What should happen? Try doing some research to find out!</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="3">
+  <h2 class="subtitle">3. Caesar cipher</h2>
+  <div class="content"><p>Caesar cipher is an ancient cipher first used in Roman days.</p>
+<p>The way it worked was to <em>shift</em> each letter of the alphabet by a certain amount.</p>
+<p>For example, if the shift was 1 <code>abc xyz</code> would become <code>bcd yza</code>
+(z wraps back around to a). If the shift was 2 then the message <code>cat</code> would become <code>ecv</code>.</p>
+<p>Your task is to create a function called <code>caesar_shift(msg, n)</code> where <code>msg</code> is
+a string containing the message and <code>n</code> is number of positions the message should
+be shifted by.</p>
+<p>Here are some things that might be useful:</p>
+<pre><code class="language-python">import string
+alphabet = string.ascii_lowercase
+# Prints 'abcdefghijklmnopqrstuvwxyz'
+print(alphabet)
+
+# Prints '3' (a = 0, b = 1, ...)
+print(alphabet.index('d'))
+
+# Prints 4 (% returns the remainder of the division - look into modular arithmetic)
+print(30 % len(alphabet))
+</code></pre>
+<h2>Test it</h2>
+<p>Try running <code>caesar_shift('cat', 2)</code>, it should equal <code>ecv</code>.</p>
+<h2>Extension</h2>
+<p>What happens if your message contains both upper and lowercase letters?
+How does you program handle that case? How should it handle that case?</p>
+<p>What if the message contains a space? Make sure your program keeps the space
+as it is without changing it when the text is shifted.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="4">
+  <h2 class="subtitle">4. Fizzbuzz</h2>
+  <div class="content"><p>This is a classic programming interview question.</p>
+<p>The idea is that your program should print the numbers from <code>1</code> to <code>1000</code>,
+but if the number is a multiple of 3 you print <code>Fizz</code>, if it's a multiple of
+5 you print <code>Buzz</code>. If it's a multiple of 3 <strong>and</strong> 5 then you print <code>FizzBuzz</code>.</p>
+<h2>Examples</h2>
+<p>The first 20 lines of output from your program should be:</p>
+<pre><code>1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+</code></pre>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="5">
+  <h2 class="subtitle">5. Fibonacci</h2>
+  <div class="content"><p>Fibonacci numbers are the famous sequence of numbers where each number is the sum
+of the two previous numbers, and the sequence starts with <code>1 1</code>.</p>
+<p>Your task is to create a function called <code>fibonacci(n)</code> which prints out the first
+<code>n</code> fibonacci numbers.</p>
+<h2>Test it</h2>
+<ul>
+<li><code>fibonacci(6)</code> should print <code>1 1 2 3 5 8</code>.</li>
+<li><code>fibonacci(2)</code> should print <code>1 1</code>.</li>
+</ul>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="6">
+  <h2 class="subtitle">6. Factorisation</h2>
+  <div class="content"><p>The factors of a number are the numbers which divide the number and return a
+whole number (called an integer) - another way of thinking about this are
+numbers which divide the original number with remainder 0.</p>
+<p>Let's look at an example such as <code>6</code>:</p>
+<ul>
+<li><code>1</code> is a factor of 6 since <code>6 ÷ 1 = 6</code>.</li>
+<li>So is <code>2</code> since <code>6 ÷ 2 = 3</code>, and 3 and 6.</li>
+<li><code>4</code> is <strong>not</strong> a factor of 6 since <code>6 ÷ 4 = 2.5</code> and <code>2.5</code> isn't a whole number.</li>
+</ul>
+<p>Your task is to create a function that returns a <strong>list</strong> of factors of a number.</p>
+<p>Call this function <code>factorise(n)</code> where n is the number you want to factorise.</p>
+<p>Hint: It may help to use <code>n % x == 0</code> to check if <code>n ÷ x</code> has remainder 0,
+and you can find all the values of <code>x</code> in a loop.</p>
+<h2>Test it</h2>
+<ul>
+<li><code>print(factorise(6))</code> should print <code>[1, 2, 3, 6]</code></li>
+<li><code>print(factorise(8) == [1, 2, 8])</code> should print <code>True</code></li>
+</ul>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="7">
+  <h2 class="subtitle">7. Prime numbers</h2>
+  <div class="content"><p>Prime numbers are numbers whose only factors are 1 and itself.</p>
+<p>For example 7 is a prime number since it's only factors are 1 and 7 whereas
+6 isn't a prime number since it's factors are 1, 2, 3 and 6.</p>
+<p>Your task is to create a function called <code>is_prime(n)</code> that returns <code>True</code>
+if the number is a prime and <code>False</code> otherwise.</p>
+<h2>Extra</h2>
+<p>Whats the greatest number that you need to check up to in order to see if it's
+a prime number?</p>
+<p>Hint: Factors come in pairs. For example when working out the factors of
+15 once you check 3, you've already checked 5 since <code>15 ÷ 3 == 5</code>.</p>
+<h2>Test it</h2>
+<ul>
+<li><code>print(is_prime(2))</code> should print <code>True</code> (this is a special case)</li>
+<li><code>print(is_prime(13))</code> should print <code>True</code></li>
+<li><code>print(is_prime(14))</code> should print <code>False</code></li>
+</ul>
+</div>
+</article>
+  
+  </section>
+</div>
+
+    </div>
+
+    <script onload="hljs.initHighlighting()" src="/tutorial_web_content/static/highlight.min.js"></script>
+    <script onload="hljs.initLineNumbersOnLoad()" src="/tutorial_web_content/static/highlightjs-line-numbers.min.js"></script>
+
+    <script src="/tutorial_web_content/static/main.js"></script>
+  </body>
+</html>

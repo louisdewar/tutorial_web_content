@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Python intermediate</title>
+
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/main.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/zenburn.min.css" />
+
+    
+  </head>
+  <body>
+    <div id="content">
+      
+<div class="course">
+  <h1 class="course-title">Python intermediate</h1>
+  <section class="tutorials">
+  
+    <article class="tutorial " data-index="1">
+  <h2 class="subtitle">1. Introduction</h2>
+  <div class="content"><p>This tutorial is designed for people who have done some python before.</p>
+<p>Before you continue here is a list of things you should know:</p>
+<ul>
+<li>The <code>print</code> command</li>
+<li>Variables</li>
+<li>Basic conditionals (<code>if</code>, <code>else</code> and <code>elif</code> - short for <code>else if</code>)</li>
+<li>Lists (defining them and appending to them)</li>
+<li>While loops</li>
+<li>For loops (e.g. <code>for value in list:</code>)</li>
+</ul>
+<p>If you think you need to recap any of these there is a tutorial
+<a href="../introduction/index.html">here</a> that should help you. Also it might be useful to
+have it open in another tab so you can refer to it if you get stuck.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="2">
+  <h2 class="subtitle">2. Operators</h2>
+  <div class="content"><p>In python we can use various common math operators e.g:</p>
+<ul>
+<li><code>+</code> is plus (you've probably used this already)</li>
+<li><code>-</code> is minus</li>
+<li><code>*</code> is times</li>
+<li><code>/</code> is divide</li>
+<li><code>//</code> is integer division (rounds down to the nearest whole number)</li>
+</ul>
+<pre><code class="language-python"># Prints 12
+print(10 + 2)
+
+# Prints 8
+print(10 - 2)
+
+# Prints 20
+print(10 * 2)
+
+# Prints 5.5
+print(11 / 2)
+
+# Prints 5 (since it is 5.5 rounded down)
+print(11 // 2)
+</code></pre>
+<h2>Assignment operators</h2>
+<p>Very often we want to apply an operation to a variable and then store
+then result in the variable, for example:</p>
+<pre><code class="language-python">a = 10
+# Set a to equal a + 2
+a = a + 2
+# Prints 12
+print(a)
+</code></pre>
+<p>In this case we can use <code>a += 2</code> as a shorthand for <code>a = a + 2</code>.</p>
+<p>We can also use other operators, here is the full list:</p>
+<ul>
+<li><code>a += b</code> is the same as <code>a = a + b</code></li>
+<li><code>a -= b</code> is the same as <code>a = a - b</code></li>
+<li><code>a *= b</code> is the same as <code>a = a * b</code></li>
+<li><code>a /= b</code> is the same as <code>a = a / b</code></li>
+</ul>
+<h2>Modular arithmetic (clock arithmetic)</h2>
+<p>A very useful operator is <code>%</code> (the modulus operator). <code>a % b</code> returns the
+remainder from dividing a by b.</p>
+<p>For example <code>10 % 3 == 1</code> since 10 ÷ 3 = 3 <strong>remainder 1</strong>.</p>
+<p>We can also use an assignment operator (<code>a %= b</code> is the same as <code>a = a % b</code>).</p>
+<h2>Brackets</h2>
+<p>Python follows the usual rules of operator order, for example
+<code>3 + 6 / 3 == 3 + (6 / 3) == 5</code>, since divide (<code>/</code>) has a higher precedence than <code>+</code> (think BIDMAS).</p>
+<p>We can use brackets just like we do in normal maths for example <code>(3 + 6) / 3 == 3</code>.</p>
+<h2>Exercise</h2>
+<p>We're going to write a timer in python, to do this we need to learn how
+to pause the program for a certain amount of time. To do this we use <code>sleep</code>
+from the <code>time</code> module.</p>
+<p>Run the code below and then remove the <code>time.sleep(1000)</code> lines and see what changes:</p>
+<pre><code class="language-python">import time
+
+print(&quot;One&quot;)
+# Sleep for 1 second
+time.sleep(1)
+print(&quot;Two&quot;)
+time.sleep(1)
+print(&quot;Three&quot;)
+</code></pre>
+<p><code>time.sleep(x)</code> takes in the number of seconds you want to sleep for.</p>
+<p><strong>Your task is</strong> to create a program that asks the user for the number of seconds
+to run a timer, and then your program prints out <code>minutes:seconds</code> with the amount
+of time the timer has been running every second. The <code>seconds</code> must never be above 60.</p>
+<p><strong>Hint:</strong> If you have been counting for 100 seconds (this should print <code>1:40</code>),
+then you can use integer division (<code>//</code>) to get the number of minutes
+(<code>100 // 60 == 1</code>) and modulus (<code>%</code>) to get the seconds (<code>100 % 60 == 40</code>).</p>
+<p>When you're debugging this it might help to temporarily speed up your timer
+so you don't have to wait for a minute to see a difference.</p>
+<p>You can find the solution that I made <a href="assets/timer.py">here</a>.</p>
+<h3>Conclusion</h3>
+<p>Writing mathematical expressions is easy in python as long as you know
+the symbol to use. As a side note these are the common operators you'll
+find in most langauges.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="3">
+  <h2 class="subtitle">3. Functions</h2>
+  <div class="content"><p>Functions are an incredibly useful tool in programming.</p>
+<p>They let us <em>label</em> a block of code so that we can run it by referring to its label
+(called the function <em>name</em>).</p>
+<p>The <code>function body</code> is a term meaning the code that is inside the function.</p>
+<p><code>Calling</code> a function is another way of saying <em>running the function</em>.
+In python we call a function by writing the function name and then some
+parentheses <code>()</code> (brackets), e.g. <code>function_name()</code>.</p>
+<p>Lets look at an example:</p>
+<pre><code class="language-python"># The name of this function is `say_hello`
+def say_hello():
+  print(&quot;Hello&quot;)
+  # This is the french way of saying hello
+  print(&quot;Bonjour&quot;)
+
+# This code isn't indented so it isn't part of the function body
+print(&quot;Hi&quot;)
+
+# Here we call the function
+say_hello()
+
+print(&quot;Some other code&quot;)
+
+# We can call the function as many times as we want
+say_hello()
+say_hello()
+say_hello()
+</code></pre>
+<p><strong>Copy and run this code</strong> and you will see that <code>hello</code> and <code>bonjour</code> is
+printed <code>4</code> times since we call the function four times.</p>
+<h2>Function arguments</h2>
+<p>Functions can also take in variables (called <code>arguments</code> or <code>parameters</code>).</p>
+<p>When we call a function with arguments we must pass in values. We do this
+by putting them in the parentheses e.g. <code>say_hello(&quot;Sam&quot;)</code>.</p>
+<pre><code class="language-python"># Define a function called `say_hello` which takes in a variable called name
+def say_hello(name):
+  print(&quot;Hello &quot; + name)
+
+say_hello(&quot;Sam&quot;)
+say_hello(&quot;dog&quot;)
+</code></pre>
+<p>This prints out <code>Hello Sam</code> and then <code>Hello dog</code>.</p>
+<p><strong>Tip:</strong> whenever you want to <em>debug</em> a function it is useful to imagine replacing
+the arguments of the function with real values such as <code>Sam</code> or <code>Dog</code> and then
+run through the function in your head to see what it does.</p>
+<h2>Function return</h2>
+<p>Functions can return a value, which is useful for calculating things which
+we can return to the caller of the function.</p>
+<pre><code class="language-python">def add(a, b):
+  return a + b
+
+# Here we take the return value of 2+3 and assign it to the variable result
+result = add(2, 3)
+print(result)
+
+# We can add strings together too
+print(add(&quot;one&quot;, &quot;two&quot;))
+
+# If you uncomment the next line and run it you will get an error (remember we need to convert numbers to strings to join them)
+# print(add(42, &quot; is the answer.&quot;))
+</code></pre>
+<h2>Challenge 1</h2>
+<p>We're going to make a calculator using our knowledge of functions and conditionals (<code>if</code> statements).</p>
+<ol>
+<li>Create a function that accepts three values <code>operator</code>, <code>a</code>, <code>b</code>.</li>
+<li>Check if the operator is <code>+</code> (plus), <code>-</code> (minus), <code>*</code> (times) or <code>/</code> (divide).</li>
+<li>For each of the four cases that the operator could be, return the result of <code>a OPERATOR b</code> like a calculator.</li>
+</ol>
+<p>Let's say the function you create is called <code>calculate</code> here are some examples of what should happen:</p>
+<pre><code class="language-python"># Should print 5 (since 2+3)
+print(calculate('+', 2, 3))
+
+# Should print 11 (since 13-2)
+print(calculate('-', 13, 2))
+
+# Should print 2 (since 5/2)
+print(calculate('/', 10, 5))
+
+# Should print 40 (since 5/2)
+print(calculate('*', 2, 20))
+</code></pre>
+<h3>Solution to challenge 1</h3>
+<p>If you finish then you can take a look at the solution to compare how you did it
+to how I did it. <a href="assets/calculator_1.py">Here is it</a>.</p>
+<h2>Challenge 2</h2>
+<p>Once you get challenge 1 working adapt it so that a program asks you to enter
+an operator, one number and then another number and it prints the result using your calculation function.</p>
+<p>This program should keep asking and returning the result forever by using
+a <code>while True:</code> loop, but at the end of each calculation it should ask
+the user if they want to stop or not. If the user wants to stop use the <code>break</code>
+command to exit the loop.</p>
+<p>Extensions:</p>
+<ul>
+<li>If the user enters an invalid operator tell them they must enter a valid operator and go back to the start of the loop
+(<strong>Hint:</strong> use a <code>continue</code> statement which skips to the next iteration of the while loop.
+You'll also probably want to use <code>and</code> between the conditions for the <code>if</code> statement).</li>
+<li>Print out the full calculation and the result in the format <code>a OPERATOR b = RESULT</code>.
+So if I enter <code>+</code> as the operator, <code>2</code> for a and <code>5</code> for b, the program should print <code>2 + 5 = 7</code>.</li>
+</ul>
+<p><strong>Watch out:</strong> don't forget to use the <code>int</code> function to convert the user input
+into a number.</p>
+<h3>Solution to challenge 2</h3>
+<p>If you finish then you can take a look at the solution to compare how you did it
+to how I did it. <a href="assets/calculator_2.py">Here is it</a>.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="4">
+  <h2 class="subtitle">4. For loops with range</h2>
+  <div class="content"><p>Previously we learnt about using for loops with a pre-defined list, e.g:</p>
+<pre><code class="language-python">numbers = [4, 2, 8]
+
+for number in numbers:
+  print(number)
+</code></pre>
+<p>It should print the numbers <code>4</code>, <code>2</code> and <code>8</code> on individual lines.</p>
+<p>Now we're going to learn about a really useful function called <code>range(start, stop)</code>.
+What is just is <code>generate</code> values from the <code>start</code> up to, but not including, the <code>stop</code>.</p>
+<p>In for loops it acts just like an list, but unlike a list which has all the values stored,
+<code>generators</code> such as <code>range</code> only produce values as they are needed.</p>
+<p>This means you can't do many of the things you can normally do with a
+list (e.g. index - get a value at a position).</p>
+<pre><code class="language-python"># The variable name i is commonly used as a counter
+for i in range(2, 10):
+  print(i)
+</code></pre>
+</div>
+</article>
+  
+  </section>
+</div>
+
+    </div>
+
+    <script onload="hljs.initHighlighting()" src="/tutorial_web_content/static/highlight.min.js"></script>
+    <script onload="hljs.initLineNumbersOnLoad()" src="/tutorial_web_content/static/highlightjs-line-numbers.min.js"></script>
+
+    <script src="/tutorial_web_content/static/main.js"></script>
+  </body>
+</html>

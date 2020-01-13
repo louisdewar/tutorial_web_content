@@ -8,8 +8,6 @@
     <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/fonts.css" />
     <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/zenburn.min.css" />
 
-    <script defer onload="hljs.initHighlightingOnLoad();" src="/tutorial_web_content/static/highlight.min.js"></script>
-
     
   </head>
   <body>
@@ -40,22 +38,18 @@ make you confused you should be fine.</p>
   <h2 class="subtitle">2. Getting started</h2>
   <div class="content"><p>To get started coding python you'll need to setup an editor where you can type and run python.</p>
 <p><strong>Note:</strong> We are learning using python3 (python2 is now outdated).</p>
-<p>Choose one of these methods:</p>
-<h2>1. IDLE (best)</h2>
-<p>Setting up the IDLE is relatively easy and it has the advantage
-that the python files are on your computer.</p>
-<p>You can download python from <a href="https://www.python.org/downloads/">the website</a>
-(you want python3).
-Once you have it downloaded you need to look for a program called IDLE.</p>
-<p>Create a new file like below:</p>
-<p><img src="assets/idle_new_file.png" alt="IDLE new file" /></p>
+<p><strong>Choose one of these methods:</strong></p>
+<h2>1. Mu python (best)</h2>
+<p>You can download Mu from <a href="https://codewith.mu/" target="_blank">their website</a>.</p>
+<p>Open mu-editor and you should see something like this:</p>
+<p><img src="assets/mu_main.png" alt="Mu main screen" /></p>
 <h2>2. Online (fastest)</h2>
 <p>The fastest way to get going with python is using an online editor such as
-<a href="https://repl.it/languages/python3">repl</a>.</p>
+<a href="https://repl.it/languages/python3" target="_blank">repl</a>.</p>
 <h2>3. Terminal (advanced)</h2>
 <p>If you are a bit more advanced you might want to use the terminal or command prompt
 to run python.</p>
-<p><a href="https://www.python.org/downloads/">Download python 3</a>,
+<p><a href="https://www.python.org/downloads/" target="_blank">Download python 3</a>
 if you are on windows make sure you select &quot;Add python to PATH&quot;.</p>
 <p>Create a folder where you will put your code.</p>
 <p>In either terminal or command prompt (depending on your OS) use the command <code>cd</code> to change
@@ -71,10 +65,17 @@ we do is to say <code>hello world</code>.</p>
 <p>In python we would use the <code>print</code> command to say things e.g.</p>
 <pre><code class="language-python">print(&quot;Text that you want to print out&quot;)
 </code></pre>
-<h2>IDLE help</h2>
-<p>If you are using the IDLE then in order to run the file you must go to
-<code>Run -&gt; Run Module F5</code>.</p>
-<p><img src="assets/idle_run.png" alt="IDLE run module" /></p>
+<h2>Mu help</h2>
+<p>If you are using Mu then once you've typed in your code you need to press
+the <code>Run</code> button.</p>
+<p><img src="assets/mu_hello_world.png" alt="Mu hello world" /></p>
+<p>Then you need to save the file:</p>
+<p><img src="assets/mu_save_as.png" alt="Mu save" /></p>
+<p>You should see this output:</p>
+<p><img src="assets/mu_hello_world_output.png" alt="Mu output" /></p>
+<p>You can call it whatever you want, in this example I call it <code>python_introduction</code>.
+Later in this course you might want to create multiple files, just make
+sure you save them with unique names.</p>
 <h2>Try it</h2>
 <ol>
 <li>Change the print command to say <code>Hello world</code></li>
@@ -96,8 +97,8 @@ print(&quot;Actual python code&quot;)
 <h2>Try it</h2>
 <p>Remove the hashtag from the code above and see what happens (hint: you should
 get a syntax error).</p>
-<p>This is what happens on the <strong>IDLE</strong> when you try to run the program without the hashtag:</p>
-<p><img src="assets/idle_syntax_error.png" alt="IDLE syntax error" /></p>
+<p>This is what happens on <strong>Mu</strong> when you try to run the program without the hashtag:</p>
+<p><img src="assets/mu_syntax_error.png" alt="Mu syntax error" /></p>
 </div>
 </article>
   
@@ -385,10 +386,20 @@ random.randint(a, b)
 <li>Change your <code>secret_number</code> in the guessing game to be a randomly generated
 number between 1 and 99 (inclusive) using <code>randint</code>.</li>
 <li>If the user runs out of guesses tell them what the number was.</li>
-<li>Come up with a scoring system so that if the user guesses correctly they
-get 100 points and then if they don't get it give them a score based on how close
-they were to the actual number.</li>
+<li>Add a scoring system (see below).</li>
 </ol>
+<p>Come up with a scoring system so that if the user guesses correctly they
+get 100 points and then if they don't get it give them a score based on how close
+they were to the actual number.</p>
+<h3>Scoring system</h3>
+<ol>
+<li>If the user guesses correctly they should get <code>100</code> points.</li>
+<li>If the user runs out of guesses then we should calculate a score for their <strong>last</strong>
+guess.</li>
+<li>The score should be <code>100 - distance from the correct answer</code>.</li>
+</ol>
+<p>e.g. If your last guess was 50 and the answer was 52, you get <code>98</code> points.
+If your last guess was 42 and the answer was 30, you should get <code>12</code>.</p>
 <p><strong>Hint:</strong> when we calculate the points we are probably going to do some sort
 of subtraction to give us the distance from the correct answer. Unfortunately
 depending on whether the guess was higher or lower than the answer the distance
@@ -432,7 +443,7 @@ print(count)
 <li>Using a while loop ask to user to keep on entering items into a shopping list until they type <code>STOP</code></li>
 <li>Using a for loop print all the elements of the list</li>
 </ol>
-<p>Hint: If you're unsure how to write the loop which ends where the user types <code>STOP</code>
+<p><strong>Hint:</strong> If you're unsure how to write the loop which ends where the user types <code>STOP</code>
 you could write the while loop using <code>while True:</code> (which means it runs forever)
 and then use and <code>if</code> statment and a <code>break</code> statement to exit when the user types <code>STOP</code>
 (there are other methods if you can think of them).</p>
@@ -468,6 +479,9 @@ or you can report them youself <a href="https://github.com/louisdewar/tutorial_w
 </div>
 
     </div>
+
+    <script onload="hljs.initHighlighting()" src="/tutorial_web_content/static/highlight.min.js"></script>
+    <script onload="hljs.initLineNumbersOnLoad()" src="/tutorial_web_content/static/highlightjs-line-numbers.min.js"></script>
 
     <script src="/tutorial_web_content/static/main.js"></script>
   </body>
