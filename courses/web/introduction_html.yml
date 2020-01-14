@@ -1,0 +1,210 @@
+title: Introduction to HTML
+lang: html
+url: introduction_html
+
+tutorials:
+  - subtitle: Introduction
+    content: |
+      Today you're going to learn how to make a website using HTML.
+
+      This course will get you started with HTML and get you ready to create your first proper website.
+
+      To get started we going to need to download a *code editor*. This isn't essential
+      (you could even code using `Text Edit` or `Notepad`) but it makes everything
+      a lot easier.
+
+      If you already have one installed on your computer you can use that,
+      but I recommend [sublime text](https://www.sublimetext.com/); [atom](https://atom.io/) will also work.
+
+      Create a folder to contain your work. I would suggest that you create a folder called `websites` in `Documents`.
+  - subtitle: Getting started
+    content: |
+      In your code editor (such as sublime text) create a new file (usually `File->New File`) and copy the following code into it:
+      ```html
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>My First Website</title>
+        </head>
+        <body>
+          <h1>Hello!</h1>
+        </body>
+      </html>
+      ```
+
+      In sublime this should look like this:
+
+      ![website starter code sublime text](assets/sublime_starter.png)
+
+      Then save the file as `my-website.html` in your `websites` folder:
+
+      ![sublime text save](assets/sublime_save.png)
+
+      Now open the `websites` folder in your file explorer (`finder` on mac),
+      then open the HTML file with the browser of your choice. Usually you can
+      just double click on the HTML file but sometimes you need to right click and choose `open with`.
+
+      It should look something like this:
+
+      ![website saying hello](assets/website_hello.png)
+
+      Notice the bar saying `My First Website` (this is the `title`).
+  - subtitle: Understanding the example code
+    content: |
+      So far I've just given you some code and got you to run it, but I haven't
+      explained how it works.
+
+      ## Understanding tags
+      The first thing we need to understand is what **tags** are.
+
+      Tags are the things that are angle brackets `<` and `>`.
+
+      Let's look at the title tag:
+      ```html
+      <title>My First Website</title>
+      ```
+
+      The first `<title>` opens the tag and everything up to the closing `</title>`
+      is a **child** of the title tag. `My First Website` is the child of the `title` tag.
+
+      Most tags in HTML are opened with their name surrounded by `<>` - for example `<body>` -
+      and they are closed with a slash (`/`) - for example `</body>`.
+
+      `<body>` means the body section starts here and `</body>` means the body section ends here.
+
+      Some tags **don't have closing tags** but there are much less common than tags that do require closing tags.
+
+      ## The code
+
+      Let's go line by line over the code to understand what's going on.
+
+      `<!DOCTYPE html>` is a special tag that doesn't have a closing tag,
+      and it tells the computer that the following code is HTML code.
+
+      `<html>` says that the HTML code starts here. All you code will be a child of this tag.
+
+      `<head>` is that start of the `head` section, certain tags that
+      represent things which aren't displayed on your website must go here.
+
+      `<title>My First Website</title>` tells the webpage that the title is `My First Website`.
+
+      `</head>` ends the `head` section.
+
+      `<body>` start the `body` section which is where **everything that is displayed on the screen** goes.
+
+      `<h1>Hello!</h1>` creates a large header with the message `Hello!`.
+      `h1` is short for `header 1` where `1` is the largest size.
+
+      `</body>` ends the `body` section
+
+      `</html>` says that this is the end of the HTML code.
+
+      ## Exercise
+
+      I mentioned that `h1` means header size `1` where `1` is the largest size.
+      Well you can make headers smaller by increasing the number (up to a maximum of `6`).
+
+      Your task is to create a new header below with a size `3`.
+      The header should say `I am a smaller header`.
+
+      Make sure you create both the opening and closing tag!
+
+      **Tip:** When you make your change you need to save the file and then refresh the page in your web-browser.
+
+      It should look like this when you've done it:
+
+      ![smaller header](assets/smaller_header.png)
+
+      ## Solution
+
+      Check the solution [here](assets/smaller_header_solution.txt) when you've done it.
+  - subtitle: Adding more content
+    content: |
+      First things first, get rid of the `<h3>...</h3>` section so you're code
+      looks like the starting code.
+
+      Next we're going to add a paragraph, this uses the `<p>` tag.
+
+      Add `<p>This is a paragraph</p>` below your `<h1>` tag.
+
+      ## Exercise
+
+      Using your knowledge so far recreate the following image of a webpage by changing your code.
+
+      **Hint:** The paragraph should say `My name is NAME.`, where `NAME` is your name.
+
+      ![more content](assets/adding_more_content_challenge.png)
+
+      ## Solution
+
+      Check the solution [here](assets/paragraph_solution.txt) when you've done it.
+  - subtitle: Images
+    content: |
+      Let's add some images to our website.
+
+      To do this we use an `<img>` tag. This tag is a special tag since you **don't need a closing tag**.
+
+      Adding an image tag just by itself won't actually do anything because
+      you need to tell your computer where to find the actual image.
+
+      To do this we use an *attribute*.
+
+      ## Attributes
+
+      Attributes are extra bits of information that are associated with an HTML tag.
+
+      Let's take a look at this diagram to understand how to add attributes to HTML tags:
+
+      ![attribute diagram](assets/attribute_diagram.png)
+
+      As you can see attributes are added inside the angle brackets (`<...>`)
+      after the tag name and they follow the pattern `attribute-name="attribute-value"`.
+
+      No attributes are ever in the closing tag.
+
+      ## Specifying the image location
+
+      We need to add an atribute with the name `src` which is short for *source*.
+
+      Now we need to find an actual image to put on our website. There are several ways of doing this.
+
+      ### Online image
+
+      An easy way to add an image we find online is to right click on the image and select
+      `Copy image location` (your browser may say something different but essentially
+      we need a URL).
+
+      ![copy image location box](assets/copy_image_location.png)
+
+      Then you can add an image using `<img src="URL">` where `URL` is the image location
+      you just copied.
+
+      ### Local / Downloaded image
+
+      If you want to add images that you've downloaded or don't even exist
+      online then you can place the image file in the same folder as your website.
+
+      Then you can write `<img src="URL">` where `URL` is the name of the image
+      (including the extension which is usually `.png` or `.jpg`).
+
+      ## Exercise
+
+      Your task is to add two images to your website, one which is from online and another
+      which has been downloaded.
+
+      ## Solution
+
+      Since there are many different ways to do this, there isn't one solution
+      so check to make sure when you load your website you see two images.
+
+      Also it might be helpful to ask a mentor to check you're on the right track.
+  - subtitle: Links
+    content: |
+      == TODO ==
+      Explain `<a>` tags here, give example with local link and remote one
+  - subtitle: Conclusion
+    content: |
+      Now you know a bit of HTML but we haven't really done anything cool with it yet.
+
+      In the [next course](TODO!) you'll make your first proper website all
+      about you and your interests! You'll also learn how to make your website look good.
