@@ -179,13 +179,17 @@ tutorials:
       Then you can add an image using `<img src="URL">` where `URL` is the image location
       you just copied.
 
+      **Don't forget:** `<img>` is a special tag and **doesn't need** `</img>`.
+
       ### Local / Downloaded image
 
       If you want to add images that you've downloaded or don't even exist
       online then you can place the image file in the same folder as your website.
 
-      Then you can write `<img src="URL">` where `URL` is the name of the image
-      (including the extension which is usually `.png` or `.jpg`).
+      Then you can write `<img src="PATH">` where `PATH` is the name of the image
+      (including the extension which is usually `.png` or `.jpg`). If you placed the image
+      in a folder e.g. `images` then (as long as that folder is in the same directory as your html file)
+      you should set `PATH` to be `images/FILE_NAME.EXTENSION`. This is called a relative path.
 
       ## Exercise
 
@@ -200,11 +204,60 @@ tutorials:
       Also it might be helpful to ask a mentor to check you're on the right track.
   - subtitle: Links
     content: |
-      == TODO ==
-      Explain `<a>` tags here, give example with local link and remote one
+      Links are incredibly useful for creating more advanced websites.
+      To create a link you use `<a href="URL">Link message</a>`.
+
+      When you run that tag in the browser it looks like this:
+
+      ![link with messsage "Link message"](assets/link_message.png)
+
+      Links use an `href` attribute which works like `src` on images except instead of displaying
+      an image, it becomes a link which when you click you are redirected to another webpage.
+
+      ## Exercise 1
+
+      1. Pick your favourite website and then copy the URL, for example `https://google.com`.
+      2. Add an `<a>` tag to your website that says "My favourite website", and when you click
+      on the link, you are redirected to that website.
+
+      The value of the `href` attribute should be the url you copied.
+
+      The solution to exercise 1 is [here](links_ex_1.txt).
+
+      ## Exercise 2
+
+      First we need to create a new webpage:
+
+      1. Create a new html file called `second_page.html` in the same folder as your other website code.
+      2. Copy the starter code at the top into the page and make the title `Second page`
+      and create a `h1` with the message `Welcome to the second page!`.
+
+      Open your second webpage in a browser, it should look like this:
+
+      ![Second page](assets/second_page.png)
+
+      The source code is [here](assets/second_page.txt).
+
+      <hr />
+
+      Now we've created the second page we need to create a link to it.
+
+      Your task is to create a new `<a>` tag with the message Go to the second page
+      and set the value of the href attribute to `second_page.html`.
+
+      When you click on it you should be redirected to the second page.
+
+      ![second page gif](assets/second_page.gif)
+
+      The source code for the main page is [here](assets/website_link.txt)
+
+      ## Extension
+
+      Add a link from the second page back to your main website.
+      Make the link say `Go back to main page`.
   - subtitle: Conclusion
     content: |
       Now you know a bit of HTML but we haven't really done anything cool with it yet.
 
-      In the [next course](TODO!) you'll make your first proper website all
+      In the [next course](../my_first_website/index.html) you'll make your first proper website all
       about you and your interests! You'll also learn how to make your website look good.

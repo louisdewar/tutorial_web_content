@@ -1,0 +1,31 @@
+title: My first website
+lang: html
+url: my_first_website
+
+tutorials:
+  - subtitle: Introduction
+    content: |
+      This course follows on from [intoduction to HTML](../introduction_html/index.html)
+      so make sure you check that out first.
+
+      Create a folder called `website` and create a file called `my-first-website.html`
+      inside it.
+
+      Copy this starter code into the file:
+      ```html
+      <!DOCTYPE html>
+      <html>
+        <head>
+        </head>
+        <body>
+        </body>
+      </html>
+      ```
+
+      Now create a title tag with the message `My first website`
+      (don't forget that `<title>` must go in the `<head>` section).
+
+      Then create a large header (`<h1>`) with the message `Welcome to my website`.
+  - subtitle: Incomplete
+    content: |
+      This course is incomplete...
