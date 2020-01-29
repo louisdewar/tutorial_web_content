@@ -1,0 +1,34 @@
+title: Ghostcatcatcher
+lang: scratch
+url: ghostcatcher
+
+tutorial_settings:
+  start_closed: true
+
+tutorials:
+  - subtitle: Introduction
+    start_closed: false
+    content: |
+      This tutorial will guide you through the creation of a PacMan-like game.
+
+      Click on "Getting started" to start!
+  - subtitle: Getting started
+    content: |
+      Open the Scratch website:
+
+      https://scratch.mit.edu
+
+      Click con "Create" to start coding.
+
+      It's highly recommended, to save your work, to log in.
+      Create an account by clicking on "Join Scratch" or "Login" if you have already registered.
+
+
+  - subtitle: Conclusion
+    content: |
+      Well done!
+
+      We hope you had fun!
+
+      If you noticed any issues with this course such as typos or bugs tell someone at an event,
+      or report them youself [here](https://github.com/louisdewar/tutorial_web_content/issues/new).
