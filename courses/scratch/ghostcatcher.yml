@@ -11,6 +11,8 @@ tutorials:
     content: |
       This tutorial will guide you through the creation of a PacMan-like game.
 
+      ![](assets/finished_game_screenshot.png)
+
       Click on "Getting started" to start!
   - subtitle: Getting started
     content: |
