@@ -14,9 +14,11 @@ tutorials:
       Click on "Getting started" to start!
   - subtitle: Getting started
     content: |
-      Open the Scratch website:
+      Open the Scratch website (right click to open in a new window):
 
       [https://scratch.mit.edu](https://scratch.mit.edu)
+
+      ![](assets/scratch_website.png)
 
       Click con "Create" to start coding.
 
