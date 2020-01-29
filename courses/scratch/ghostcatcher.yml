@@ -30,6 +30,17 @@ tutorials:
 
       Create an account by clicking on "Join Scratch" or "Login" if you have already registered.
 
+  - subtitle: Backdrop
+    content: |
+      Make a colourful backdrop. Use the paint can tool to flood the backdrop with colour.
+
+      Click on "Stage" on the right
+
+      ![](assets/click_on_stage.png)
+
+      then "Backdrops" at the top left of the screen
+
+      ![](assets/click_on_backdrops.png)
 
   - subtitle: Conclusion
     content: |
