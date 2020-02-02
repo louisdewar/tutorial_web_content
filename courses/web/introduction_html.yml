@@ -83,7 +83,7 @@ tutorials:
 
       `<html>` says that the HTML code starts here. All you code will be a child of this tag.
 
-      `<head>` is that start of the `head` section, certain tags that
+      `<head>` is the start of the `head` section, certain tags that
       represent things which aren't displayed on your website must go here.
 
       `<title>My First Website</title>` tells the webpage that the title is `My First Website`.
@@ -104,7 +104,7 @@ tutorials:
       I mentioned that `h1` means header size `1` where `1` is the largest size.
       Well you can make headers smaller by increasing the number (up to a maximum of `6`).
 
-      Your task is to create a new header below with a size `3`.
+      Your task is to create a new header with a size `3` below the `h1`.
       The header should say `I am a smaller header`.
 
       Make sure you create both the opening and closing tag!
@@ -179,12 +179,15 @@ tutorials:
       Then you can add an image using `<img src="URL">` where `URL` is the image location
       you just copied.
 
-      **Don't forget:** `<img>` is a special tag and **doesn't need** `</img>`.
+      **Don't forget:** `<img>` is a special tag and **doesn't need** `</img>`
+
+      **Tip:** If your image is too big add a width attribute with the value `200px`,
+      for example `<img src="URL" width="200px">`.
 
       ### Local / Downloaded image
 
       If you want to add images that you've downloaded or don't even exist
-      online then you can place the image file in the same folder as your website.
+      online then you can place the image file in the **same folder** as your website.
 
       Then you can write `<img src="PATH">` where `PATH` is the name of the image
       (including the extension which is usually `.png` or `.jpg`). If you placed the image
@@ -222,7 +225,7 @@ tutorials:
 
       The value of the `href` attribute should be the url you copied.
 
-      The solution to exercise 1 is [here](links_ex_1.txt).
+      The solution to exercise 1 is [here](assets/links_ex_1.txt).
 
       ## Exercise 2
 
