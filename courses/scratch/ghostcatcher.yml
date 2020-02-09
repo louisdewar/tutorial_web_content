@@ -171,7 +171,38 @@ tutorials:
       Let's give the eyes a final touch
 
       ![](assets/ghost_eyes.png)
+
+  - subtitle: (Optional) Animating the ghost
+    content: |
+      Feel free to come to this section later if you want to go straight to continuing with the game.
+
+      Let's make an animated ghost just like we did for pacman.
       
+      Duplicate the costume ghost.
+
+      Click on the black ovan inside the eye.
+
+      *While holding down the _shift_ key* click on the black oval inside the other eye.
+
+      Move the eyes together by pressing the left arrow.
+
+      ![](assets/ghost_animated_eyes.png)
+
+      Now let's add to the ghost the same animation code we used for Pacman
+
+      ![](assets/pacman_animation_cycle.png)
+
+  - subtitle: Let's make the ghost move
+    content: |
+      Click on the "Code" tab of the ghost sprite, and add the following blocks:
+
+      ![](assets/ghost_motion.png)
+
+      You'll notice the ghost turns into all directions. In order to make it "stand", add the "set rotation style to left-right":
+
+      ![](assets/ghost_motion_2.png)
+
+      If the ghost bounces in a "weird" way, go back to the costumes and make sure the ghost is positioned in the center of the drawing area.
 
   - subtitle: Conclusion
     content: |
