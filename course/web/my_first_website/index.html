@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My first website</title>
+
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/main.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/zenburn.min.css" />
+
+    
+  </head>
+  <body>
+    <div id="content">
+      
+<div class="course">
+  <h1 class="course-title">My first website</h1>
+  <section class="tutorials">
+  
+    <article class="tutorial " data-index="1">
+  <h2 class="subtitle">1. Introduction</h2>
+  <div class="content"><p><strong>This course follows on from <a href="../introduction_html/index.html">intoduction to HTML</a>
+so make sure you check that out first.</strong></p>
+<p>Create a folder called <code>about_me</code> and create a file called <code>index.html</code>
+inside it.</p>
+<p><strong>Index</strong> is a special name that means &quot;this is the main/home page&quot;.</p>
+<p>Copy this starter code into the file:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Now create a title tag with the message <code>My website about me</code>
+(don't forget that <code>&lt;title&gt;</code> must go in the <code>&lt;head&gt;</code> section).</p>
+<p>Then create a large header (<code>&lt;h1&gt;</code>) with the message <code>About me</code>.</p>
+<hr>
+<p>The goal for this course is to create a website about you and your interests.</p>
+<p>This course will encourage you to be creative and so the instructions
+might ask you to come up with your own ideas.</p>
+<p><a href="assets/starter.txt">Here</a> is the solution to the task above.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="2">
+  <h2 class="subtitle">2. Adding content to your front page</h2>
+  <div class="content"><p>Create a paragraph using the <code>p</code> tag below your header (the <code>h1</code> tag).</p>
+<p>In it introduce yourself, say what your name is and your age.
+You could also add something about what your hobbies are.</p>
+<hr>
+<h3>Now we're going to learn about lists.</h3>
+<p>There are two types of lists, unordered lists (<code>ul</code>) and ordered lists (<code>ol</code>).
+Ordered lists automatically label each item with a number whereas unordered list
+just use bullet points.</p>
+<p>Inside a <code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code> block we use the tag <code>&lt;li&gt;</code> to mark out <code>List Items</code>.</p>
+<p>See the result of this code in the image below:</p>
+<pre><code class="language-html">&lt;h2&gt;This is an unordered list:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A list item&lt;/li&gt;
+  &lt;li&gt;Another list item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;This is an ordered list:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p><img src="assets/lists.png" alt="list types" /></p>
+<h2>Task</h2>
+<p>Your task is to create an <strong>unordered</strong> list, to list anything you want.
+For example you could create a section that has some of the books you have read
+recently or games you have played.</p>
+<p>Then once you have created that list create an <strong>ordered</strong> list ranking
+something you are interested in. For example it could rank your favourite
+TV shows or movies.</p>
+<p>Try to make your website look structured so create headers (e.g. <code>h2</code>)
+before your lists to label them, just like I've done in the example above.</p>
+<p>As an extension add some images to your lists (if you need a recap then go
+to the <a href="../introduction_html/index.html">intoduction to HTML</a> course).</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="3">
+  <h2 class="subtitle">3. Styling your website</h2>
+  <div class="content"><p>Black and white websites were all the rage when the internet first started
+but nowadays every website has a least some splash of colour!</p>
+<p>To do this we use a language called <code>CSS</code>. HTML and CSS work hand in hand.
+HTML defines the structure of the website and CSS says how it should look.</p>
+<p>CSS files have the <code>.css</code> extension just like HTML files have a <code>.html</code>
+extension. A single CSS file can be shared between multiple html files.</p>
+<p>Create a file called <code>styles.css</code> in the same folder as your HTML file.</p>
+<p>In the <code>head</code> section of your html add the following line:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;
+</code></pre>
+<p>All this does is import a CSS stylesheet called <code>styles.css</code>.</p>
+<p>In <code>styles.css</code> add the following code:</p>
+<pre><code class="language-css">h1 {
+  color: red;
+}
+</code></pre>
+<p>This should make all <code>h1</code> tags red.</p>
+<p>Reload your website and see if it works (make sure you have a <code>h1</code>).
+If it isn't working ask for help.</p>
+<p>In the next few sections we'll be learning more about CSS.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="4">
+  <h2 class="subtitle">4. Selectors</h2>
+  <div class="content"><p>Now we've got CSS working let's backtrack and understand how CSS works.</p>
+<p>Whenever we want to style something in CSS we need to describe <em>what</em>
+we want to style. To do this we use something called <strong>selectors</strong>.</p>
+<p>In the example code above we styled <code>h1</code> tags. We did this by using a <code>h1</code>
+selector. Then we set the <strong>property</strong> called <code>color</code> to be <code>red</code>.</p>
+<p>The basic structure of css is this:</p>
+<p><img src="assets/css_structure.png" alt="css structure" /></p>
+<h2>Task</h2>
+<p>To check your understanding add some CSS that makes your ordered list (<code>ol</code>)
+that you created earlier have blue text.</p>
+<p>As an <strong>extension</strong> set the background color of <code>body</code> to be red. To do this you need
+to use the property called <code>background-color</code>. The image above should help
+you do this.</p>
+<p>Once you've got this to work, feel free to change the colours to suit you.</p>
+<p><strong>Tip:</strong> you can use the pre-defined named colours like <code>blue</code> and <code>yellow</code>
+or you could use a <strong>hex</strong> colour. For example if I write: <code>color: #a74343;</code>
+the text is a pale red. You can find more by searching for hex colours online.</p>
+<h2>Classes</h2>
+<p>Currently we only know how to target specific tags, but what if we
+want more control than that? Let's say we want to target a certain group of <code>p</code>
+tags but not all of them.</p>
+<p>Well we need to use a class. Let's imagine we want some paragraphs to have a
+large font size. We could use create a class called <code>large</code>
+and then apply that class to the paragraph elements we want to be large.
+To do this we use a <code>class</code> attribute on the HTML tags we want to have the class.</p>
+<pre><code class="language-html">&lt;p class=&quot;large&quot;&gt;This should be large&lt;/p&gt;
+&lt;p&gt;This won't be large&lt;/p&gt;
+&lt;p class=&quot;large&quot;&gt;This should also be large&lt;/p&gt;
+</code></pre>
+<p>Okay, so we've labeled two paragaphs with the class <code>large</code> but we haven't
+defined what <code>large</code> means. We need to do this in CSS. To specify a class
+selector we use a dot (<code>.</code>) and then the class name.</p>
+<pre><code class="language-css">.large {
+  font-size: 40px;
+}
+</code></pre>
+<p>As long as that CSS is imported any paragraph with the class large with have
+a large font size.</p>
+<h2>Task</h2>
+<p>Your task is to create a class called <code>important</code> which makes the text stand out.</p>
+<p>You can decide what you want to do, but I'd recommend changing the text colour,
+increasing the font size, making it bold and maybe changing the background colour.</p>
+<p>I haven't told you how to make text bold so you'll have to look that up. (hint:
+search <code>css bold text</code>).</p>
+<p>Make sure you add a paragraph to your HTML with that class.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="5">
+  <h2 class="subtitle">5. Extra CSS tricks</h2>
+  <div class="content"><p>There are loads of things you can do with CSS and it would take too long
+to go through all of it but here is a list of some things you might want to look
+into.</p>
+<p>There are no tasks for this section but you should read through it and maybe
+add them to your website.</p>
+<ul>
+<li>Elements can have more than one class. For example I can give a paragraph
+the class <code>large</code> and the class <code>important</code>: <code>&lt;p class=&quot;large important&quot;&gt;...&lt;/p&gt;</code>.
+Essentially you just need to put a space in between each class.</li>
+<li>You can write comments in CSS using <code>/*</code> and <code>*/</code> for example <code>/* This is a comment */</code>.
+Everything inside the comment is ignored. This lets you write notes to your self.</li>
+</ul>
+<h2>Advanced selectors</h2>
+<p>Selectors can get a bit complicated but they're also really powerful.</p>
+<p><code>.class-1.class-2.class-3</code> targets elements with classes
+<code>class-1</code>, <code>class-2</code> <strong>and</strong> <code>class-3</code>.</p>
+<p><code>.class-1, .class-2</code> targets elements with either the class <code>class-1</code>
+or <code>class-2</code>. The comma <code>,</code> lets you define a list of selectors.</p>
+<p><code>.class-1 .class-2</code> targets elements with the class <code>class-2</code> that are
+<strong>descendants</strong> of <code>class-1</code>.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="6">
+  <h2 class="subtitle">6. Time to follow your own path</h2>
+  <div class="content"><p>So far I've been giving you specific instructions on what to do.</p>
+<p>This has been important for learning the basics but now you're ready
+to start following your own path. I'll give you some ideas on things
+you can add to your website but ultimately <strong>it's your website</strong>.
+You should customise it for exactly what you want!</p>
+<p>You should get rid of anything I've told you to add but you don't want.</p>
+<p>As you add more features you might have an idea but get stuck trying to
+implement it. <strong>Follow these steps to resolve your problems:</strong></p>
+<ol>
+<li>Search for the problem your having online. There are loads of online
+resources that can help you with using HTML/CSS to create a website
+(loads is underselling it, seriously the web is <strong>huge</strong>).</li>
+<li>If you're following this tutorial at a coding workshop then try
+asking your peers around you.</li>
+<li>If you're still stuck ask a mentor (they'll be happy to help!).</li>
+</ol>
+<h2>Ideas</h2>
+<p>So if you haven't quite got a creative spark yet about what to do next
+for you website, try some of these ideas. Feel free (in fact <strong>I encourage you</strong>)
+to remix these depending on what you think is best:</p>
+<ol>
+<li>Add more pages: Using <code>&lt;a&gt;</code> tags you can create links to multiple HTML files
+in your website. You should create links from your lists to pages talking about the things
+they describe. For example if you created a top 10 list about your favourite
+games you should pick your favourite game and create a page all about it!</li>
+<li>Add more CSS: now you know the basics you should be able to look things up
+and make your website look awesome!</li>
+<li>Add more images: It will make your website stand out.</li>
+<li>Make a website about the projects you've worked on. You could create a
+projects page that has links to other HTML files, each one describing a project
+your worked on. You could add images.</li>
+</ol>
+</div>
+</article>
+  
+  </section>
+</div>
+
+    </div>
+
+    <script onload="hljs.initHighlighting()" src="/tutorial_web_content/static/highlight.min.js"></script>
+    <script onload="hljs.initLineNumbersOnLoad()" src="/tutorial_web_content/static/highlightjs-line-numbers.min.js"></script>
+
+    <script src="/tutorial_web_content/static/main.js"></script>
+  </body>
+</html>

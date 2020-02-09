@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Introduction to HTML</title>
+
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/main.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/zenburn.min.css" />
+
+    
+  </head>
+  <body>
+    <div id="content">
+      
+<div class="course">
+  <h1 class="course-title">Introduction to HTML</h1>
+  <section class="tutorials">
+  
+    <article class="tutorial " data-index="1">
+  <h2 class="subtitle">1. Introduction</h2>
+  <div class="content"><p>Today you're going to learn how to make a website using HTML.</p>
+<p>This course will get you started with HTML and get you ready to create your first proper website.</p>
+<p>To get started we going to need to download a <em>code editor</em>. This isn't essential
+(you could even code using <code>Text Edit</code> or <code>Notepad</code>) but it makes everything
+a lot easier.</p>
+<p>If you already have one installed on your computer you can use that,
+but I recommend <a href="https://www.sublimetext.com/">sublime text</a>; <a href="https://atom.io/">atom</a> will also work.</p>
+<p>Create a folder to contain your work. I would suggest that you create a folder called <code>websites</code> in <code>Documents</code>.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="2">
+  <h2 class="subtitle">2. Getting started</h2>
+  <div class="content"><p>In your code editor (such as sublime text) create a new file (usually <code>File-&gt;New File</code>) and copy the following code into it:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>In sublime this should look like this:</p>
+<p><img src="assets/sublime_starter.png" alt="website starter code sublime text" /></p>
+<p>Then save the file as <code>my-website.html</code> in your <code>websites</code> folder:</p>
+<p><img src="assets/sublime_save.png" alt="sublime text save" /></p>
+<p>Now open the <code>websites</code> folder in your file explorer (<code>finder</code> on mac),
+then open the HTML file with the browser of your choice. Usually you can
+just double click on the HTML file but sometimes you need to right click and choose <code>open with</code>.</p>
+<p>It should look something like this:</p>
+<p><img src="assets/website_hello.png" alt="website saying hello" /></p>
+<p>Notice the bar saying <code>My First Website</code> (this is the <code>title</code>).</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="3">
+  <h2 class="subtitle">3. Understanding the example code</h2>
+  <div class="content"><p>So far I've just given you some code and got you to run it, but I haven't
+explained how it works.</p>
+<h2>Understanding tags</h2>
+<p>The first thing we need to understand is what <strong>tags</strong> are.</p>
+<p>Tags are the things that are angle brackets <code>&lt;</code> and <code>&gt;</code>.</p>
+<p>Let's look at the title tag:</p>
+<pre><code class="language-html">&lt;title&gt;My First Website&lt;/title&gt;
+</code></pre>
+<p>The first <code>&lt;title&gt;</code> opens the tag and everything up to the closing <code>&lt;/title&gt;</code>
+is a <strong>child</strong> of the title tag. <code>My First Website</code> is the child of the <code>title</code> tag.</p>
+<p>Most tags in HTML are opened with their name surrounded by <code>&lt;&gt;</code> - for example <code>&lt;body&gt;</code> -
+and they are closed with a slash (<code>/</code>) - for example <code>&lt;/body&gt;</code>.</p>
+<p><code>&lt;body&gt;</code> means the body section starts here and <code>&lt;/body&gt;</code> means the body section ends here.</p>
+<p>Some tags <strong>don't have closing tags</strong> but there are much less common than tags that do require closing tags.</p>
+<h2>The code</h2>
+<p>Let's go line by line over the code to understand what's going on.</p>
+<p><code>&lt;!DOCTYPE html&gt;</code> is a special tag that doesn't have a closing tag,
+and it tells the computer that the following code is HTML code.</p>
+<p><code>&lt;html&gt;</code> says that the HTML code starts here. All you code will be a child of this tag.</p>
+<p><code>&lt;head&gt;</code> is the start of the <code>head</code> section, certain tags that
+represent things which aren't displayed on your website must go here.</p>
+<p><code>&lt;title&gt;My First Website&lt;/title&gt;</code> tells the webpage that the title is <code>My First Website</code>.</p>
+<p><code>&lt;/head&gt;</code> ends the <code>head</code> section.</p>
+<p><code>&lt;body&gt;</code> start the <code>body</code> section which is where <strong>everything that is displayed on the screen</strong> goes.</p>
+<p><code>&lt;h1&gt;Hello!&lt;/h1&gt;</code> creates a large header with the message <code>Hello!</code>.
+<code>h1</code> is short for <code>header 1</code> where <code>1</code> is the largest size.</p>
+<p><code>&lt;/body&gt;</code> ends the <code>body</code> section</p>
+<p><code>&lt;/html&gt;</code> says that this is the end of the HTML code.</p>
+<h2>Exercise</h2>
+<p>I mentioned that <code>h1</code> means header size <code>1</code> where <code>1</code> is the largest size.
+Well you can make headers smaller by increasing the number (up to a maximum of <code>6</code>).</p>
+<p>Your task is to create a new header with a size <code>3</code> below the <code>h1</code>.
+The header should say <code>I am a smaller header</code>.</p>
+<p>Make sure you create both the opening and closing tag!</p>
+<p><strong>Tip:</strong> When you make your change you need to save the file and then refresh the page in your web-browser.</p>
+<p>It should look like this when you've done it:</p>
+<p><img src="assets/smaller_header.png" alt="smaller header" /></p>
+<h2>Solution</h2>
+<p>Check the solution <a href="assets/smaller_header_solution.txt">here</a> when you've done it.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="4">
+  <h2 class="subtitle">4. Adding more content</h2>
+  <div class="content"><p>First things first, get rid of the <code>&lt;h3&gt;...&lt;/h3&gt;</code> section so you're code
+looks like the starting code.</p>
+<p>Next we're going to add a paragraph, this uses the <code>&lt;p&gt;</code> tag.</p>
+<p>Add <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code> below your <code>&lt;h1&gt;</code> tag.</p>
+<h2>Exercise</h2>
+<p>Using your knowledge so far recreate the following image of a webpage by changing your code.</p>
+<p><strong>Hint:</strong> The paragraph should say <code>My name is NAME.</code>, where <code>NAME</code> is your name.</p>
+<p><img src="assets/adding_more_content_challenge.png" alt="more content" /></p>
+<h2>Solution</h2>
+<p>Check the solution <a href="assets/paragraph_solution.txt">here</a> when you've done it.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="5">
+  <h2 class="subtitle">5. Images</h2>
+  <div class="content"><p>Let's add some images to our website.</p>
+<p>To do this we use an <code>&lt;img&gt;</code> tag. This tag is a special tag since you <strong>don't need a closing tag</strong>.</p>
+<p>Adding an image tag just by itself won't actually do anything because
+you need to tell your computer where to find the actual image.</p>
+<p>To do this we use an <em>attribute</em>.</p>
+<h2>Attributes</h2>
+<p>Attributes are extra bits of information that are associated with an HTML tag.</p>
+<p>Let's take a look at this diagram to understand how to add attributes to HTML tags:</p>
+<p><img src="assets/attribute_diagram.png" alt="attribute diagram" /></p>
+<p>As you can see attributes are added inside the angle brackets (<code>&lt;...&gt;</code>)
+after the tag name and they follow the pattern <code>attribute-name=&quot;attribute-value&quot;</code>.</p>
+<p>No attributes are ever in the closing tag.</p>
+<h2>Specifying the image location</h2>
+<p>We need to add an atribute with the name <code>src</code> which is short for <em>source</em>.</p>
+<p>Now we need to find an actual image to put on our website. There are several ways of doing this.</p>
+<h3>Online image</h3>
+<p>An easy way to add an image we find online is to right click on the image and select
+<code>Copy image location</code> (your browser may say something different but essentially
+we need a URL).</p>
+<p><img src="assets/copy_image_location.png" alt="copy image location box" /></p>
+<p>Then you can add an image using <code>&lt;img src=&quot;URL&quot;&gt;</code> where <code>URL</code> is the image location
+you just copied.</p>
+<p><strong>Don't forget:</strong> <code>&lt;img&gt;</code> is a special tag and <strong>doesn't need</strong> <code>&lt;/img&gt;</code></p>
+<p><strong>Tip:</strong> If your image is too big add a width attribute with the value <code>200px</code>,
+for example <code>&lt;img src=&quot;URL&quot; width=&quot;200px&quot;&gt;</code>.</p>
+<h3>Local / Downloaded image</h3>
+<p>If you want to add images that you've downloaded or don't even exist
+online then you can place the image file in the <strong>same folder</strong> as your website.</p>
+<p>Then you can write <code>&lt;img src=&quot;PATH&quot;&gt;</code> where <code>PATH</code> is the name of the image
+(including the extension which is usually <code>.png</code> or <code>.jpg</code>). If you placed the image
+in a folder e.g. <code>images</code> then (as long as that folder is in the same directory as your html file)
+you should set <code>PATH</code> to be <code>images/FILE_NAME.EXTENSION</code>. This is called a relative path.</p>
+<h2>Exercise</h2>
+<p>Your task is to add two images to your website, one which is from online and another
+which has been downloaded.</p>
+<h2>Solution</h2>
+<p>Since there are many different ways to do this, there isn't one solution
+so check to make sure when you load your website you see two images.</p>
+<p>Also it might be helpful to ask a mentor to check you're on the right track.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="6">
+  <h2 class="subtitle">6. Links</h2>
+  <div class="content"><p>Links are incredibly useful for creating more advanced websites.
+To create a link you use <code>&lt;a href=&quot;URL&quot;&gt;Link message&lt;/a&gt;</code>.</p>
+<p>When you run that tag in the browser it looks like this:</p>
+<p><img src="assets/link_message.png" alt="link with messsage &quot;Link message&quot;" /></p>
+<p>Links use an <code>href</code> attribute which works like <code>src</code> on images except instead of displaying
+an image, it becomes a link which when you click you are redirected to another webpage.</p>
+<h2>Exercise 1</h2>
+<ol>
+<li>Pick your favourite website and then copy the URL, for example <code>https://google.com</code>.</li>
+<li>Add an <code>&lt;a&gt;</code> tag to your website that says &quot;My favourite website&quot;, and when you click
+on the link, you are redirected to that website.</li>
+</ol>
+<p>The value of the <code>href</code> attribute should be the url you copied.</p>
+<p>The solution to exercise 1 is <a href="assets/links_ex_1.txt">here</a>.</p>
+<h2>Exercise 2</h2>
+<p>First we need to create a new webpage:</p>
+<ol>
+<li>Create a new html file called <code>second_page.html</code> in the same folder as your other website code.</li>
+<li>Copy the starter code at the top into the page and make the title <code>Second page</code>
+and create a <code>h1</code> with the message <code>Welcome to the second page!</code>.</li>
+</ol>
+<p>Open your second webpage in a browser, it should look like this:</p>
+<p><img src="assets/second_page.png" alt="Second page" /></p>
+<p>The source code is <a href="assets/second_page.txt">here</a>.</p>
+<hr />
+<p>Now we've created the second page we need to create a link to it.</p>
+<p>Your task is to create a new <code>&lt;a&gt;</code> tag with the message Go to the second page
+and set the value of the href attribute to <code>second_page.html</code>.</p>
+<p>When you click on it you should be redirected to the second page.</p>
+<p><img src="assets/second_page.gif" alt="second page gif" /></p>
+<p>The source code for the main page is <a href="assets/website_link.txt">here</a></p>
+<h2>Extension</h2>
+<p>Add a link from the second page back to your main website.
+Make the link say <code>Go back to main page</code>.</p>
+</div>
+</article>
+  
+    <article class="tutorial " data-index="7">
+  <h2 class="subtitle">7. Conclusion</h2>
+  <div class="content"><p>Now you know a bit of HTML but we haven't really done anything cool with it yet.</p>
+<p>In the <a href="../my_first_website/index.html">next course</a> you'll make your first proper website all
+about you and your interests! You'll also learn how to make your website look good.</p>
+</div>
+</article>
+  
+  </section>
+</div>
+
+    </div>
+
+    <script onload="hljs.initHighlighting()" src="/tutorial_web_content/static/highlight.min.js"></script>
+    <script onload="hljs.initLineNumbersOnLoad()" src="/tutorial_web_content/static/highlightjs-line-numbers.min.js"></script>
+
+    <script src="/tutorial_web_content/static/main.js"></script>
+  </body>
+</html>
