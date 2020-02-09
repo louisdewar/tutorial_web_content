@@ -204,6 +204,58 @@ tutorials:
 
       If the ghost bounces in a "weird" way, go back to the costumes and make sure the ghost is positioned in the center of the drawing area.
 
+  - subtitle: Pacman eats ghost!
+    content: |
+      Let's import a sound that Pacman will make when "eating" a ghost.
+
+      Click on the "ghost" sprite
+
+      ![](assets/select_ghost_sprite.png)
+
+      then click on the "sounds" tab and on the "select sound" at the bottom
+
+      ![](assets/choose_sound.png)
+
+      for example let's use the "chomp" sound:
+
+      ![](assets/select_chomp_sound.png)
+
+      Let's rename the sprites in order to make our life easier in a moment. Click on each sprite and change the name in the "Sprite" section:
+
+      ![](assets/rename_sprites.png)
+
+      Let's make Pacman "eat" a ghost! Modify the existing code so that it looks like this:
+
+      ![](assets/pacman_eats_ghost.png)
+
+      When a ghost is touching pacman, we make it disappear for 1 second and reappear in a random position.
+
+  - subtitle: Adding more ghosts
+    content: |
+      First of all let's make pacman and the ghost smaller, in order to make room for more ghosts
+
+      Let's use the block "Change size to <percentage>". for example 60%.
+
+      Pacman:
+
+      ![](assets/resize_pacman.png)
+
+      The ghost:
+
+      ![](assets/resize_ghost.png)
+
+      Now we can simply duplicate the ghost sprite: right click on the ghost sprite then click on "duplicate":
+
+      ![](assets/duplicate_ghost.png)
+
+      Now two ghosts appear on the stage! Feel free to change the color or speed of the second ghost.
+
+      ![](assets/duplicated_ghosts.png)
+
+
+
+
+
   - subtitle: Conclusion
     content: |
       Well done!
