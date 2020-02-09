@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Website</title>
+  </head>
+  <body>
+    <h1>Hello!</h1>
+    <h3>I am a smaller header</h3>
+  </body>
+</html>

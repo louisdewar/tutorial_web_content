@@ -1,0 +1,258 @@
+title: My first website
+lang: html
+url: my_first_website
+
+tutorials:
+  - subtitle: Introduction
+    content: |
+      **This course follows on from [intoduction to HTML](../introduction_html/index.html)
+      so make sure you check that out first.**
+
+      Create a folder called `about_me` and create a file called `index.html`
+      inside it.
+
+      **Index** is a special name that means "this is the main/home page".
+
+      Copy this starter code into the file:
+      ```html
+      <!DOCTYPE html>
+      <html>
+        <head>
+        </head>
+        <body>
+        </body>
+      </html>
+      ```
+
+      Now create a title tag with the message `My website about me`
+      (don't forget that `<title>` must go in the `<head>` section).
+
+      Then create a large header (`<h1>`) with the message `About me`.
+
+      <hr>
+
+      The goal for this course is to create a website about you and your interests.
+
+      This course will encourage you to be creative and so the instructions
+      might ask you to come up with your own ideas.
+
+      [Here](assets/starter.txt) is the solution to the task above.
+
+  - subtitle: Adding content to your front page
+    content: |
+      Create a paragraph using the `p` tag below your header (the `h1` tag).
+
+      In it introduce yourself, say what your name is and your age.
+      You could also add something about what your hobbies are.
+
+      <hr>
+
+      ### Now we're going to learn about lists.
+
+      There are two types of lists, unordered lists (`ul`) and ordered lists (`ol`).
+      Ordered lists automatically label each item with a number whereas unordered list
+      just use bullet points.
+
+      Inside a `<ol>` or `<ul>` block we use the tag `<li>` to mark out `List Items`.
+
+      See the result of this code in the image below:
+      ```html
+      <h2>This is an unordered list:</h2>
+
+      <ul>
+        <li>A list item</li>
+        <li>Another list item</li>
+      </ul>
+
+      <h2>This is an ordered list:</h2>
+
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+      </ol>
+      ```
+
+      ![list types](assets/lists.png)
+
+      ## Task
+
+      Your task is to create an **unordered** list, to list anything you want.
+      For example you could create a section that has some of the books you have read
+      recently or games you have played.
+
+      Then once you have created that list create an **ordered** list ranking
+      something you are interested in. For example it could rank your favourite
+      TV shows or movies.
+
+      Try to make your website look structured so create headers (e.g. `h2`)
+      before your lists to label them, just like I've done in the example above.
+
+      As an extension add some images to your lists (if you need a recap then go
+      to the [intoduction to HTML](../introduction_html/index.html) course).
+  - subtitle: Styling your website
+    content: |
+      Black and white websites were all the rage when the internet first started
+      but nowadays every website has a least some splash of colour!
+
+      To do this we use a language called `CSS`. HTML and CSS work hand in hand.
+      HTML defines the structure of the website and CSS says how it should look.
+
+      CSS files have the `.css` extension just like HTML files have a `.html`
+      extension. A single CSS file can be shared between multiple html files.
+
+      Create a file called `styles.css` in the same folder as your HTML file.
+
+      In the `head` section of your html add the following line:
+      ```html
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      ```
+
+      All this does is import a CSS stylesheet called `styles.css`.
+
+      In `styles.css` add the following code:
+      ```css
+      h1 {
+        color: red;
+      }
+      ```
+
+      This should make all `h1` tags red.
+
+      Reload your website and see if it works (make sure you have a `h1`).
+      If it isn't working ask for help.
+
+      In the next few sections we'll be learning more about CSS.
+  - subtitle: Selectors
+    content: |
+      Now we've got CSS working let's backtrack and understand how CSS works.
+
+      Whenever we want to style something in CSS we need to describe *what*
+      we want to style. To do this we use something called **selectors**.
+
+      In the example code above we styled `h1` tags. We did this by using a `h1`
+      selector. Then we set the **property** called `color` to be `red`.
+
+      The basic structure of css is this:
+
+      ![css structure](assets/css_structure.png)
+
+      ## Task
+
+      To check your understanding add some CSS that makes your ordered list (`ol`)
+      that you created earlier have blue text.
+
+      As an **extension** set the background color of `body` to be red. To do this you need
+      to use the property called `background-color`. The image above should help
+      you do this.
+
+      Once you've got this to work, feel free to change the colours to suit you.
+
+      **Tip:** you can use the pre-defined named colours like `blue` and `yellow`
+      or you could use a **hex** colour. For example if I write: `color: #a74343;`
+      the text is a pale red. You can find more by searching for hex colours online.
+
+      ## Classes
+
+      Currently we only know how to target specific tags, but what if we
+      want more control than that? Let's say we want to target a certain group of `p`
+      tags but not all of them.
+
+      Well we need to use a class. Let's imagine we want some paragraphs to have a
+      large font size. We could use create a class called `large`
+      and then apply that class to the paragraph elements we want to be large.
+      To do this we use a `class` attribute on the HTML tags we want to have the class.
+
+      ```html
+      <p class="large">This should be large</p>
+      <p>This won't be large</p>
+      <p class="large">This should also be large</p>
+      ```
+
+      Okay, so we've labeled two paragaphs with the class `large` but we haven't
+      defined what `large` means. We need to do this in CSS. To specify a class
+      selector we use a dot (`.`) and then the class name.
+
+      ```css
+      .large {
+        font-size: 40px;
+      }
+      ```
+
+      As long as that CSS is imported any paragraph with the class large with have
+      a large font size.
+
+      ## Task
+
+      Your task is to create a class called `important` which makes the text stand out.
+
+      You can decide what you want to do, but I'd recommend changing the text colour,
+      increasing the font size, making it bold and maybe changing the background colour.
+
+      I haven't told you how to make text bold so you'll have to look that up. (hint:
+      search `css bold text`).
+
+      Make sure you add a paragraph to your HTML with that class.
+  - subtitle: Extra CSS tricks
+    content: |
+      There are loads of things you can do with CSS and it would take too long
+      to go through all of it but here is a list of some things you might want to look
+      into.
+
+      There are no tasks for this section but you should read through it and maybe
+      add them to your website.
+
+      - Elements can have more than one class. For example I can give a paragraph
+      the class `large` and the class `important`: `<p class="large important">...</p>`.
+      Essentially you just need to put a space in between each class.
+      - You can write comments in CSS using `/*` and `*/` for example `/* This is a comment */`.
+      Everything inside the comment is ignored. This lets you write notes to your self.
+
+      ## Advanced selectors
+
+      Selectors can get a bit complicated but they're also really powerful.
+
+      `.class-1.class-2.class-3` targets elements with classes
+      `class-1`, `class-2` **and** `class-3`.
+
+      `.class-1, .class-2` targets elements with either the class `class-1`
+      or `class-2`. The comma `,` lets you define a list of selectors.
+
+      `.class-1 .class-2` targets elements with the class `class-2` that are
+      **descendants** of `class-1`.
+  - subtitle: Time to follow your own path
+    content: |
+      So far I've been giving you specific instructions on what to do.
+
+      This has been important for learning the basics but now you're ready
+      to start following your own path. I'll give you some ideas on things
+      you can add to your website but ultimately **it's your website**.
+      You should customise it for exactly what you want!
+
+      You should get rid of anything I've told you to add but you don't want.
+
+      As you add more features you might have an idea but get stuck trying to
+      implement it. **Follow these steps to resolve your problems:**
+
+      1. Search for the problem your having online. There are loads of online
+      resources that can help you with using HTML/CSS to create a website
+      (loads is underselling it, seriously the web is **huge**).
+      2. If you're following this tutorial at a coding workshop then try
+      asking your peers around you.
+      3. If you're still stuck ask a mentor (they'll be happy to help!).
+
+      ## Ideas
+
+      So if you haven't quite got a creative spark yet about what to do next
+      for you website, try some of these ideas. Feel free (in fact **I encourage you**)
+      to remix these depending on what you think is best:
+
+      1. Add more pages: Using `<a>` tags you can create links to multiple HTML files
+      in your website. You should create links from your lists to pages talking about the things
+      they describe. For example if you created a top 10 list about your favourite
+      games you should pick your favourite game and create a page all about it!
+      2. Add more CSS: now you know the basics you should be able to look things up
+      and make your website look awesome!
+      3. Add more images: It will make your website stand out.
+      4. Make a website about the projects you've worked on. You could create a
+      projects page that has links to other HTML files, each one describing a project
+      your worked on. You could add images.
