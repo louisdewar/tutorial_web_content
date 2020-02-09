@@ -14,6 +14,9 @@ tutorials:
       ![](assets/finished_game_screenshot.png)
 
       Click on "Getting started" to start!
+
+      You can find a version of this game [online](https://scratch.mit.edu/projects/363620465/) on the Scratch website
+
   - subtitle: Getting started
     content: |
       Open the Scratch website (right click to open in a new window):
@@ -252,15 +255,56 @@ tutorials:
 
       ![](assets/duplicated_ghosts.png)
 
-
-
-
-
-  - subtitle: Conclusion
+  - subtitle: Keeping a score
     content: |
-      Well done!
+      First we need to have a variable called "score"
 
-      We hope you had fun!
+      Select the pacman sprite, then click on the "variables" section and "Make a variable" button.
+
+      ![](assets/make_a_variable_1.png)
+
+      ![](assets/make_a_variable_2.png)
+
+      Notice the option "for all sprites" which makes the variable global.
+
+      Now click on the first ghost, and add the "broadcast" block next to the "play sound" block.
+      Whenever the ghost is "eaten", besides playing the sound we want to make that event known to the game.
+
+      In a second, we will use this signal to increase the score
+
+      ![](assets/broadcast_1.png)
+
+      ![](assets/broadcast_2_new_message.png)
+
+      This is the final result of the ghost code:
+
+      ![](assets/broadcast_3.png)
+
+      The same code needs to be added to the other ghost (and any others you might have created).
+
+      Let's add the "score" code to Pacman:
+
+      ![](assets/increase_score.png)
+
+      You will notice that the score never goes to zero! Let's fix that:
+
+      ![](assets/set_score_to_zero.png)
+
+  - subtitle: Conclusion / Further ideas
+    content: |
+      Well done. We hope you had fun!
+
+      You can keep adding features or changing colors, speed and sound of the characters in the game.
+
+      Here are some ideas:
+
+      - Make some ghosts bigger and other smaller
+
+      - Make the smaller ghosts broadcast a different message and give pacman more points when catching those small ones
+
+      - Add a timer.
+
+      - Make sure to share your Ghostcatcher! Did you know you can also remix (i.e. reuse) the games made by others on the Scratch website? Your friends could remix yours too!
 
       If you noticed any issues with this course such as typos or bugs tell someone at an event,
       or report them youself [here](https://github.com/louisdewar/tutorial_web_content/issues/new).
