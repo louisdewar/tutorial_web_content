@@ -125,6 +125,27 @@ tutorials:
 
       *NOTE* try to change the number in the "wait 1 seconds" block, for example try "0.2" or "2" and see how the animation changes.
 
+  - subtitle: Controlling Pacman with the mouse
+    content: |
+      Let's make Pacman move towars the mouse.
+
+      Add the following blocks to Pacman:
+
+      ![](assets/move_pacman_towards_mouse.png)
+
+      ## Test
+
+      Press the green flag and see what Pacman does!
+
+      ## Moving faster
+
+      We can tell Pacman do move faster when the mouse pointer is farther away.
+
+      The logic here is: if the distance between Pacmand and the mouse is greater than 100, move 10 steps.
+      Else, if it's greater than 6 move only 5 steps.
+
+      ![](assets/move_pacman_faster.png)
+
   - subtitle: Conclusion
     content: |
       Well done!
