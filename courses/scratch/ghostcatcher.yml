@@ -59,7 +59,7 @@ tutorials:
 
       Now create a new sprite by hovering the mouse on the little cat head with a "+" sign and clicking on the paintbrush symbol
 
-      ![](assets/paint_new_sprite.png)
+      <img src="assets/paint_new_sprite.png" id="paintnewsprite"/>
 
       Select yellow from the color picker, the "circle" tool and draw a circle roughtly in the middle of the checkered board
 
@@ -145,6 +145,33 @@ tutorials:
       Else, if it's greater than 6 move only 5 steps.
 
       ![](assets/move_pacman_faster.png)
+
+  - subtitle: Drawing a ghost
+    content: |
+      Let's create a new sprite [like we did for Pacman](#paintnewsprite) (If clicking doen't work, open the section "Drawing Pacman" then click again.)
+
+      First select "No outline" so that ther's no black border around the shapes
+
+      ![](assets/no_outline.png)
+
+      Let's draw a circle and a square on top of it.
+      
+      ![](assets/circle_and_square_for_ghost.png)
+
+      You can draw the ghost's legs by erasing two triangles from the bottom
+
+      ![](assets/ghost_legs.png)
+
+      Select "white" as fill colour (bring Saturation to 0) and draw an "oval" shape to make the eye.
+
+      ![](assets/ghost_eye.png)
+
+      *Trick*: to draw the second eye you can press `CTRL-C` and `CTRL-V` to "copy-paste" the previous one.
+
+      Let's give the eyes a final touch
+
+      ![](assets/ghost_eyes.png)
+      
 
   - subtitle: Conclusion
     content: |
