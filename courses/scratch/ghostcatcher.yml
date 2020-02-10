@@ -202,7 +202,8 @@ tutorials:
 
       ![](assets/ghost_motion.png)
 
-      You'll notice the ghost turns into all directions. In order to make it "stand", add the "set rotation style to left-right":
+      You'll notice the ghost turns in all directions. In order to
+      make it stand upright, add the "set rotation style to left-right":
 
       ![](assets/ghost_motion_2.png)
 
