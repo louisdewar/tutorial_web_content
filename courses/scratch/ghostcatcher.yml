@@ -1,6 +1,6 @@
 title: Ghost Catcher
 lang: scratch
-url: ghostcatcher
+url: ghost_catcher
 
 tutorial_settings:
   start_closed: true
@@ -302,7 +302,7 @@ tutorials:
 
       Here are some ideas:
 
-      - Make some ghosts bigger and other smaller
+      - Make some ghosts bigger and some smaller
 
       - Make the smaller ghosts broadcast a different message and give pacman more points when catching those small ones
 
