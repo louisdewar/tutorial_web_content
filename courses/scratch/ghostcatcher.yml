@@ -240,7 +240,7 @@ tutorials:
     content: |
       First of all let's make pacman and the ghost smaller, in order to make room for more ghosts
 
-      Let's use the block "Change size to <percentage>". for example 60%.
+      Let's use the block `Change size to <percentage>`. Try a value of `60%`.
 
       Pacman:
 
