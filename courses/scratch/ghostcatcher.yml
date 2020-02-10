@@ -260,7 +260,7 @@ tutorials:
 
   - subtitle: Keeping a score
     content: |
-      First we need to have a variable called "score"
+      First we need to have a variable called `score`.
 
       Select the pacman sprite, then click on the "variables" section and "Make a variable" button.
 
