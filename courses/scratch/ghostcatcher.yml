@@ -160,7 +160,7 @@ tutorials:
     content: |
       Let's create a new sprite [like we did for Pacman](#paintnewsprite) (If clicking doen't work, open the section "Drawing Pacman" then click again.)
 
-      First select "No outline" so that ther's no black border around the shapes
+      First select `No outline` so that there's no black border around the shapes:
 
       ![](assets/no_outline.png)
 
