@@ -113,7 +113,10 @@ tutorials:
 
   - subtitle: Animating Pacman
     content: |
-      Let's go to the "Code" tab and start animating Pacman! Click on the "Events" section on the left, then find and drag on the screen the "When green flag pressed" block
+      Let's go to the "Code" tab and start animating Pacman!
+      Click on the "Events" section on the left and find the block labelled
+      `When [green flag] pressed`. Click and drag the block from the left 
+      onto the right hand screen.
 
       ![](assets/pacman_green_flag.png)
 
