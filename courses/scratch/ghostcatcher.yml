@@ -132,7 +132,8 @@ tutorials:
 
       Now click on the green flag and see what happens!
 
-      *NOTE* try to change the number in the "wait 1 seconds" block, for example try "0.2" or "2" and see how the animation changes.
+      **Extension:** try to change the number in the `wait 1 seconds` block,
+      for example try `0.2` or `2` and see how the animation changes.
 
   - subtitle: Controlling Pacman with the mouse
     content: |
