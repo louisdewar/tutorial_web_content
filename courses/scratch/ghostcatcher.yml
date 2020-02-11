@@ -137,7 +137,7 @@ tutorials:
 
   - subtitle: Controlling Pacman with the mouse
     content: |
-      Let's make Pacman move towars the mouse.
+      Let's make Pacman move towards the mouse.
 
       Add the following blocks to Pacman:
 
