@@ -120,7 +120,9 @@ tutorials:
 
       ![](assets/pacman_green_flag.png)
 
-      What we want to achieve is Pacman opening and closign his mouth, in other words do automatically what we did manually by clicking on the two costumes.
+      Our goal is to get Pacman automatically opening and closing his mouth,
+      kind of like what we did when we manually clicked between the two
+      costumes.
 
       For this we need a *cycle*.
 
