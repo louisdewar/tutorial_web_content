@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ghost Catcher</title>
+
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/main.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/tutorial_web_content/static/zenburn.min.css" />
+
+    
+  </head>
+  <body>
+    <div id="content">
+      
+<div class="course">
+  <h1 class="course-title">Ghost Catcher</h1>
+  <section class="tutorials">
+  
+    <article class="tutorial " data-index="1">
+  <h2 class="subtitle">1. Introduction</h2>
+  <div class="content"><p>This tutorial will guide you through the creation of a PacMan-like game.</p>
+<p><img src="assets/finished_game_screenshot.png" alt="" /></p>
+<p>Click on &quot;Getting started&quot; to start!</p>
+<p>You can find a version of this game <a href="https://scratch.mit.edu/projects/363620465/">online</a> on the Scratch website</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="2">
+  <h2 class="subtitle">2. Getting started</h2>
+  <div class="content"><p>Open the Scratch website (right click to open in a new window):</p>
+<p><a href="https://scratch.mit.edu">https://scratch.mit.edu</a></p>
+<p><img src="assets/scratch_website.png" alt="" /></p>
+<p>Click on &quot;Create&quot; to start coding.</p>
+<p><strong>Highly recommended</strong></p>
+<p>If you log into Scratch you can save your project
+and keep working on it when you get home!</p>
+<p>Create an account by clicking on &quot;Join Scratch&quot; or &quot;Login&quot; if you have already registered.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="3">
+  <h2 class="subtitle">3. Backdrop</h2>
+  <div class="content"><p>Make a colourful backdrop. Use the paint can tool to flood the backdrop with colour.</p>
+<p>Click on &quot;Stage&quot; on the right</p>
+<p><img src="assets/click_on_stage.png" alt="" /></p>
+<p>then &quot;Backdrops&quot; at the top left of the screen</p>
+<p><img src="assets/click_on_backdrops.png" alt="" /></p>
+<p>Click on the Paint Tool, select a color you like and click on the checkered area to paint it.</p>
+<p><img src="assets/color_selector_paint_tool.png" alt="" /></p>
+<p>Feel free to experiment with the other tools, but don't make it too crowded just yet! 
+You can come back later and improve the background, or select a completely new one.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="4">
+  <h2 class="subtitle">4. Drawing Pacman</h2>
+  <div class="content"><p>Let's draw our pacman!</p>
+<p>First of all delete the &quot;Cat&quot; sprite by clicking on the bin icon with an &quot;X&quot;</p>
+<p><img src="assets/delete_cat_sprite.png" alt="" /></p>
+<p>Now create a new sprite by hovering the mouse on the little cat head with a &quot;+&quot; sign and clicking on the paintbrush symbol</p>
+<img src="assets/paint_new_sprite.png" id="paintnewsprite"/>
+<p>Select yellow from the color picker, the &quot;circle&quot; tool and draw a circle roughtly in the middle of the checkered board</p>
+<p><img src="assets/draw_a_circle.png" alt="" /></p>
+<p>Let's draw the eye and the mouth! To make it easier to work, click on the magnifying glass at the bottom right of the drawing area</p>
+<p><img src="assets/zoom_buttons.png" alt="" /></p>
+<p>Click on an empty spot of the drawing area to deselect pacman.</p>
+<p>Now select &quot;black&quot; as the fill colour to draw the eye.</p>
+<p>Notice that if Pacman is still selected, when you change the colour you change the colour of Pacman!</p>
+<p><img src="assets/deselect_pacman.png" alt="" /></p>
+<p>Using the &quot;circle&quot; tool draw the eye</p>
+<p><img src="assets/draw_pacman_eye.png" alt="" /></p>
+<p>Using the &quot;line&quot; tool draw Pacman's mouth closed</p>
+<p><img src="assets/draw_pacman_mouth_closed.png" alt="" /></p>
+<p>Now let's draw Pacman's mouth open. First let's duplicate the drawing so that we can later create a nice animation!</p>
+<p><img src="assets/duplicate_pacman_costume.png" alt="" /></p>
+<p>Notice that now Pacman has two costumes: &quot;costume1&quot; and &quot;costume2&quot;. <strong>Make sure &quot;costume2&quot; is selected now</strong>.</p>
+<p>Now let's &quot;erase&quot; a bit of Pacman to make his mouth open.</p>
+<p>Select the &quot;eraser&quot; tool and adjust its size, for example start with 20.</p>
+<p><img src="assets/eraser_size.png" alt="" /></p>
+<p>Drag the white circle in order to remove a triangular shaped portion of Pacman's mouth.</p>
+<p><img src="assets/pacman_open_mouth.png" alt="" /></p>
+<p>If you're not satisfied, you can always undo and try again by pressing the &quot;Undo&quot; button:</p>
+<p><img src="assets/undo_redo.png" alt="" /></p>
+<p>Once you're happy with the result, click on the two costumes in sequence, and notice how Pacman seems to opena and close its mouth!</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="5">
+  <h2 class="subtitle">5. Animating Pacman</h2>
+  <div class="content"><p>Let's go to the &quot;Code&quot; tab and start animating Pacman!
+Click on the &quot;Events&quot; section on the left and find the block labelled
+<code>When [green flag] pressed</code>. Click and drag the block from the left 
+onto the right hand screen.</p>
+<p><img src="assets/pacman_green_flag.png" alt="" /></p>
+<p>Our goal is to get Pacman automatically opening and closing his mouth,
+kind of like what we did when we manually clicked between the two
+costumes.</p>
+<p>For this we need a <em>cycle</em>.</p>
+<p>Underneath the &quot;When green flag clicked&quot; block, add these other blocks:</p>
+<p><img src="assets/pacman_animation_cycle.png" alt="" /></p>
+<p>Now click on the green flag and see what happens!</p>
+<p><strong>Extension:</strong> try to change the number in the <code>wait 1 seconds</code> block,
+for example try <code>0.2</code> or <code>2</code> and see how the animation changes.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="6">
+  <h2 class="subtitle">6. Controlling Pacman with the mouse</h2>
+  <div class="content"><p>Let's make Pacman move towards the mouse.</p>
+<p>Add the following blocks to Pacman:</p>
+<p><img src="assets/move_pacman_towards_mouse.png" alt="" /></p>
+<h2>Test</h2>
+<p>Press the green flag and see what Pacman does!</p>
+<h2>Moving faster</h2>
+<p>We can tell Pacman to move faster when the mouse pointer is farther away.</p>
+<p>The logic here is: if the distance between Pacman and the mouse is greater than 100, move 10 steps.
+Else, if it's greater than 6 move only 5 steps.</p>
+<p><img src="assets/move_pacman_faster.png" alt="" /></p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="7">
+  <h2 class="subtitle">7. Drawing a ghost</h2>
+  <div class="content"><p>Let's create a new sprite <a href="#paintnewsprite">like we did for Pacman</a> (If clicking doen't work, open the section &quot;Drawing Pacman&quot; then click again.)</p>
+<p>First select <code>No outline</code> so that there's no black border around the shapes:</p>
+<p><img src="assets/no_outline.png" alt="" /></p>
+<p>Let's draw a circle and a square on top of it.</p>
+<p><img src="assets/circle_and_square_for_ghost.png" alt="" /></p>
+<p>You can draw the ghost's legs by erasing two triangles from the bottom</p>
+<p><img src="assets/ghost_legs.png" alt="" /></p>
+<p>Select &quot;white&quot; as fill colour (bring Saturation to 0) and draw an &quot;oval&quot; shape to make the eye.</p>
+<p><img src="assets/ghost_eye.png" alt="" /></p>
+<p><strong>Trick:</strong> to draw the second eye you can press <code>CTRL-C</code>
+and <code>CTRL-V</code> to &quot;copy-paste&quot; the previous one.</p>
+<p>Let's give the eyes a final touch</p>
+<p><img src="assets/ghost_eyes.png" alt="" /></p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="8">
+  <h2 class="subtitle">8. (Optional) Animating the ghost</h2>
+  <div class="content"><p>Feel free to come to this section later if you want to go straight to continuing with the game.</p>
+<p>Let's make an animated ghost just like we did for pacman.</p>
+<p>Duplicate the costume ghost.</p>
+<p>Click on the black ovan inside the eye.</p>
+<p><em>While holding down the <em>shift</em> key</em> click on the black oval inside the other eye.</p>
+<p>Move the eyes together by pressing the left arrow.</p>
+<p><img src="assets/ghost_animated_eyes.png" alt="" /></p>
+<p>Now let's add to the ghost the same animation code we used for Pacman</p>
+<p><img src="assets/pacman_animation_cycle.png" alt="" /></p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="9">
+  <h2 class="subtitle">9. Let's make the ghost move</h2>
+  <div class="content"><p>Click on the &quot;Code&quot; tab of the ghost sprite, and add the following blocks:</p>
+<p><img src="assets/ghost_motion.png" alt="" /></p>
+<p>You'll notice the ghost turns in all directions. In order to
+make it stand upright, add the &quot;set rotation style to left-right&quot;:</p>
+<p><img src="assets/ghost_motion_2.png" alt="" /></p>
+<p>If the ghost bounces in a &quot;weird&quot; way, go back to the costumes and make sure the ghost is positioned in the center of the drawing area.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="10">
+  <h2 class="subtitle">10. Pacman eats ghost!</h2>
+  <div class="content"><p>Let's import a sound that Pacman will make when &quot;eating&quot; a ghost.</p>
+<p>Click on the &quot;ghost&quot; sprite</p>
+<p><img src="assets/select_ghost_sprite.png" alt="" /></p>
+<p>then click on the &quot;sounds&quot; tab and on the &quot;select sound&quot; at the bottom</p>
+<p><img src="assets/choose_sound.png" alt="" /></p>
+<p>for example let's use the &quot;chomp&quot; sound:</p>
+<p><img src="assets/select_chomp_sound.png" alt="" /></p>
+<p>Let's rename the sprites in order to make our life easier in a moment. Click on each sprite and change the name in the &quot;Sprite&quot; section:</p>
+<p><img src="assets/rename_sprites.png" alt="" /></p>
+<p>Let's make Pacman &quot;eat&quot; a ghost! Modify the existing code so that it looks like this:</p>
+<p><img src="assets/pacman_eats_ghost.png" alt="" /></p>
+<p>When a ghost is touching pacman, we make it disappear for 1 second and reappear in a random position.</p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="11">
+  <h2 class="subtitle">11. Adding more ghosts</h2>
+  <div class="content"><p>First of all let's make Pacman and the ghost smaller,
+to make room for more ghosts.</p>
+<p>Let's use the block <code>Change size to &lt;percentage&gt;</code>. Try a value of <code>60%</code>.</p>
+<p>Pacman:</p>
+<p><img src="assets/resize_pacman.png" alt="" /></p>
+<p>The ghost:</p>
+<p><img src="assets/resize_ghost.png" alt="" /></p>
+<p>Now we can simply duplicate the ghost sprite: right click on the ghost sprite then click on &quot;duplicate&quot;:</p>
+<p><img src="assets/duplicate_ghost.png" alt="" /></p>
+<p>Now two ghosts appear on the stage! Feel free to change the color or speed of the second ghost.</p>
+<p><img src="assets/duplicated_ghosts.png" alt="" /></p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="12">
+  <h2 class="subtitle">12. Keeping a score</h2>
+  <div class="content"><p>First we need to have a variable called <code>score</code>.</p>
+<p>Select the pacman sprite, then click on the &quot;variables&quot; section and &quot;Make a variable&quot; button.</p>
+<p><img src="assets/make_a_variable_1.png" alt="" /></p>
+<p><img src="assets/make_a_variable_2.png" alt="" /></p>
+<p>Notice the option &quot;for all sprites&quot; which makes the variable global.</p>
+<p>Now click on the first ghost, and add the &quot;broadcast&quot; block next to the &quot;play sound&quot; block.
+Whenever the ghost is &quot;eaten&quot;, besides playing the sound we want to make that event known to the game.</p>
+<p>In a second, we will use this signal to increase the score</p>
+<p><img src="assets/broadcast_1.png" alt="" /></p>
+<p><img src="assets/broadcast_2_new_message.png" alt="" /></p>
+<p>This is the final result of the ghost code:</p>
+<p><img src="assets/broadcast_3.png" alt="" /></p>
+<p>The same code needs to be added to the other ghost (and any others you might have created).</p>
+<p>Let's add the &quot;score&quot; code to Pacman:</p>
+<p><img src="assets/increase_score.png" alt="" /></p>
+<p>You will notice that the score never goes to zero! Let's fix that:</p>
+<p><img src="assets/set_score_to_zero.png" alt="" /></p>
+</div>
+</article>
+  
+    <article class="tutorial hide" data-index="13">
+  <h2 class="subtitle">13. Conclusion / Further ideas</h2>
+  <div class="content"><p>Well done. We hope you had fun!</p>
+<p>You can keep adding features or changing colors, speed and sound of the characters in the game.</p>
+<p>Here are some ideas:</p>
+<ul>
+<li>
+<p>Make some ghosts bigger and some smaller</p>
+</li>
+<li>
+<p>Make the smaller ghosts broadcast a different message and give pacman more points when catching those small ones</p>
+</li>
+<li>
+<p>Add a timer.</p>
+</li>
+<li>
+<p>Make sure to share your Ghostcatcher! Did you know you can also remix (i.e. reuse) the games made by others on the Scratch website? Your friends could remix yours too!</p>
+</li>
+</ul>
+<p>If you noticed any issues with this course such as typos or bugs tell someone at an event,
+or report them youself <a href="https://github.com/louisdewar/tutorial_web_content/issues/new">here</a>.</p>
+</div>
+</article>
+  
+  </section>
+</div>
+
+    </div>
+
+    <script onload="hljs.initHighlighting()" src="/tutorial_web_content/static/highlight.min.js"></script>
+    <script onload="hljs.initLineNumbersOnLoad()" src="/tutorial_web_content/static/highlightjs-line-numbers.min.js"></script>
+
+    <script src="/tutorial_web_content/static/main.js"></script>
+  </body>
+</html>
