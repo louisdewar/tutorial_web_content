@@ -34,12 +34,15 @@ response = json.loads(f.read())
 
 print('Current version tag:', response['tag_name'])
 
-assets = response['assets']
+assets = [asset for asset in response['assets']
+          if asset['name'].endswith('.tar.gz')]
 
 if match_release:
     try:
-        asset_choice = next(asset for asset in assets if match_release in asset['name'])
-        print('Automatically picked {} to download based on match "{}"\n'.format(asset_choice['name'], match_release))
+        asset_choice = next(
+            asset for asset in assets if match_release in asset['name'])
+        print('Automatically picked {} to download based on match "{}"\n'.format(
+            asset_choice['name'], match_release))
     except StopIteration:
         print('Couldn\'t find "{}" in releases'.format(match_release))
 else:

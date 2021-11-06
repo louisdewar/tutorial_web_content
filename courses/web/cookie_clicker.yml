@@ -1,0 +1,317 @@
+title: Cookie clicker
+lang: html
+url: cookie_clicker
+
+tutorials:
+  - subtitle: Introduction
+    content: |
+      There are loads of games on the internet and many of them aren't very difficult to make.
+      The game that we're making isn't very advanced but a lot of the core concepts can be used to
+      make more advanced games.
+
+      We're making a cookie clicker game where you own a bakery which makes cookies and you buys ways
+      of upgrading your bakery until you take over the world.
+
+      **Requirements**: I would really recommend that you have a decent amount of experience with HTML/CSS
+      and maybe a bit of using a textual langauge such as python or javascript (we'll be learning javascript).
+      I won't assume much knowledge of javascript at this point.
+
+      Hopefully you also have a text editor that you can use, if not check out the start (part 1) of
+      [this tutorial (introduction to HTML)](../introduction_html/index.html) which has some suggestions
+      about editors to use.
+  - subtitle: The basic HTML structure
+    content: |
+      Since I hope that you already know some HTML I won't go into the details here, but essentially
+      we need an area to show the current amount of cookies (which is our currency), an image of a
+      cookie (which the user can click to bake a single cookie) and finally we need an area with buttons
+      where we can buy upgrades (such as hiring a baker).
+
+      ## Steps to setup
+
+      1. Create a folder to store you project code (if you are doing this online create a new project).
+      2. Create a file called `game.html`.
+      3. Copy this code into `game.html`:
+      ```html
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Cookie clicker</title>
+        </head>
+        <body>
+          <p>
+            You have <span id="cookieCount">0</span> cookies
+          </p>
+          <!-- Task: replace this comment with an image take that displays an image a cookie -->
+          <div id="shop">
+            <!-- In future our buttons to buy items will go here -->
+          </div>
+        </body>
+      </html>
+      ```
+
+      (Hint: you can use the sideways scroll in the code area to see it all)
+
+      If you haven't seen it before a `div` tag it just used to grouping elements together.
+
+      In HTML whenever you see `<!--` and then `-->` everything between the two is ignored
+      and **not** treated as valid code.
+      This is useful for writing messages about code without it affecting the functionality of the
+      website. In general programming langauges call this a **comment**, for example
+      to comment out a line in python we use `#` whereas in javascript we use `//`.
+
+      Finally a `span` tag is just used to wrap around inline text, we wrap a span tag around the number
+      of cookies so that we can easily update the number in javascript later.
+
+      ## Tasks
+
+      Have a look at the line in the HTML that says: 
+      ```html
+      <!-- Task: replace this comment with an image take that displays an image a cookie -->
+      ```
+
+      Your first task is to do exactly what it says: find an image online of a cookie and then replace
+      the HTML comment with the image tag displaying the image of the cookie you found.
+
+      ## Hints:
+
+      If you get stuck with adding an image check out
+      [the introduction to HTML tutorial](../introduction_html/index.html) and look at the chapter which
+      explains how to use images (chapter 5).
+
+      If the image is too large you can add an attribute called `width` and set it to a value such as
+      `200px` (the height will automatically adjust to keep the same image proportions).
+      In general your image tag should look like this: `<img src="URL" width="200px">` (of course `URL`
+      should the link to the image that you found). If you want to learn more look at the images chapter
+      of the link above.
+
+  - subtitle: Baking your first cookies
+    content: |
+      ## Getting started with javascript
+
+      In order to implement the logic of our game we need to use javascript which is a language that
+      can run in your web browser.
+
+      We need to create a file in the same folder as `game.html` and call this file `game.js` (`js` is
+      short for javascript).
+
+      Once you've created the file add this to `game.js`:
+      ```js
+      alert("Hello world!");
+      ```
+
+      Right now if you reload your webpage nothing will happen, this because we still need to link
+      our `game.js` file into our `game.html` file. To do this we add the `script` to the **bottom** of
+      the body (just above `</body>`.
+
+      This is the line you need to add, `src` is short for **source** and it tells the browser to look for
+      a javascript file named `game.js`:
+      ```html
+      <script src="game.js"></script>
+      ```
+
+      The **last** 3 lines of your `game.html` should look like:
+      ```html
+          <script src="game.js"></script>
+        </body>
+      </html>
+      ```
+
+      Now if you reload your website you should see an alert popup saying "Hello world!", it might look
+      something like the one below but it depends on which web browser you use.
+
+      ![Hello World! alert window](assets/hello_world_alert.png)
+
+      ## Baking cookies
+
+      Now that we've got our javascript code setup we can start actually doing something with it.
+      The first step is to delete that original `alert("Hello world!");` so that your javascript
+      file is empty again.
+
+      Now we need to think how we are going to implement the cookie code. We need a way of storing how
+      many cookies have been baked so far. To do this we're going to use a variable. Let's create one
+      now, add this to your javascript file:
+      ```js
+      // We start with 0 cookies;
+      var cookieCount = 0;
+      ```
+
+      All this code does is create a variable called `cookieCount` and initialises the value to `0` (at the
+      start we have baked 0 cookies).
+
+      Next we need a function that simulates baking some cookies, add this below where you've created your
+      `cookieCount` variable:
+      ```js
+      // When you call this function this will simulate
+      // baking the number of cookies you pass into the
+      // function as a parameter.
+      function bakeCookies(numberOfCookies) {
+        cookieCount = cookieCount + numberOfCookies;
+      }
+      ```
+
+      Great! We've now got some code that will simulate baking cookies but it's never run!
+
+      We want to run that function every time you click the cookie image.
+      To do this we can add another attribute to our image function called `onclick` which allows
+      us to run javascript code whenever a user clicks the element.
+      Our new image tag will look something like this (don't delete your old `img` tag, just update it
+      to have the new `onclick="bakeCookies(1);"` attribute):
+      ```html
+      <img src="URL" onclick="bakeCookies(1)">
+      ```
+
+      Right now if you try to click on your cookie image to bake nothing will happen.
+      This is because we change the variable which stores the cookie count but we never display it.
+
+      Let's look at a snippet of our HTML code from earlier:
+      ```html
+      <p>
+        You have <span id="cookieCount">0</span> cookies
+      </p>
+      ```
+
+      If we can figure out a way of change what's inside the span tag (the one with the id `cookieCount`)
+      everytime a cookie is baked then we can keep the number up to date.
+
+      To do this we use a javascript function called `document.querySelector(selector)` which allows
+      us to search for HTML tags from within javascript.
+      Once we have to element we can change things about it, for example we can do
+      `element.innerHTML = "new message"`
+      which will change the text inside the element to be the text on the right.
+
+      If you've done CSS where you've used `selectors` such as `.` for a class or `#` for an id,
+      this works just the same way.
+      Our `span` tag has the id `cookieCount` which means the selector we want to use is `#cookieCount`.
+
+      Here's the code inside our newly modified `bakeCookies` function:
+      ```js
+      function bakeCookies(numberOfCookies) {
+        cookieCount = cookieCount + numberOfCookies;
+        var cookieCountSpan = document.querySelector("#cookieCount");
+        cookieCountSpan.innerHTML = cookieCount;
+      }
+      ```
+
+      Great, now trying saving your code and then reloading your webpage.
+      Now everytime you click on the cookie the number of cookies displayed in
+      `You have X cookies` should go up by one each time.
+  - subtitle: Automatic Baking
+    content: |
+      Right now we've got the ability to manually bake cookies one at a time, but that isn't very
+      interesting. We want to make it possible to expand your cookie baking empire so we need to allow
+      automation and upgrades.
+
+      The idea is that our currency are cookies so we can buy a chef with say `20` cookies and then maybe
+      a bakery for `200` cookies and then a factory for `5000`. Then without clicking the cookie each one
+      would automatically bake cookies for you.
+
+      So how are we going to implement this?
+
+      First we need a button to let you buy these upgrades. So let's replace our existing shop div with this:
+      ```html
+      <div id="shop">
+        <button onclick="buyChef()">Chef (20)</button>
+        <button onclick="buyBakery()">Bakery (200)</button>
+        <button onclick="buyFactory()">Factory (5000)</button>
+      </div>
+      ```
+
+      So now we need to create the three functions in javascript to handle each of the `onclick` events.
+
+      ## Implementing the javascript
+
+      Let's list out our requirements:
+      1. a way of storing how many chefs, bakeries and factories we have
+      2. a way of buying each of them with cookies
+      3. a way of updating the cookie count frequenty (say every second) with the result of all of the
+        automated bakers
+
+      We can start with task 1 first. To store each we should use variables; add this to the top of your
+      javascript file (`n` is short for number of, we could choose any variable name but it's nice to keep
+      them short **and** descriptive):
+      ```js
+      var nChefs = 0;
+      var nBakeries = 0;
+      var nFactories = 0;
+      ```
+
+      Now for task 2, let's create each of the functions that the button references at the bottom of
+      your javascript file:
+      ```js
+      function buyChef() {
+        // Only let them buy chefs if they have enough cookies (otherwise they will end up with negative
+        // cookies)
+        if (cookieCount >= 20) {
+          cookieCount -= 20;
+          // `nChefs += 1` is a shorthand for nChefs = nChefs + 1
+          nChefs += 1;
+        }
+      }
+
+      function buyBakery() {
+        if (cookieCount >= 200) {
+          cookieCount -= 200;
+          nBakeries += 1;
+        }
+      }
+
+      function buyFactory() {
+        if (cookieCount >= 5000) {
+          cookieCount -= 5000;
+          nFactories += 1;
+        }
+      }
+      ```
+
+      Now finally onto task 3 which is a little bit more tricky but here we can use a javascript function
+      called `setInterval`.
+
+      `setInterval` allows you to specify a function and a number of milliseconds and javascript will
+      automatically run that function for ever every `n` milliseconds where `n` is the number you passed
+      in as a parameter.
+
+      In our case we want to run a function every second to calculate how many cookies were automatically baked
+      and then update our total count. Tip: `1000`ms (milliseconds) = `1` second.
+
+      First let's create the function that actually calculates the number of cookies baked per second
+      and updates the total (add this to the buttom of `game.js`):
+      ```js
+      // Calculates the number of baked cookies per second (not including manually baked cookies),
+      // and then calls `bakeCookies` which will update the new number of cookies.
+      function automaticCookieUpdate() {
+        var newCookies = 0;
+        // Chefs bake 1 cookie per second
+        newCookies += nChefs * 1;
+        // Bakeries bake 5 cookies per second
+        newCookies += nBakeries * 5;
+        // Factories bake 100 cookies per second
+        newCookies += nFactories * 100;
+
+        bakeCookies(newCookies);
+      }
+      ```
+
+      Notice how we used our `bakeCookies` function from earlier. This let's us not have to worry about the
+      details of updating the cookie count **and** updating the user interface each time.
+
+      The fact that we're re-using code is a good practise and it's called code reuse. The advantage of
+      code reuse is that if we change the exact details of the UI we only have to change the javascript
+      code in one place (in the `bakeCookies` function) and all the rest of the code will use the updated
+      version (since they call `bakeCookies`).
+
+      So now that we've created the function to do the hard work we need to use setInterval to run it
+      infinitely every second. Add this to the buttom of the javascript file:
+      ```js
+      // Call the function automaticCookieUpdate every second
+      setInterval(automaticCookieUpdate, 1000);
+      ```
+  - subtitle: What next?
+    content: |
+      Right now we've got a very basic game but there's loads of room for improvement.
+
+      Here are a few ideas of things you might want to implement to improve you game:
+      - Better graphics. Try using CSS to make the game look better.
+      - It would be nice to see how many factories/chefs/bakeries you have purchased and how many they
+        produce per second.
+      - Upgrades. You could create purchasable upgrades to improve the productivity of your cookie production.
+
