@@ -16,8 +16,7 @@ jobs:
     - name: Build
       run: ./bin/tutorial_web build -i courses -s ./bin/static -o build -b /tutorial_web_content
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
-      env:
-        PERSONAL_TOKEN: ${{ secrets.DEPLOY_PAGES_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./build
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        branch: gh-pages
+        folder: build
