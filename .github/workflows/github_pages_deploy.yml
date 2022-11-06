@@ -9,14 +9,12 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Install the tutorial_web binary
-      run: /usr/bin/env python3 install.py linux
-    # Build the website
-    - name: Build
-      run: ./bin/tutorial_web build -i courses -s ./bin/static -o build -b /tutorial_web_content
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.5
-      with:
-        branch: gh-pages
-        folder: build
+
+      - name: Build
+        uses: ./actions/build_website
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: build
