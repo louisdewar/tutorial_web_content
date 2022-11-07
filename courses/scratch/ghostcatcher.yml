@@ -49,8 +49,8 @@ tutorials:
       Click on the Paint Tool, select a color you like and click on the checkered area to paint it.
 
       ![](assets/color_selector_paint_tool.png)
-      
-      Feel free to experiment with the other tools, but don't make it too crowded just yet! 
+
+      Feel free to experiment with the other tools, but don't make it too crowded just yet!
       You can come back later and improve the background, or select a completely new one.
 
   - subtitle: Drawing Pacman
@@ -115,7 +115,7 @@ tutorials:
     content: |
       Let's go to the "Code" tab and start animating Pacman!
       Click on the "Events" section on the left and find the block labelled
-      `When [green flag] pressed`. Click and drag the block from the left 
+      `When [green flag] pressed`. Click and drag the block from the left
       onto the right hand screen.
 
       ![](assets/pacman_green_flag.png)
@@ -165,7 +165,7 @@ tutorials:
       ![](assets/no_outline.png)
 
       Let's draw a circle and a square on top of it.
-      
+
       ![](assets/circle_and_square_for_ghost.png)
 
       You can draw the ghost's legs by erasing two triangles from the bottom
@@ -188,7 +188,7 @@ tutorials:
       Feel free to come to this section later if you want to go straight to continuing with the game.
 
       Let's make an animated ghost just like we did for pacman.
-      
+
       Duplicate the costume ghost.
 
       Click on the black ovan inside the eye.
