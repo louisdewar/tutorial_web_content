@@ -64,7 +64,7 @@ tutorials:
 
       ## Tasks
 
-      Have a look at the line in the HTML that says: 
+      Have a look at the line in the HTML that says:
       ```html
       <!-- Task: replace this comment with an image take that displays an image a cookie -->
       ```
@@ -314,4 +314,3 @@ tutorials:
       - It would be nice to see how many factories/chefs/bakeries you have purchased and how many they
         produce per second.
       - Upgrades. You could create purchasable upgrades to improve the productivity of your cookie production.
-

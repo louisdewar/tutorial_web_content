@@ -1,0 +1,15 @@
+extends: default
+
+ignore: |
+  .git/**
+rules:
+  braces:
+    level: error
+    max-spaces-inside: 1
+  brackets:
+    level: error
+    max-spaces-inside: 1
+  document-start: disable
+  line-length: disable
+  new-line-at-end-of-file: enable
+  trailing-spaces: enable
