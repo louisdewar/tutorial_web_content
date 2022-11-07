@@ -1,7 +1,6 @@
 name: Build the website (doesn't deploy - only used for checking syntax)
 
-on:
-  push
+on: [push, pull_request]
 
 jobs:
   build:
