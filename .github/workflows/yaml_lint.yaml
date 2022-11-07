@@ -10,8 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: YAML Lint github actions
+      - name: YAML Lint
         uses: ibiqlik/action-yamllint@v3
         with:
-          file_or_dir: .github
-          config_file: .github/.yamllint.yaml
+          file_or_dir: .
+          config_file: .yamllint.yaml
