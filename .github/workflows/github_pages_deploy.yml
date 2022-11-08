@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Build
-        uses: ./actions/build_website
+        uses: ./.github/actions/build_website
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
