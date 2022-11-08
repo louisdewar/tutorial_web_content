@@ -4,9 +4,6 @@ description: Build the website
 runs:
   using: "composite"
   steps:
-    - name: Checkout
-      uses: actions/checkout@master
-
     - name: Install the tutorial_web binary
       shell: bash
       run: /usr/bin/env python3 install.py linux
